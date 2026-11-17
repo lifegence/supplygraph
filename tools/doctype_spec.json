@@ -715,6 +715,13 @@
      "",
      "",
      "0＝直接、1以上＝推移的"
+    ],
+    [
+     "development_only",
+     "Check",
+     "",
+     "",
+     "このリリースの SBOM で、この部品の版の行がすべて Scope＝excluded（開発用）"
     ]
    ],
    "note": "一意制約：(release, component_version, via_bom_document)。インデックス：component_version。"
@@ -1583,6 +1590,13 @@
      "User",
      "",
      ""
+    ],
+    [
+     "development_only",
+     "Check",
+     "",
+     "読み取り専用",
+     "この部品の版を含むすべてのリリースで、開発用だけに使われている"
     ]
    ],
    "note": "一意制約：(vulnerability, component_version)。インデックス：component_version、match_status。"

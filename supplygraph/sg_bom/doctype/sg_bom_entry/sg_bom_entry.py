@@ -4,9 +4,14 @@
 import frappe
 from frappe.model.document import Document
 
+from supplygraph.sg_bom import flatten
+
 
 class SGBOMEntry(Document):
-	pass
+	def on_update(self):
+		# Scope "excluded" marks a component used only for development; the release index keeps that flag
+		if self.has_value_changed("scope"):
+			flatten.reindex_bom_documents([self.bom_document])
 
 
 def on_doctype_update():

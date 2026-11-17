@@ -763,6 +763,14 @@ msgstr ""
 msgid "Development"
 msgstr ""
 
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json
+msgid "Development Only"
+msgstr ""
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py
+msgid "Development-Only Components"
+msgstr ""
+
 #. Label of the domain_impact (Small Text) field in DocType 'SG Impact
 #. Assessment'
 #: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:86
@@ -1300,6 +1308,10 @@ msgstr ""
 msgid "Manufacturer"
 msgstr ""
 
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+msgid "Mark as Development Only"
+msgstr ""
+
 #: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match_list.js:19
 msgid "Mark as False Positive"
 msgstr ""
@@ -1589,6 +1601,10 @@ msgstr ""
 #: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:39
 #: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:54
 msgid "Open"
+msgstr ""
+
+#: supplygraph/sg_vulnerability/number_card/open_development_only_matches/open_development_only_matches.json
+msgid "Open Development-Only Matches"
 msgstr ""
 
 #. Label of a number card in the SupplyGraph Workspace
@@ -3148,6 +3164,10 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+msgid "Unmark Development Only"
+msgstr ""
+
 #: supplygraph/sg_bom/export/__init__.py:54
 msgid "Unsupported Format"
 msgstr ""
@@ -3483,6 +3503,16 @@ msgstr ""
 #. Assessment'
 #: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:61
 msgid "vulnerable_code_not_present"
+msgstr ""
+
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+#, python-brace-format
+msgid "{0} entries marked as development only"
+msgstr ""
+
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+#, python-brace-format
+msgid "{0} entries no longer marked as development only"
 msgstr ""
 
 #: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match_list.js:25
