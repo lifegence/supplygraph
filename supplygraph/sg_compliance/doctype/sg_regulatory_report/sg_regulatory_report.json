@@ -1,0 +1,204 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "report_type",
+  "vulnerability_case",
+  "basis_at",
+  "due_at",
+  "report_status",
+  "submitted_at",
+  "submission_reference",
+  "report_body",
+  "attachments",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SGRR-.YYYY.-.####",
+   "default": "SGRR-.YYYY.-.####",
+   "reqd": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "report_type",
+   "label": "Report Type",
+   "fieldtype": "Link",
+   "options": "SG Report Type",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vulnerability_case",
+   "label": "Vulnerability Case",
+   "fieldtype": "Link",
+   "options": "SG Vulnerability Case",
+   "search_index": 1
+  },
+  {
+   "fieldname": "basis_at",
+   "label": "Basis At",
+   "fieldtype": "Datetime",
+   "reqd": 1,
+   "description": "期限の起点日時",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "due_at",
+   "label": "Due At",
+   "fieldtype": "Datetime",
+   "read_only": 1,
+   "description": "自動計算"
+  },
+  {
+   "fieldname": "report_status",
+   "label": "Report Status",
+   "fieldtype": "Select",
+   "options": "Not Started\nDrafting\nApproved\nSubmitted\nOverdue\nNot Required",
+   "read_only": 1
+  },
+  {
+   "fieldname": "submitted_at",
+   "label": "Submitted At",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "submission_reference",
+   "label": "Submission Reference",
+   "fieldtype": "Data",
+   "description": "受付番号"
+  },
+  {
+   "fieldname": "report_body",
+   "label": "Report Body",
+   "fieldtype": "Text Editor",
+   "description": "報告内容（AI下書き可）"
+  },
+  {
+   "fieldname": "attachments",
+   "label": "Attachments",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SG Regulatory Report",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Compliance",
+ "name": "SG Regulatory Report",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

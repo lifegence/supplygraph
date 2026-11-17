@@ -1,0 +1,193 @@
+{
+ "actions": [],
+ "autoname": "field:model_code",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "model_code",
+  "model_name",
+  "product_category",
+  "manufacturer",
+  "markets",
+  "lifecycle_status",
+  "support_end_date",
+  "regulatory_ids",
+  "unit_slots"
+ ],
+ "fields": [
+  {
+   "fieldname": "model_code",
+   "label": "Model Code",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "model_name",
+   "label": "Model Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "product_category",
+   "label": "Product Category",
+   "fieldtype": "Link",
+   "options": "SG Product Category",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "manufacturer",
+   "label": "Manufacturer",
+   "fieldtype": "Link",
+   "options": "SG Organization"
+  },
+  {
+   "fieldname": "markets",
+   "label": "Markets",
+   "fieldtype": "Table MultiSelect",
+   "options": "SG Market Row",
+   "description": "仕向地・販売地域"
+  },
+  {
+   "fieldname": "lifecycle_status",
+   "label": "Lifecycle Status",
+   "fieldtype": "Select",
+   "options": "Development\nIn Production\nEnd of Production\nEnd of Support"
+  },
+  {
+   "fieldname": "support_end_date",
+   "label": "Support End Date",
+   "fieldtype": "Date",
+   "description": "セキュリティ更新の提供終了日（CRAのサポート期間）"
+  },
+  {
+   "fieldname": "regulatory_ids",
+   "label": "Regulatory IDs",
+   "fieldtype": "Table",
+   "options": "SG Regulatory Identifier",
+   "description": "型式認可番号、UDI-DI、510(k)番号、JC-STAR等"
+  },
+  {
+   "fieldname": "unit_slots",
+   "label": "Unit Slots",
+   "fieldtype": "Table",
+   "options": "SG Model Unit",
+   "description": "搭載ユニットの構成"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Product",
+ "name": "SG Product Model",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "model_name",
+ "track_changes": 1
+}

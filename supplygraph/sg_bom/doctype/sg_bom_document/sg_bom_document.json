@@ -1,0 +1,325 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "bom_type",
+  "format",
+  "spec_version",
+  "serial_number",
+  "bom_version",
+  "lifecycle_phase",
+  "author_name",
+  "author_org",
+  "supplier_org",
+  "bom_timestamp",
+  "primary_component",
+  "subject_release",
+  "source_file",
+  "source_sha256",
+  "completeness",
+  "granularity",
+  "import_status",
+  "validation_score",
+  "validation_results",
+  "entry_count",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SGB-.YYYY.-.#####",
+   "default": "SGB-.YYYY.-.#####",
+   "reqd": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "bom_type",
+   "label": "BOM Type",
+   "fieldtype": "Link",
+   "options": "SG BOM Type",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "format",
+   "label": "Format",
+   "fieldtype": "Select",
+   "options": "CycloneDX\nSPDX\nInternal",
+   "reqd": 1,
+   "description": "元の形式",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "spec_version",
+   "label": "Spec Version",
+   "fieldtype": "Data",
+   "description": "例：CycloneDX 1.6、SPDX 2.3"
+  },
+  {
+   "fieldname": "serial_number",
+   "label": "Serial Number",
+   "fieldtype": "Data",
+   "description": "CycloneDXのserialNumber / SPDXのdocumentNamespace"
+  },
+  {
+   "fieldname": "bom_version",
+   "label": "BOM Version",
+   "fieldtype": "Int",
+   "description": "文書の版"
+  },
+  {
+   "fieldname": "lifecycle_phase",
+   "label": "Lifecycle Phase",
+   "fieldtype": "Select",
+   "options": "Design\nSource\nBuild\nAnalyzed\nDeployed\nRuntime",
+   "reqd": 1,
+   "description": "CISAのSBOM種別（FrameworkのSBOM Type）",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "author_name",
+   "label": "Author Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "description": "SBOM Author"
+  },
+  {
+   "fieldname": "author_org",
+   "label": "Author Org",
+   "fieldtype": "Link",
+   "options": "SG Organization"
+  },
+  {
+   "fieldname": "supplier_org",
+   "label": "Supplier Org",
+   "fieldtype": "Link",
+   "options": "SG Organization",
+   "description": "SBOMを提供した組織"
+  },
+  {
+   "fieldname": "bom_timestamp",
+   "label": "BOM Timestamp",
+   "fieldtype": "Datetime",
+   "reqd": 1,
+   "description": "Timestamp"
+  },
+  {
+   "fieldname": "primary_component",
+   "label": "Primary Component",
+   "fieldtype": "Link",
+   "options": "SG Component Version",
+   "description": "Primary Component"
+  },
+  {
+   "fieldname": "subject_release",
+   "label": "Subject Release",
+   "fieldtype": "Link",
+   "options": "SG Release",
+   "description": "このBOMが記述するリリース"
+  },
+  {
+   "fieldname": "source_file",
+   "label": "Source File",
+   "fieldtype": "Attach",
+   "description": "受領した元ファイル"
+  },
+  {
+   "fieldname": "source_sha256",
+   "label": "Source SHA-256",
+   "fieldtype": "Data",
+   "description": "元ファイルのハッシュ（改ざん検知）"
+  },
+  {
+   "fieldname": "completeness",
+   "label": "Completeness",
+   "fieldtype": "Select",
+   "options": "Complete\nIncomplete\nUnknown",
+   "description": "CycloneDX compositionsに対応"
+  },
+  {
+   "fieldname": "granularity",
+   "label": "Granularity",
+   "fieldtype": "Select",
+   "options": "Full\nTop-level Only\nVendor Coarse",
+   "description": "粒度（照合精度の限界を示す）"
+  },
+  {
+   "fieldname": "import_status",
+   "label": "Import Status",
+   "fieldtype": "Select",
+   "options": "Parsed\nValidated\nRejected\nAccepted\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "validation_score",
+   "label": "Validation Score",
+   "fieldtype": "Percent",
+   "read_only": 1,
+   "description": "必須項目の充足率"
+  },
+  {
+   "fieldname": "validation_results",
+   "label": "Validation Results",
+   "fieldtype": "Table",
+   "options": "SG BOM Validation Result",
+   "description": "検証結果（子テーブル）"
+  },
+  {
+   "fieldname": "entry_count",
+   "label": "Entry Count",
+   "fieldtype": "Int",
+   "read_only": 1,
+   "description": "BOM Entryの件数"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SG BOM Document",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG BOM",
+ "name": "SG BOM Document",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

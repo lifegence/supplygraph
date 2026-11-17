@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "bom_document",
+  "component_version",
+  "bom_ref",
+  "scope",
+  "is_direct",
+  "supplier",
+  "license_concluded",
+  "external_bom",
+  "external_bom_ref"
+ ],
+ "fields": [
+  {
+   "fieldname": "bom_document",
+   "label": "BOM Document",
+   "fieldtype": "Link",
+   "options": "SG BOM Document",
+   "reqd": 1,
+   "search_index": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "component_version",
+   "label": "Component Version",
+   "fieldtype": "Link",
+   "options": "SG Component Version",
+   "reqd": 1,
+   "search_index": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "bom_ref",
+   "label": "BOM Ref",
+   "fieldtype": "Data",
+   "description": "元文書内の識別子（CycloneDX bom-ref / SPDX SPDXID）"
+  },
+  {
+   "fieldname": "scope",
+   "label": "Scope",
+   "fieldtype": "Select",
+   "options": "required\noptional\nexcluded"
+  },
+  {
+   "fieldname": "is_direct",
+   "label": "Is Direct",
+   "fieldtype": "Check",
+   "description": "直接依存か"
+  },
+  {
+   "fieldname": "supplier",
+   "label": "Supplier",
+   "fieldtype": "Link",
+   "options": "SG Organization"
+  },
+  {
+   "fieldname": "license_concluded",
+   "label": "License Concluded",
+   "fieldtype": "Link",
+   "options": "SG License"
+  },
+  {
+   "fieldname": "external_bom",
+   "label": "External BOM",
+   "fieldtype": "Link",
+   "options": "SG BOM Document",
+   "description": "この部品自体のSBOM（入れ子）"
+  },
+  {
+   "fieldname": "external_bom_ref",
+   "label": "External BOM Ref",
+   "fieldtype": "Small Text",
+   "description": "元文書に書かれた外部SBOMの参照。対象が未取込でも保持し、取込後にexternal_bomへつなぐ"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG BOM",
+ "name": "SG BOM Entry",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

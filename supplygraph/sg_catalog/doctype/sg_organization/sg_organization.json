@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "autoname": "field:organization_name",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "organization_name",
+  "organization_type",
+  "tier",
+  "country",
+  "website",
+  "psirt_email",
+  "advisory_url",
+  "is_active"
+ ],
+ "fields": [
+  {
+   "fieldname": "organization_name",
+   "label": "Organization Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "description": "組織名",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "organization_type",
+   "label": "Organization Type",
+   "fieldtype": "Select",
+   "options": "Supplier\nManufacturer\nCustomer\nInternal\nOpen Source Project",
+   "reqd": 1,
+   "description": "組織の種別",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "tier",
+   "label": "Tier",
+   "fieldtype": "Select",
+   "options": "Tier 1\nTier 2\nTier 3\nN/A",
+   "description": "サプライチェーン上の階層"
+  },
+  {
+   "fieldname": "country",
+   "label": "Country",
+   "fieldtype": "Link",
+   "options": "Country",
+   "description": "所在国（ドローンの原産国判定にも使う）"
+  },
+  {
+   "fieldname": "website",
+   "label": "Website",
+   "fieldtype": "Data",
+   "options": "URL"
+  },
+  {
+   "fieldname": "psirt_email",
+   "label": "PSIRT Email",
+   "fieldtype": "Data",
+   "options": "Email",
+   "description": "脆弱性連絡窓口"
+  },
+  {
+   "fieldname": "advisory_url",
+   "label": "Advisory URL",
+   "fieldtype": "Data",
+   "options": "URL",
+   "description": "セキュリティアドバイザリの公開先（CSAF取込元）"
+  },
+  {
+   "fieldname": "is_active",
+   "label": "Is Active",
+   "fieldtype": "Check",
+   "description": "取引中か"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Catalog",
+ "name": "SG Organization",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

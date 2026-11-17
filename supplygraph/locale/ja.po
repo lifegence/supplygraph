@@ -1,0 +1,4118 @@
+# Japanese translations for SupplyGraph.
+# Copyright (C) 2026 Lifegence and contributors
+# This file is distributed under the same license as the SupplyGraph project.
+#
+# Update with "bench generate-pot-file" and "bench update-po-files", which keep these entries.
+# Standard identifiers (VEX justifications, CycloneDX types, SHA-256) and role names stay in English.
+msgid ""
+msgstr ""
+"Project-Id-Version: SupplyGraph VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-10 09:34+0000\n"
+"PO-Revision-Date: 2026-11-05 15:43+0000\n"
+"Last-Translator: \n"
+"Language: ja\n"
+"Language-Team: Japanese\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#. Description of the 'Depth' (Int) field in DocType 'SG Release Component'
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json
+msgid "0＝直接、1以上＝推移的"
+msgstr ""
+
+#. Description of the 'Hash Value' (Data) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json
+msgid "16進文字列"
+msgstr ""
+
+#. Label of the ai_drafted (Check) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:98
+msgid "AI Drafted"
+msgstr "AI下書き"
+
+#. Label of the ai_drafting_enabled (Check) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:53
+msgid "AI Drafting Enabled"
+msgstr "AI下書きを有効にする"
+
+#. Option for the 'Release Type' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:50
+msgid "AI Model"
+msgstr "AIモデル"
+
+#. Option for the 'Category' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:36
+msgid "AI Use Restricted"
+msgstr "AI利用の制限"
+
+#. Description of the 'AI Drafted' (Check) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json
+msgid "AIが下書きしたか"
+msgstr ""
+
+#. Description of the 'AI Drafting Enabled' (Check) field in DocType 'SG
+#. Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json
+msgid "AIによる下書きを許可するか"
+msgstr ""
+
+#. Option for the 'TLP' (Select) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:45
+msgid "AMBER"
+msgstr ""
+
+#. Description of the 'Safety Level' (Data) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json
+msgid "ASIL / SIL / PL / IEC 62304クラス（業界ごとの表記）"
+msgstr ""
+
+#: supplygraph/sg_bom/workflow.py:14
+msgid "Accept"
+msgstr "受け入れる"
+
+#. Option for the 'Import Status' (Select) field in DocType 'SG BOM Document'
+#. Option for the 'Request Status' (Select) field in DocType 'SG Exchange
+#. Request'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:156
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:62
+msgid "Accepted"
+msgstr "受入済み"
+
+#. Label of the action_statement (Small Text) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:73
+msgid "Action Statement"
+msgstr "対応の説明"
+
+#. Label of the action_status (Select) field in DocType 'SG Remediation Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:37
+msgid "Action Status"
+msgstr "対応の状況"
+
+#. Label of the action_type (Select) field in DocType 'SG Remediation Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:18
+msgid "Action Type"
+msgstr "対応の種類"
+
+#. Label of the actions (Table) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:102
+msgid "Actions"
+msgstr "アクション"
+
+#. Option for the 'Support Status' (Select) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:96
+msgid "Active"
+msgstr "有効"
+
+#. Label of the adjusted_severity (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:79
+msgid "Adjusted Severity"
+msgstr "調整後の深刻度"
+
+#. Option for the 'Reference Type' (Select) field in DocType 'SG Reference'
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:24
+msgid "Advisory"
+msgstr "アドバイザリ"
+
+#. Label of the advisory_id (Data) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:20
+msgid "Advisory ID"
+msgstr "アドバイザリID"
+
+#. Label of the advisory_url (Data) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:65
+msgid "Advisory URL"
+msgstr "アドバイザリURL"
+
+#. Option for the 'VEX Status' (Select) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:53
+msgid "Affected"
+msgstr "影響あり"
+
+#. Label of the affected_ranges (Table) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:116
+msgid "Affected Ranges"
+msgstr "影響する版の範囲"
+
+#. Label of the affected_release_count (Int) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:90
+msgid "Affected Release Count"
+msgstr "影響リリース数"
+
+#. Label of the affected_unit_count (Int) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:96
+msgid "Affected Unit Count"
+msgstr "影響台数"
+
+#. Description of the 'Action Statement' (Small Text) field in DocType 'SG
+#. Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json
+msgid "Affectedの場合の対処"
+msgstr ""
+
+#. Label of the algorithm (Select) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:14
+msgid "Algorithm"
+msgstr "アルゴリズム"
+
+#. Label of the alias_id (Data) field in DocType 'SG Vulnerability Alias'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_alias/sg_vulnerability_alias.json:14
+msgid "Alias ID"
+msgstr "別名ID"
+
+#. Label of the alias_name (Data) field in DocType 'SG Component Alias'
+#: supplygraph/sg_catalog/doctype/sg_component_alias/sg_component_alias.json:14
+msgid "Alias Name"
+msgstr "別名"
+
+#. Label of the alias_purl_base (Data) field in DocType 'SG Component Alias'
+#: supplygraph/sg_catalog/doctype/sg_component_alias/sg_component_alias.json:22
+msgid "Alias PURL Base"
+msgstr "別名のPURLベース"
+
+#. Label of the alias_source (Data) field in DocType 'SG Vulnerability Alias'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_alias/sg_vulnerability_alias.json:21
+msgid "Alias Source"
+msgstr "別名の出どころ"
+
+#. Label of the aliases (Table) field in DocType 'SG Component'
+#. Label of the aliases (Table) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:100
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:38
+msgid "Aliases"
+msgstr "別名"
+
+#. Option for the 'Policy' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:49
+msgid "Allowed"
+msgstr "許可"
+
+#. Label of the amended_from (Link) field in DocType 'SG BOM Document'
+#. Label of the amended_from (Link) field in DocType 'SG Advisory'
+#. Label of the amended_from (Link) field in DocType 'SG Regulatory Report'
+#. Label of the amended_from (Link) field in DocType 'SG Configuration Change'
+#. Label of the amended_from (Link) field in DocType 'SG Compensating Control'
+#. Label of the amended_from (Link) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:183
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:70
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:92
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:82
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:81
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:106
+msgid "Amended From"
+msgstr "修正元"
+
+#. Option for the 'Lifecycle Phase' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:80
+msgid "Analyzed"
+msgstr "解析済み"
+
+#. Option for the 'Report Status' (Select) field in DocType 'SG Regulatory
+#. Report'
+#. Option for the 'Campaign Status' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:64
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:77
+msgid "Approved"
+msgstr "承認済み"
+
+#. Label of the approved_by (Link) field in DocType 'SG Compensating Control'
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:74
+msgid "Approved By"
+msgstr "承認者"
+
+#. Option for the 'Reference Type' (Select) field in DocType 'SG Reference'
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:24
+msgid "Article"
+msgstr "条項"
+
+#. Option for the 'Change Source' (Select) field in DocType 'SG Configuration
+#. Change'
+#. Option for the 'Source' (Select) field in DocType 'SG Installed Release'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:69
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:46
+msgid "As-Built"
+msgstr "出荷時構成"
+
+#. Label of the attachments (Attach) field in DocType 'SG Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:86
+msgid "Attachments"
+msgstr "添付ファイル"
+
+#. Label of the author_name (Data) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:87
+msgid "Author Name"
+msgstr "作成者名"
+
+#. Label of the author_org (Link) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:94
+msgid "Author Org"
+msgstr "作成組織"
+
+#. Option for the 'Deadline Basis' (Select) field in DocType 'SG Report Type'
+#. Label of the aware_at (Datetime) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:42
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:54
+msgid "Aware At"
+msgstr "認知日時"
+
+#. Option for the 'Algorithm' (Select) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:16
+msgid "BLAKE3"
+msgstr ""
+
+#. Label of the bom_document (Link) field in DocType 'SG BOM Entry'
+#. Label of the bom_document (Link) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:21
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:16
+msgid "BOM Document"
+msgstr "BOM文書"
+
+#. Description of the 'Required Entry Fields' (JSON) field in DocType 'SG BOM
+#. Type'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json
+msgid "BOM Entryで必須にする追加フィールドの一覧"
+msgstr ""
+
+#. Description of the 'Entry Count' (Int) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "BOM Entryの件数"
+msgstr ""
+
+#. Label of the bom_ref (Data) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:39
+msgid "BOM Ref"
+msgstr "BOM参照"
+
+#. Label of the bom_timestamp (Datetime) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:107
+msgid "BOM Timestamp"
+msgstr "BOMのタイムスタンプ"
+
+#. Label of the bom_type (Link) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:43
+msgid "BOM Type"
+msgstr "BOMの種類"
+
+#. Label of the bom_type_name (Data) field in DocType 'SG BOM Type'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:16
+msgid "BOM Type Name"
+msgstr "BOMの種類の名前"
+
+#. Label of the bom_version (Int) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:72
+msgid "BOM Version"
+msgstr "BOMの版"
+
+#. Label of the basis_at (Datetime) field in DocType 'SG Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:47
+msgid "Basis At"
+msgstr "起算日時"
+
+#. Option for the 'Lifecycle Phase' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:80
+msgid "Build"
+msgstr "ビルド"
+
+#. Description of the 'Security Level' (Data) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:57
+msgid "CAL / IEC 62443 SL"
+msgstr ""
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "CE DoC"
+msgstr ""
+
+#. Description of the 'Lifecycle Phase' (Select) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "CISAのSBOM種別（FrameworkのSBOM Type）"
+msgstr ""
+
+#. Option for the 'TLP' (Select) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:45
+msgid "CLEAR"
+msgstr ""
+
+#. Label of the cpe (Data) field in DocType 'SG Component Version'
+#. Option for the 'Match Method' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:61
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:38
+msgid "CPE"
+msgstr ""
+
+#. Description of the 'CPE' (Data) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "CPE 2.3文字列"
+msgstr ""
+
+#. Label of the cpe_match (Data) field in DocType 'SG Affected Range'
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json:22
+msgid "CPE Match"
+msgstr "CPE照合"
+
+#. Label of the cpe_match_min_confidence (Select) field in DocType 'SG
+#. Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:40
+msgid "CPE Match Min Confidence"
+msgstr "CPE照合の最低信頼度"
+
+#. Label of the cpe_product (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:63
+msgid "CPE Product"
+msgstr "CPEのproduct"
+
+#. Label of the cpe_vendor (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:57
+msgid "CPE Vendor"
+msgstr "CPEのvendor"
+
+#. Description of the 'CPE Product' (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "CPEのproduct"
+msgstr ""
+
+#. Description of the 'CPE Vendor' (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "CPEのvendor（NVD照合用）"
+msgstr ""
+
+#. Description of the 'Confidence' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json
+msgid "CPE照合はMedium以下"
+msgstr ""
+
+#. Description of the 'CPE Match' (Data) field in DocType 'SG Affected Range'
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json
+msgid "CPE照合文字列"
+msgstr ""
+
+#. Label of the csaf_document (JSON) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:50
+msgid "CSAF Document"
+msgstr "CSAF文書"
+
+#. Description of the 'Vuln ID' (Data) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json
+msgid "CVE-2026-XXXX、GHSA-…、OSV ID"
+msgstr ""
+
+#. Label of the cvss_v3_score (Float) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:78
+msgid "CVSS v3 Score"
+msgstr "CVSS v3 スコア"
+
+#. Label of the cvss_v3_vector (Data) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:73
+msgid "CVSS v3 Vector"
+msgstr "CVSS v3 ベクトル"
+
+#. Label of the cvss_v4_score (Float) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:88
+msgid "CVSS v4 Score"
+msgstr "CVSS v4 スコア"
+
+#. Label of the cvss_v4_vector (Data) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:83
+msgid "CVSS v4 Vector"
+msgstr "CVSS v4 ベクトル"
+
+#. Label of the cwe_ids (Data) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:111
+msgid "CWE IDs"
+msgstr ""
+
+#. Option for the 'Release Type' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:50
+msgid "Calibration"
+msgstr "キャリブレーション"
+
+#. Label of the campaign_status (Select) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:75
+msgid "Campaign Status"
+msgstr "キャンペーンの状況"
+
+#. Label of the campaign_title (Data) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:32
+msgid "Campaign Title"
+msgstr "キャンペーン名"
+
+#: supplygraph/sg_bom/workflow.py:14
+msgid "Cancel"
+msgstr "キャンセル"
+
+#. Option for the 'Import Status' (Select) field in DocType 'SG BOM Document'
+#. Option for the 'Request Status' (Select) field in DocType 'SG Exchange
+#. Request'
+#. Option for the 'Campaign Status' (Select) field in DocType 'SG Update
+#. Campaign'
+#. Option for the 'Action Status' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:156
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:62
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:77
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:39
+msgid "Cancelled"
+msgstr "キャンセル"
+
+#: supplygraph/sg_bom/export/__init__.py:65
+msgid "Cancelled SBOM"
+msgstr "キャンセル済みのSBOM"
+
+#. Label of the case_severity (Select) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:62
+msgid "Case Severity"
+msgstr "ケースの深刻度"
+
+#. Label of the case_status (Select) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:68
+msgid "Case Status"
+msgstr "ケースの状況"
+
+#. Label of the case_title (Data) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:33
+msgid "Case Title"
+msgstr "ケース名"
+
+#. Label of a Card Break in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:62
+msgid "Catalog"
+msgstr "カタログ"
+
+#. Label of the category (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:34
+msgid "Category"
+msgstr "カテゴリ"
+
+#. Label of the category_name (Data) field in DocType 'SG Product Category'
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:16
+msgid "Category Name"
+msgstr "カテゴリ名"
+
+#. Option for the 'External Connectivity' (Select) field in DocType 'SG Unit
+#. Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:44
+msgid "Cellular or Internet"
+msgstr "携帯回線・インターネット"
+
+#. Label of the change_source (Select) field in DocType 'SG Configuration
+#. Change'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:67
+msgid "Change Source"
+msgstr "変更の出どころ"
+
+#. Label of the changed_on (Datetime) field in DocType 'SG Configuration
+#. Change'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:61
+msgid "Changed On"
+msgstr "変更日"
+
+#. Option for the 'Case Status' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:70
+msgid "Closed"
+msgstr "クローズ"
+
+#. Option for the 'Action Type' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:20
+msgid "Compensating Control"
+msgstr "代替策"
+
+#. Option for the 'Completeness' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:142
+msgid "Complete"
+msgstr "完全"
+
+#. Option for the 'Campaign Status' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:77
+msgid "Completed"
+msgstr "完了"
+
+#. Label of the completed_count (Int) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:89
+msgid "Completed Count"
+msgstr "完了数"
+
+#. Label of the completeness (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:140
+msgid "Completeness"
+msgstr "完全性"
+
+#. Label of the component (Link) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:37
+msgid "Component"
+msgstr "部品"
+
+#. Label of the component_name (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:33
+msgid "Component Name"
+msgstr "部品名"
+
+#. Label of the component_type (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:41
+msgid "Component Type"
+msgstr "部品の種類"
+
+#. Label of the component_version (Link) field in DocType 'SG BOM Entry'
+#. Label of the component_version (Link) field in DocType 'SG Release
+#. Component'
+#. Label of the component_version (Link) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:30
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:25
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:27
+msgid "Component Version"
+msgstr "部品の版"
+
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:38
+msgid "Component to keep"
+msgstr "残す部品"
+
+#: supplygraph/sg_bom/importer/loader.py:127
+#, python-brace-format
+msgid "Component {0} has a {1} over {2} characters"
+msgstr "部品 {0} の {1} が {2} 文字を超えています"
+
+#. Label of a Sidebar Item
+#: supplygraph/sidebar/supplygraph/supplygraph.json:50
+msgid "Components"
+msgstr "部品"
+
+#. Label of a number card in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:224
+msgid "Components to Review"
+msgstr "確認待ちの部品"
+
+#. Label of the confidence (Select) field in DocType 'SG Vulnerability Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:44
+msgid "Confidence"
+msgstr "信頼度"
+
+#. Option for the 'Release Type' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:50
+msgid "Configuration"
+msgstr "構成"
+
+#. Option for the 'Review Status' (Select) field in DocType 'SG Component'
+#. Option for the 'Match Status' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:95
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:54
+msgid "Confirmed"
+msgstr "確定"
+
+#. Label of the control_description (Text Editor) field in DocType 'SG
+#. Compensating Control'
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:61
+msgid "Control Description"
+msgstr "対策の説明"
+
+#. Label of the copyright_text (Small Text) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:131
+msgid "Copyright Text"
+msgstr "著作権表示"
+
+#. Label of the country (Link) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:45
+msgid "Country"
+msgstr "国"
+
+#. Option for the 'Adjusted Severity' (Select) field in DocType 'SG Impact
+#. Assessment'
+#. Option for the 'Severity' (Select) field in DocType 'SG Vulnerability'
+#. Option for the 'Case Severity' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:81
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:95
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:64
+msgid "Critical"
+msgstr "緊急"
+
+#. Label of a number card in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:212
+msgid "Critical Vulnerabilities"
+msgstr "緊急の脆弱性"
+
+#. Option for the 'Organization Type' (Select) field in DocType 'SG
+#. Organization'
+#. Option for the 'Intake Source' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:31
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:48
+msgid "Customer"
+msgstr "顧客"
+
+#. Option for the 'Change Source' (Select) field in DocType 'SG Configuration
+#. Change'
+#. Option for the 'Source' (Select) field in DocType 'SG Installed Release'
+#. Option for the 'Delivery Method' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:69
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:46
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:41
+msgid "Customer Install"
+msgstr "顧客による導入"
+
+#. Option for the 'Action Type' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:20
+msgid "Customer Notification"
+msgstr "顧客への通知"
+
+#. Option for the 'Format' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:53
+msgid "CycloneDX"
+msgstr ""
+
+#. Description of the 'Completeness' (Select) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "CycloneDX compositionsに対応"
+msgstr ""
+
+#. Description of the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "CycloneDXのcomponent typeに合わせる"
+msgstr ""
+
+#. Description of the 'Serial Number' (Data) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "CycloneDXのserialNumber / SPDXのdocumentNamespace"
+msgstr ""
+
+#. Option for the 'Sync Interval' (Select) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:35
+msgid "Daily"
+msgstr "毎日"
+
+#. Label of the deadline_basis (Select) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:40
+msgid "Deadline Basis"
+msgstr "期限の起算点"
+
+#. Label of the deadline_days (Int) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:55
+msgid "Deadline Days"
+msgstr "期限（日）"
+
+#. Label of the deadline_hours (Int) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:49
+msgid "Deadline Hours"
+msgstr "期限（時間）"
+
+#. Option for the 'Unit Status' (Select) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:74
+msgid "Decommissioned"
+msgstr "廃止"
+
+#. Label of the default_release (Link) field in DocType 'SG Model Unit'
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json:31
+msgid "Default Release"
+msgstr "標準リリース"
+
+#. Label of the delivery_method (Select) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:39
+msgid "Delivery Method"
+msgstr "提供方法"
+
+#: supplygraph/devtools/demo.py:197
+msgid "Demo data can be loaded or removed only on a site with developer_mode or allow_tests"
+msgstr "デモデータの投入と削除は、developer_mode または allow_tests が有効なサイトでのみできます"
+
+#: supplygraph/devtools/demo.py:131
+msgid "Demo data is already loaded. Run supplygraph.devtools.demo.purge first."
+msgstr "デモデータは投入済みです。先に supplygraph.devtools.demo.purge を実行してください。"
+
+#. Option for the 'Lifecycle Phase' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:80
+msgid "Deployed"
+msgstr "配備済み"
+
+#. Label of the depth (Int) field in DocType 'SG Release Component'
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:41
+msgid "Depth"
+msgstr "深さ"
+
+#. Label of the description (Small Text) field in DocType 'SG Component'
+#. Label of the description (Text) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:88
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:58
+msgid "Description"
+msgstr "説明"
+
+#. Option for the 'Lifecycle Phase' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:80
+msgid "Design"
+msgstr "設計"
+
+#. Option for the 'Lifecycle Status' (Select) field in DocType 'SG Product
+#. Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:59
+msgid "Development"
+msgstr "開発中"
+
+#. Label of the domain_impact (Small Text) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:86
+msgid "Domain Impact"
+msgstr "業務への影響"
+
+#. Option for the 'Action Status' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:39
+msgid "Done"
+msgstr "完了"
+
+#. Label of the download_location (Small Text) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:119
+msgid "Download Location"
+msgstr "ダウンロード元"
+
+#. Option for the 'Campaign Status' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:77
+msgid "Draft"
+msgstr "下書き"
+
+#. Option for the 'Report Status' (Select) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:64
+msgid "Drafting"
+msgstr "作成中"
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "Drone Registration"
+msgstr "ドローン登録"
+
+#. Label of the due_at (Datetime) field in DocType 'SG Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:55
+msgid "Due At"
+msgstr "期限日時"
+
+#. Label of the due_date (Date) field in DocType 'SG Exchange Request'
+#. Label of the due_date (Date) field in DocType 'SG Remediation Action'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:55
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:32
+msgid "Due Date"
+msgstr "期日"
+
+#. Label of the epss_score (Float) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:99
+msgid "EPSS Score"
+msgstr "EPSSスコア"
+
+#. Label of the end_of_support_date (Date) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:101
+msgid "End Of Support Date"
+msgstr "サポート終了日"
+
+#. Option for the 'Lifecycle Status' (Select) field in DocType 'SG Product
+#. Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:59
+msgid "End of Production"
+msgstr "生産終了"
+
+#. Option for the 'Support Status' (Select) field in DocType 'SG Component
+#. Version'
+#. Option for the 'Lifecycle Status' (Select) field in DocType 'SG Product
+#. Model'
+#. Option for the 'Release Status' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:96
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:59
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:65
+msgid "End of Support"
+msgstr "サポート終了"
+
+#. Label of the entry_count (Int) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:175
+msgid "Entry Count"
+msgstr "エントリ数"
+
+#. Option for the 'Severity' (Select) field in DocType 'SG BOM Validation
+#. Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:26
+msgid "Error"
+msgstr "エラー"
+
+#. Label of the error_detail (Small Text) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:48
+msgid "Error Detail"
+msgstr "エラーの詳細"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:58
+msgid "Export Anyway"
+msgstr "このまま出力"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:13
+msgid "Export SBOM"
+msgstr "SBOM を出力"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:56
+msgid "Export it anyway?"
+msgstr "このまま出力しますか？"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:70
+msgid "Exported with Warnings"
+msgstr "警告つきで出力しました"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:49
+#, python-brace-format
+msgid "Exporting {0}..."
+msgstr "{0} を出力しています…"
+
+#. Label of the external_bom (Link) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:69
+msgid "External BOM"
+msgstr "外部BOM"
+
+#. Label of the external_bom_ref (Small Text) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:76
+msgid "External BOM Ref"
+msgstr "外部BOMの参照"
+
+#. Label of the external_connectivity (Select) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:42
+msgid "External Connectivity"
+msgstr "外部接続"
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "FDA 510(k)"
+msgstr ""
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "FDA PMA"
+msgstr ""
+
+#. Option for the 'Record Status' (Select) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:37
+msgid "Failed"
+msgstr "失敗"
+
+#. Label of the failed_count (Int) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:95
+msgid "Failed Count"
+msgstr "失敗数"
+
+#. Option for the 'Match Status' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:54
+msgid "False Positive"
+msgstr "誤検知"
+
+#. Label of the file_name (Data) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:113
+msgid "File Name"
+msgstr "ファイル名"
+
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:15
+msgid "Find Duplicates"
+msgstr "重複を探す"
+
+#. Option for the 'Release Type' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:50
+msgid "Firmware"
+msgstr "ファームウェア"
+
+#. Option for the 'Reference Type' (Select) field in DocType 'SG Reference'
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:24
+msgid "Fix"
+msgstr "修正"
+
+#. Option for the 'Deadline Basis' (Select) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:42
+msgid "Fix Available"
+msgstr "修正あり"
+
+#. Option for the 'VEX Status' (Select) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:53
+msgid "Fixed"
+msgstr "修正済み"
+
+#. Option for the 'Deadline Basis' (Select) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:42
+msgid "Fixed Date"
+msgstr "修正日"
+
+#. Label of the fixed_in_release (Link) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:92
+msgid "Fixed In Release"
+msgstr "修正したリリース"
+
+#. Label of the fixed_version (Data) field in DocType 'SG Affected Range'
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json:34
+msgid "Fixed Version"
+msgstr "修正版"
+
+#. Label of the format (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:51
+msgid "Format"
+msgstr "形式"
+
+#: supplygraph/sg_bom/export/__init__.py:53
+#, python-brace-format
+msgid "Format {0} cannot be exported. Use one of: {1}"
+msgstr "形式 {0} は出力できません。次のいずれかを使ってください：{1}"
+
+#. Label of the from_entry (Link) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:25
+msgid "From Entry"
+msgstr "依存元のエントリ"
+
+#. Label of the from_release (Link) field in DocType 'SG Campaign Release'
+#. Label of the from_release (Link) field in DocType 'SG Configuration Change'
+#: supplygraph/sg_product/doctype/sg_campaign_release/sg_campaign_release.json:23
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:47
+msgid "From Release"
+msgstr "更新前のリリース"
+
+#. Option for the 'Granularity' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:149
+msgid "Full"
+msgstr "フル"
+
+#. Option for the 'TLP' (Select) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:45
+msgid "GREEN"
+msgstr ""
+
+#. Option for the 'Source' (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:47
+msgid "GitHub"
+msgstr ""
+
+#. Label of the granularity (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:147
+msgid "Granularity"
+msgstr "粒度"
+
+#. Label of the hash_value (Data) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:22
+msgid "Hash Value"
+msgstr "ハッシュ値"
+
+#. Label of the hashes (Table) field in DocType 'SG Component Version'
+#. Label of the hashes (Table) field in DocType 'SG Release'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:67
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:75
+msgid "Hashes"
+msgstr "ハッシュ"
+
+#. Option for the 'CPE Match Min Confidence' (Select) field in DocType 'SG
+#. Settings'
+#. Option for the 'Adjusted Severity' (Select) field in DocType 'SG Impact
+#. Assessment'
+#. Option for the 'Severity' (Select) field in DocType 'SG Vulnerability'
+#. Option for the 'Case Severity' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#. Option for the 'Confidence' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:42
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:81
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:95
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:64
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:46
+msgid "High"
+msgstr "高"
+
+#. Label of a Sidebar Item
+#: supplygraph/sidebar/supplygraph/supplygraph.json:18
+msgid "Home"
+msgstr "ホーム"
+
+#. Option for the 'Sync Interval' (Select) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:35
+msgid "Hourly"
+msgstr "毎時"
+
+#. Label of the identifier (Data) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:24
+msgid "Identifier"
+msgstr "識別子"
+
+#. Label of a shortcut in the SupplyGraph Workspace
+#. Label of a Sidebar Item
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:278
+#: supplygraph/sidebar/supplygraph/supplygraph.json:130
+msgid "Impact Assessments"
+msgstr "影響評価"
+
+#. Label of the impact_statement (Small Text) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:67
+msgid "Impact Statement"
+msgstr "影響の説明"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document_list.js:9
+msgid "Import SBOM"
+msgstr "SBOMを取り込む"
+
+#. Label of the import_status (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:154
+msgid "Import Status"
+msgstr "取込の状況"
+
+#. Option for the 'Lifecycle Status' (Select) field in DocType 'SG Product
+#. Model'
+#. Option for the 'Unit Status' (Select) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:59
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:74
+msgid "In Production"
+msgstr "生産中"
+
+#. Option for the 'Campaign Status' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:77
+msgid "In Progress"
+msgstr "進行中"
+
+#. Option for the 'Campaign Status' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:77
+msgid "In Review"
+msgstr "確認中"
+
+#. Option for the 'Unit Status' (Select) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:74
+msgid "In Service"
+msgstr "稼働中"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.js:15
+msgid "Include Not Affected and Fixed"
+msgstr "影響なしと修正済みも含める"
+
+#. Option for the 'Completeness' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:142
+msgid "Incomplete"
+msgstr "不完全"
+
+#. Option for the 'Severity' (Select) field in DocType 'SG BOM Validation
+#. Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:26
+msgid "Info"
+msgstr "情報"
+
+#. Label of the installed_location (Data) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:66
+msgid "Installed Location"
+msgstr "設置場所"
+
+#. Label of the installed_on (Datetime) field in DocType 'SG Installed Release'
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:39
+msgid "Installed On"
+msgstr "搭載日"
+
+#. Label of the installed_releases (Table) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:78
+msgid "Installed Releases"
+msgstr "搭載リリース"
+
+#. Label of the intake_source (Select) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:46
+msgid "Intake Source"
+msgstr "受付元"
+
+#. Option for the 'Format' (Select) field in DocType 'SG BOM Document'
+#. Option for the 'Organization Type' (Select) field in DocType 'SG
+#. Organization'
+#. Option for the 'Intake Source' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:53
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:31
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:48
+msgid "Internal"
+msgstr "内部"
+
+#. Option for the 'External Connectivity' (Select) field in DocType 'SG Unit
+#. Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:44
+msgid "Internal Bus"
+msgstr "内部バス"
+
+#: supplygraph/sg_product/product_unit.py:48
+msgid "Invalid Serial Number"
+msgstr "番号が正しくありません"
+
+#: supplygraph/sg_product/product_unit.py:41
+msgid "Invalid Serial Number Rule"
+msgstr "番号の決まりが正しくありません"
+
+#. Option for the 'Case Status' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:70
+msgid "Investigating"
+msgstr "調査中"
+
+#. Label of the is_active (Check) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:72
+msgid "Is Active"
+msgstr "有効"
+
+#. Label of the is_direct (Check) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:51
+msgid "Is Direct"
+msgstr "直接依存"
+
+#. Label of the is_modified (Check) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:107
+msgid "Is Modified"
+msgstr "改変あり"
+
+#. Label of the is_optional (Check) field in DocType 'SG Model Unit'
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json:38
+msgid "Is Optional"
+msgstr "オプション"
+
+#. Label of the is_proprietary (Check) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:76
+msgid "Is Proprietary"
+msgstr "独自ライセンス"
+
+#. Label of the issued_on (Date) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:31
+msgid "Issued On"
+msgstr "発行日"
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "JC-STAR"
+msgstr ""
+
+#. Description of the 'Valid Until' (Date) field in DocType 'SG Regulatory
+#. Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json
+msgid "JC-STARラベル等の有効期限"
+msgstr ""
+
+#. Label of the justification (Select) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:59
+msgid "Justification"
+msgstr "根拠"
+
+#. Label of the known_exploited (Check) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:105
+msgid "Known Exploited"
+msgstr "悪用が確認済み"
+
+#. Label of the license_concluded (Link) field in DocType 'SG BOM Entry'
+#. Label of the license_concluded (Link) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:63
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:74
+msgid "License Concluded"
+msgstr "確定ライセンス"
+
+#. Label of the license_declared (Data) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:125
+msgid "License Declared"
+msgstr "宣言ライセンス"
+
+#. Label of the license_expression (Data) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:81
+msgid "License Expression"
+msgstr "ライセンス式"
+
+#. Label of the license_name (Data) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:27
+msgid "License Name"
+msgstr "ライセンス名"
+
+#. Label of the lifecycle_phase (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:78
+msgid "Lifecycle Phase"
+msgstr "ライフサイクル段階"
+
+#. Label of the lifecycle_status (Select) field in DocType 'SG Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:57
+msgid "Lifecycle Status"
+msgstr "ライフサイクルの状況"
+
+#. Option for the 'Support Status' (Select) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:96
+msgid "Limited"
+msgstr "限定"
+
+#. Option for the 'External Connectivity' (Select) field in DocType 'SG Unit
+#. Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:44
+msgid "Local Wireless"
+msgstr "近距離無線"
+
+#. Option for the 'CPE Match Min Confidence' (Select) field in DocType 'SG
+#. Settings'
+#. Option for the 'Adjusted Severity' (Select) field in DocType 'SG Impact
+#. Assessment'
+#. Option for the 'Severity' (Select) field in DocType 'SG Vulnerability'
+#. Option for the 'Case Severity' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#. Option for the 'Confidence' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:42
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:81
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:95
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:64
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:46
+msgid "Low"
+msgstr "低"
+
+#. Option for the 'Delivery Method' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:41
+msgid "Maintenance Window"
+msgstr "メンテナンス時間帯"
+
+#. Option for the 'Source' (Select) field in DocType 'SG Vulnerability'
+#. Option for the 'Match Method' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:47
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:38
+msgid "Manual"
+msgstr "手動"
+
+#. Label of the manufactured_on (Date) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:41
+msgid "Manufactured On"
+msgstr "製造日"
+
+#. Option for the 'Organization Type' (Select) field in DocType 'SG
+#. Organization'
+#. Label of the manufacturer (Link) field in DocType 'SG Product Model'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:31
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:44
+msgid "Manufacturer"
+msgstr "製造者"
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match_list.js:19
+msgid "Mark as False Positive"
+msgstr "誤検知にする"
+
+#. Label of the market (Link) field in DocType 'SG Market Row'
+#. Label of the market (Link) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_market_row/sg_market_row.json:13
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:52
+msgid "Market"
+msgstr "仕向地"
+
+#. Label of the market_code (Data) field in DocType 'SG Market'
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:14
+msgid "Market Code"
+msgstr "仕向地コード"
+
+#. Label of the market_name (Data) field in DocType 'SG Market'
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:23
+msgid "Market Name"
+msgstr "仕向地名"
+
+#. Label of the markets (Table MultiSelect) field in DocType 'SG Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:50
+msgid "Markets"
+msgstr "仕向地"
+
+#. Label of the match_method (Select) field in DocType 'SG Vulnerability Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:36
+msgid "Match Method"
+msgstr "照合方法"
+
+#. Label of the match_status (Select) field in DocType 'SG Vulnerability Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:52
+msgid "Match Status"
+msgstr "照合の状況"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:45
+msgid "Matched Components"
+msgstr "照合した部品"
+
+#. Label of a Sidebar Item
+#: supplygraph/sidebar/supplygraph/supplygraph.json:114
+msgid "Matches"
+msgstr "照合結果"
+
+#. Option for the 'Change Source' (Select) field in DocType 'SG Configuration
+#. Change'
+#. Option for the 'Source' (Select) field in DocType 'SG Installed Release'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:69
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:46
+msgid "Measured"
+msgstr "実測"
+
+#. Label of the measured_identifier (Data) field in DocType 'SG Installed
+#. Release'
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:51
+msgid "Measured Identifier"
+msgstr "実測の識別子"
+
+#. Option for the 'CPE Match Min Confidence' (Select) field in DocType 'SG
+#. Settings'
+#. Option for the 'Adjusted Severity' (Select) field in DocType 'SG Impact
+#. Assessment'
+#. Option for the 'Severity' (Select) field in DocType 'SG Vulnerability'
+#. Option for the 'Case Severity' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#. Option for the 'Confidence' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:42
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:81
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:95
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:64
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:46
+msgid "Medium"
+msgstr "中"
+
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:57
+msgid "Merge"
+msgstr "統合"
+
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:28
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:56
+msgid "Merge Components"
+msgstr "部品を統合"
+
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:51
+msgid "Merged"
+msgstr "統合済み"
+
+#. Label of the message (Small Text) field in DocType 'SG BOM Validation
+#. Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:38
+msgid "Message"
+msgstr "メッセージ"
+
+#. Label of the model_code (Data) field in DocType 'SG Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:21
+msgid "Model Code"
+msgstr "モデルコード"
+
+#. Label of the model_name (Data) field in DocType 'SG Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:29
+msgid "Model Name"
+msgstr "モデル名"
+
+#. Label of the modified_on (Datetime) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:68
+msgid "Modified On"
+msgstr "更新日"
+
+#. Option for the 'Case Status' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:70
+msgid "Monitoring"
+msgstr "監視中"
+
+#. Option for the 'Tier' (Select) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:40
+msgid "N/A"
+msgstr "該当なし"
+
+#. Option for the 'Source' (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:47
+msgid "NVD"
+msgstr ""
+
+#. Label of the nvd_api_key (Password) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:23
+msgid "NVD Api Key"
+msgstr "NVD APIキー"
+
+#. Label of the nvd_enabled (Check) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:18
+msgid "NVD Enabled"
+msgstr "NVDを有効にする"
+
+#. Label of the naming_series (Select) field in DocType 'SG BOM Document'
+#. Label of the naming_series (Select) field in DocType 'SG Component'
+#. Label of the naming_series (Select) field in DocType 'SG Component Version'
+#. Label of the naming_series (Select) field in DocType 'SG Regulatory Report'
+#. Label of the naming_series (Select) field in DocType 'SG Exchange Request'
+#. Label of the naming_series (Select) field in DocType 'SG Configuration
+#. Change'
+#. Label of the naming_series (Select) field in DocType 'SG Release'
+#. Label of the naming_series (Select) field in DocType 'SG Update Campaign'
+#. Label of the naming_series (Select) field in DocType 'SG Compensating
+#. Control'
+#. Label of the naming_series (Select) field in DocType 'SG Impact Assessment'
+#. Label of the naming_series (Select) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:35
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:24
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:29
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:24
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:21
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:22
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:25
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:24
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:22
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:25
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:25
+msgid "Naming Series"
+msgstr "命名規則"
+
+#. Option for the 'Review Status' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:95
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:8
+msgid "Needs Review"
+msgstr "要確認"
+
+#. Option for the 'Category' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:36
+msgid "Network Copyleft"
+msgstr "ネットワークコピーレフト"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.js:37
+msgid "No product model"
+msgstr "製品モデルなし"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.js:42
+msgid "No units registered"
+msgstr "実機の登録なし"
+
+#. Option for the 'External Connectivity' (Select) field in DocType 'SG Unit
+#. Type'
+#. Option for the 'Adjusted Severity' (Select) field in DocType 'SG Impact
+#. Assessment'
+#. Option for the 'Severity' (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:44
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:81
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:95
+msgid "None"
+msgstr "なし"
+
+#. Option for the 'VEX Status' (Select) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:53
+msgid "Not Affected"
+msgstr "影響なし"
+
+#. Description of the 'Justification' (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json
+msgid "Not Affectedの場合に必須"
+msgstr ""
+
+#. Option for the 'Report Status' (Select) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:64
+msgid "Not Required"
+msgstr "不要"
+
+#. Option for the 'Report Status' (Select) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:64
+msgid "Not Started"
+msgstr "未着手"
+
+#. Label of the osi_approved (Check) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:42
+msgid "OSI Approved"
+msgstr "OSI承認済み"
+
+#. Option for the 'Source' (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:47
+msgid "OSV"
+msgstr ""
+
+#: supplygraph/sg_vulnerability/osv.py:373
+#, python-brace-format
+msgid "OSV API failed after {0} attempts for {1}: {2}"
+msgstr "OSV API の呼び出しが {0} 回失敗しました（{1}）：{2}"
+
+#: supplygraph/sg_vulnerability/osv.py:371
+#, python-brace-format
+msgid "OSV API returned HTTP {0} for {1}"
+msgstr "OSV API が HTTP {0} を返しました（{1}）"
+
+#. Label of the osv_enabled (Check) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:28
+msgid "OSV Enabled"
+msgstr "OSVを有効にする"
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability_list.js:34
+msgid "OSV is not enabled"
+msgstr "OSV が有効になっていません"
+
+#: supplygraph/sg_vulnerability/osv.py:118
+msgid "OSV is not enabled. Turn on OSV Enabled in SG Settings."
+msgstr "OSV が有効になっていません。SG Settings の「OSVを有効にする」をオンにしてください。"
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability_list.js:27
+msgid "OSV sync failed"
+msgstr "OSV との同期に失敗しました"
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability_list.js:39
+#, python-brace-format
+msgid "OSV sync finished: {0} new and {1} updated vulnerabilities, {2} new matches"
+msgstr "OSV との同期が終わりました：脆弱性 新規 {0} 件・更新 {1} 件、照合 新規 {2} 件"
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability_list.js:18
+msgid "OSV sync is already running"
+msgstr "OSV との同期はすでに実行中です"
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability_list.js:17
+msgid "OSV sync started"
+msgstr "OSV との同期を始めました"
+
+#. Option for the 'Change Source' (Select) field in DocType 'SG Configuration
+#. Change'
+#. Option for the 'Source' (Select) field in DocType 'SG Installed Release'
+#. Option for the 'Delivery Method' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:69
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:46
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:41
+msgid "OTA"
+msgstr ""
+
+#. Label of the obligations (Text Editor) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:55
+msgid "Obligations"
+msgstr "義務"
+
+#. Option for the 'Action Status' (Select) field in DocType 'SG Remediation
+#. Action'
+#. Option for the 'Match Status' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:39
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:54
+msgid "Open"
+msgstr "オープン"
+
+#. Label of a number card in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:208
+msgid "Open Matches"
+msgstr "未対応の照合結果"
+
+#. Option for the 'Organization Type' (Select) field in DocType 'SG
+#. Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:31
+msgid "Open Source Project"
+msgstr "オープンソースプロジェクト"
+
+#. Label of the organization_name (Data) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:20
+msgid "Organization Name"
+msgstr "組織名"
+
+#. Label of the organization_type (Select) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:29
+msgid "Organization Type"
+msgstr "組織の種類"
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#. Option for the 'Reference Type' (Select) field in DocType 'SG Reference'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:24
+msgid "Other"
+msgstr "その他"
+
+#. Option for the 'Report Status' (Select) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:64
+msgid "Overdue"
+msgstr "期限超過"
+
+#. Label of the owner_org (Link) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:59
+msgid "Owner Org"
+msgstr "所有組織"
+
+#. Label of the owner_user (Link) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:76
+msgid "Owner User"
+msgstr "担当者"
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "PMDA Approval"
+msgstr ""
+
+#. Label of the psirt_email (Data) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:58
+msgid "PSIRT Email"
+msgstr "PSIRTのメールアドレス"
+
+#. Label of the purl (Data) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:54
+msgid "PURL"
+msgstr ""
+
+#. Label of the purl_base (Data) field in DocType 'SG Component'
+#. Label of the purl_base (Data) field in DocType 'SG Affected Range'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:50
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json:16
+msgid "PURL Base"
+msgstr "PURLベース"
+
+#. Option for the 'Match Method' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:38
+msgid "PURL Exact"
+msgstr "PURL完全一致"
+
+#. Option for the 'Match Method' (Select) field in DocType 'SG Vulnerability
+#. Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:38
+msgid "PURL Range"
+msgstr "PURL範囲"
+
+#. Option for the 'Import Status' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:156
+msgid "Parsed"
+msgstr "解析済み"
+
+#. Option for the 'Action Type' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:20
+msgid "Patch"
+msgstr "パッチ"
+
+#. Option for the 'Record Status' (Select) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:37
+msgid "Pending"
+msgstr "保留"
+
+#. Option for the 'Deadline Basis' (Select) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:42
+msgid "Periodic"
+msgstr "定期"
+
+#. Option for the 'Category' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:36
+msgid "Permissive"
+msgstr "パーミッシブ"
+
+#. Option for the 'Release Status' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:65
+msgid "Planned"
+msgstr "予定"
+
+#. Label of the planned_start (Date) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:70
+msgid "Planned Start"
+msgstr "開始予定"
+
+#. Label of the plant (Data) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:46
+msgid "Plant"
+msgstr "工場"
+
+#. Label of the policy (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:47
+msgid "Policy"
+msgstr "ポリシー"
+
+#. Label of the previous_release (Link) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:88
+msgid "Previous Release"
+msgstr "前のリリース"
+
+#. Label of the primary_bom (Link) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:81
+msgid "Primary BOM"
+msgstr "主BOM"
+
+#. Label of the primary_component (Link) field in DocType 'SG BOM Document'
+#. Description of the 'Primary Component' (Link) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:114
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:117
+msgid "Primary Component"
+msgstr "主要部品"
+
+#. Label of the product_category (Link) field in DocType 'SG Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:36
+msgid "Product Category"
+msgstr "製品カテゴリ"
+
+#. Label of the product_model (Link) field in DocType 'SG Campaign Model'
+#. Label of the product_model (Link) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_campaign_model/sg_campaign_model.json:13
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:32
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:52
+msgid "Product Model"
+msgstr "製品モデル"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:148
+msgid "Product Models"
+msgstr "製品モデル"
+
+#. Label of the product_unit (Link) field in DocType 'SG Configuration Change'
+#. Label of the product_unit (Link) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:30
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:26
+msgid "Product Unit"
+msgstr "実機"
+
+#. Label of a Sidebar Item
+#: supplygraph/sidebar/supplygraph/supplygraph.json:82
+msgid "Product Units"
+msgstr "実機"
+
+#. Label of a Card Break in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:100
+msgid "Products"
+msgstr "製品"
+
+#. Option for the 'Policy' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:49
+msgid "Prohibited"
+msgstr "禁止"
+
+#. Option for the 'Category' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:36
+msgid "Proprietary"
+msgstr "独自"
+
+#. Label of the provided_by_app (Data) field in DocType 'SG BOM Type'
+#. Label of the provided_by_app (Data) field in DocType 'SG Report Type'
+#. Label of the provided_by_app (Data) field in DocType 'SG Product Category'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:25
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:61
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:36
+msgid "Provided By App"
+msgstr "提供アプリ"
+
+#. Option for the 'Intake Source' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:48
+msgid "Public Disclosure"
+msgstr "公開情報"
+
+#. Option for the 'Category' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:36
+msgid "Public Domain"
+msgstr "パブリックドメイン"
+
+#. Label of the published_at (Datetime) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:57
+msgid "Published At"
+msgstr "公開日時"
+
+#. Label of the published_on (Datetime) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:63
+msgid "Published On"
+msgstr "公開日"
+
+#. Option for the 'TLP' (Select) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:45
+msgid "RED"
+msgstr ""
+
+#. Label of the reason_unpatchable (Small Text) field in DocType 'SG
+#. Compensating Control'
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:55
+msgid "Reason Unpatchable"
+msgstr "修正できない理由"
+
+#. Option for the 'Case Status' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:70
+msgid "Received"
+msgstr "受領済み"
+
+#. Label of the recipient (Data) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:34
+msgid "Recipient"
+msgstr "提出先"
+
+#. Label of the record_status (Select) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:35
+msgid "Record Status"
+msgstr "レコードの状況"
+
+#: supplygraph/devtools/synthetic.py:148
+#, python-brace-format
+msgid "Records outside the synthetic data point to it, so nothing was deleted. Remove them first: {0}"
+msgstr "合成データ以外のレコードが合成データを参照しているため、何も削除していません。先に次のレコードを削除してください：{0}"
+
+#. Label of the reference_doctype (Link) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:43
+msgid "Reference Doctype"
+msgstr "参照先DocType"
+
+#. Label of the reference_name (Dynamic Link) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:49
+msgid "Reference Name"
+msgstr "参照先の名前"
+
+#. Label of the reference_type (Select) field in DocType 'SG Reference'
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:22
+msgid "Reference Type"
+msgstr "参照の種類"
+
+#. Label of the references (Table) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:123
+msgid "References"
+msgstr "参照"
+
+#. Label of the regulation (Data) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:28
+msgid "Regulation"
+msgstr "規制"
+
+#. Label of the regulatory_ids (Table) field in DocType 'SG Product Model'
+#. Label of the regulatory_ids (Table) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:69
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:85
+msgid "Regulatory IDs"
+msgstr "規制上の識別子"
+
+#: supplygraph/sg_bom/workflow.py:14
+msgid "Reject"
+msgstr "却下する"
+
+#. Option for the 'Import Status' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:156
+msgid "Rejected"
+msgstr "却下"
+
+#. Label of a number card in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:220
+msgid "Rejected SBOMs"
+msgstr "却下されたSBOM"
+
+#. Label of the relationship (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:41
+msgid "Relationship"
+msgstr "関係"
+
+#. Label of the release (Link) field in DocType 'SG Release Component'
+#. Label of the release (Link) field in DocType 'SG Exchange Request'
+#. Label of the release (Link) field in DocType 'SG Installed Release'
+#. Label of the release (Link) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:16
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:37
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:31
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:42
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:29
+msgid "Release"
+msgstr "リリース"
+
+#. Label of the release_changes (Table) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:54
+msgid "Release Changes"
+msgstr "リリースの変更"
+
+#. Label of the release_code (Data) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:33
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:34
+msgid "Release Code"
+msgstr "リリースコード"
+
+#. Label of the release_notes (Text Editor) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:100
+msgid "Release Notes"
+msgstr "リリースノート"
+
+#. Label of the release_status (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:63
+msgid "Release Status"
+msgstr "リリースの状況"
+
+#. Label of the release_type (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:48
+msgid "Release Type"
+msgstr "リリースの種類"
+
+#. Option for the 'Release Status' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:65
+msgid "Released"
+msgstr "リリース済み"
+
+#. Label of the released_on (Date) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:70
+msgid "Released On"
+msgstr "リリース日"
+
+#. Label of a Sidebar Item
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:147
+#: supplygraph/sidebar/supplygraph/supplygraph.json:66
+msgid "Releases"
+msgstr "リリース"
+
+#. Option for the 'Case Status' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:70
+msgid "Remediating"
+msgstr "修正中"
+
+#. Option for the 'Reference Type' (Select) field in DocType 'SG Reference'
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:24
+msgid "Report"
+msgstr "レポート"
+
+#. Label of the report_body (Text Editor) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:80
+msgid "Report Body"
+msgstr "報告の本文"
+
+#. Label of the report_status (Select) field in DocType 'SG Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:62
+msgid "Report Status"
+msgstr "報告の状況"
+
+#. Label of the report_type (Link) field in DocType 'SG Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:32
+msgid "Report Type"
+msgstr "報告の種類"
+
+#. Label of the report_type_name (Data) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:19
+msgid "Report Type Name"
+msgstr "報告の種類の名前"
+
+#. Label of a Card Break in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:186
+msgid "Reports"
+msgstr "レポート"
+
+#. Label of the repository_url (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:82
+msgid "Repository URL"
+msgstr "リポジトリURL"
+
+#. Label of the request_status (Select) field in DocType 'SG Exchange Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:60
+msgid "Request Status"
+msgstr "依頼の状況"
+
+#. Option for the 'Request Status' (Select) field in DocType 'SG Exchange
+#. Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:62
+msgid "Requested"
+msgstr "依頼済み"
+
+#. Label of the requested_bom_type (Link) field in DocType 'SG Exchange
+#. Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:47
+msgid "Requested BOM Type"
+msgstr "依頼するBOMの種類"
+
+#. Label of the required_entry_fields (JSON) field in DocType 'SG BOM Type'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:31
+msgid "Required Entry Fields"
+msgstr "エントリの必須項目"
+
+#. Option for the 'Intake Source' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:48
+msgid "Researcher"
+msgstr "研究者"
+
+#. Label of the responsible_org (Link) field in DocType 'SG Remediation Action'
+#. Label of the responsible_org (Link) field in DocType 'SG Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:26
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:83
+msgid "Responsible Org"
+msgstr "責任組織"
+
+#. Label of the return_reason (Small Text) field in DocType 'SG Exchange
+#. Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:73
+msgid "Return Reason"
+msgstr "差し戻しの理由"
+
+#. Option for the 'Request Status' (Select) field in DocType 'SG Exchange
+#. Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:62
+msgid "Returned"
+msgstr "差し戻し"
+
+#. Option for the 'Policy' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:49
+msgid "Review Required"
+msgstr "確認が必要"
+
+#. Label of the review_status (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:93
+msgid "Review Status"
+msgstr "確認の状況"
+
+#. Label of the reviewed_by (Link) field in DocType 'SG Vulnerability Match'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:59
+msgid "Reviewed By"
+msgstr "確認者"
+
+#. Label of the revision_date (Date) field in DocType 'SG Advisory Revision'
+#: supplygraph/sg_compliance/doctype/sg_advisory_revision/sg_advisory_revision.json:22
+msgid "Revision Date"
+msgstr "改訂日"
+
+#. Label of the revision_number (Data) field in DocType 'SG Advisory Revision'
+#: supplygraph/sg_compliance/doctype/sg_advisory_revision/sg_advisory_revision.json:15
+msgid "Revision Number"
+msgstr "改訂番号"
+
+#. Label of the revisions (Table) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:62
+msgid "Revisions"
+msgstr "改訂履歴"
+
+#. Option for the 'Action Type' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:20
+msgid "Risk Acceptance"
+msgstr "リスク受容"
+
+#. Option for the 'Record Status' (Select) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:37
+msgid "Rolled Back"
+msgstr "ロールバック済み"
+
+#. Label of the rule_code (Data) field in DocType 'SG BOM Validation Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:16
+msgid "Rule Code"
+msgstr "ルールコード"
+
+#. Option for the 'Lifecycle Phase' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:80
+msgid "Runtime"
+msgstr "実行時"
+
+#. Label of a Card Break in the SupplyGraph Workspace
+#. Label of a Sidebar Item
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:34
+#: supplygraph/sidebar/supplygraph/supplygraph.json:34
+msgid "SBOM"
+msgstr ""
+
+#. Description of the 'Author Name' (Data) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:90
+msgid "SBOM Author"
+msgstr "SBOMの作成者"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:55
+#: supplygraph/sg_bom/export/__init__.py:103
+msgid "SBOM Has Errors"
+msgstr "SBOMにエラーがあります"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document_list.js:31
+msgid "SBOM import failed"
+msgstr "SBOMの取込に失敗しました"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document_list.js:20
+msgid "SBOM import started"
+msgstr "SBOMの取込を開始しました"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document_list.js:45
+#, python-brace-format
+msgid "SBOM imported, but rejected by validation: {0}"
+msgstr "SBOMを取り込みましたが、検証で却下されました：{0}"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document_list.js:39
+#, python-brace-format
+msgid "SBOM imported, but validation failed: {0}"
+msgstr "SBOMを取り込みましたが、検証を実行できませんでした：{0}"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document_list.js:52
+#, python-brace-format
+msgid "SBOM imported: {0}"
+msgstr "SBOMを取り込みました：{0}"
+
+#. Label of a shortcut in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:261
+msgid "SBOMs"
+msgstr ""
+
+#. Label of a chart in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:14
+msgid "SBOMs by Status"
+msgstr "状況別のSBOM"
+
+#. Label of a number card in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:216
+msgid "SBOMs to Accept"
+msgstr "受入待ちのSBOM"
+
+#. Description of the 'Supplier Org' (Link) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "SBOMを提供した組織"
+msgstr ""
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:216
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:102
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:63
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:68
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:67
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:127
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:157
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:81
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:98
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:79
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:103
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:125
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:86
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:99
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:115
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:50
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:61
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:103
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:113
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:125
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:86
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:121
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:73
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:114
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:139
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:149
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:128
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:85
+msgid "SG Administrator"
+msgstr ""
+
+#. Name of a DocType
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:83
+msgid "SG Advisory"
+msgstr "アドバイザリ"
+
+#. Name of a DocType
+#: supplygraph/sg_compliance/doctype/sg_advisory_revision/sg_advisory_revision.json:36
+msgid "SG Advisory Revision"
+msgstr "アドバイザリの改訂"
+
+#. Name of a DocType
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json:43
+msgid "SG Affected Range"
+msgstr "影響する版の範囲"
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:196
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:42
+msgid "SG BOM Document"
+msgstr "BOM文書"
+
+#: supplygraph/sg_bom/export/__init__.py:98
+#, python-brace-format
+msgid "SG BOM Document {0} has {1} validation errors and is not exported:"
+msgstr "BOM文書 {0} に検証エラーが {1} 件あるため、出力しません："
+
+#: supplygraph/sg_bom/validation/__init__.py:56
+#, python-brace-format
+msgid "SG BOM Document {0} is cancelled and cannot be validated"
+msgstr "BOM文書 {0} はキャンセル済みのため、検証できません"
+
+#: supplygraph/sg_bom/export/__init__.py:64
+#, python-brace-format
+msgid "SG BOM Document {0} is cancelled and is not exported"
+msgstr "BOM文書 {0} はキャンセル済みのため、出力しません"
+
+#: supplygraph/sg_bom/workflow.py:20
+#, python-brace-format
+msgid "SG BOM Document {0} is rejected and cannot be submitted"
+msgstr "BOM文書 {0} は却下されているため、提出できません"
+
+#: supplygraph/sg_bom/export/__init__.py:59
+#, python-brace-format
+msgid "SG BOM Document {0} not found"
+msgstr "BOM文書 {0} が見つかりません"
+
+#. Name of a DocType
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:85
+msgid "SG BOM Entry"
+msgstr "BOMエントリ"
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:46
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:52
+msgid "SG BOM Type"
+msgstr "BOMの種類"
+
+#. Name of a DocType
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:47
+msgid "SG BOM Validation Result"
+msgstr "BOMの検証結果"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_campaign_model/sg_campaign_model.json:25
+msgid "SG Campaign Model"
+msgstr "キャンペーンの対象モデル"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_campaign_release/sg_campaign_release.json:43
+msgid "SG Campaign Release"
+msgstr "キャンペーンのリリース"
+
+#. Name of a DocType
+#: supplygraph/sg_vulnerability/doctype/sg_case_vulnerability/sg_case_vulnerability.json:25
+msgid "SG Case Vulnerability"
+msgstr "ケースの脆弱性"
+
+#. Name of a DocType
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:94
+msgid "SG Compensating Control"
+msgstr "代替策"
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:276
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:150
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:111
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:116
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:115
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:175
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:205
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:129
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:146
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:148
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:170
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:122
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:175
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:98
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:109
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:151
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:165
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:173
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:134
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:169
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:121
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:174
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:199
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:197
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:176
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:133
+msgid "SG Compliance Officer"
+msgstr ""
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:110
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:70
+msgid "SG Component"
+msgstr "部品"
+
+#. Name of a DocType
+#: supplygraph/sg_catalog/doctype/sg_component_alias/sg_component_alias.json:32
+msgid "SG Component Alias"
+msgstr "部品の別名"
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:140
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:80
+msgid "SG Component Version"
+msgstr "部品の版"
+
+#: supplygraph/sg_catalog/component_merge.py:74
+#, python-brace-format
+msgid "SG Component {0} does not exist"
+msgstr "部品 {0} は存在しません"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:95
+msgid "SG Configuration Change"
+msgstr "構成の変更"
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:231
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:114
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:75
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:80
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:79
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:139
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:169
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:93
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:110
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:111
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:130
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:62
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:73
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:115
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:126
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:137
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:98
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:133
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:85
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:129
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:154
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:161
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:140
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:97
+msgid "SG Configuration Manager"
+msgstr ""
+
+#. Name of a DocType
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:51
+msgid "SG Dependency"
+msgstr "依存関係"
+
+#. Name of a DocType
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:82
+msgid "SG Exchange Request"
+msgstr "SBOM交換の依頼"
+
+#. Name of a DocType
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:34
+msgid "SG Hash"
+msgstr "ハッシュ"
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:119
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:176
+msgid "SG Impact Assessment"
+msgstr "影響評価"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:61
+msgid "SG Installed Release"
+msgstr "搭載リリース"
+
+#. Name of a DocType
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:64
+msgid "SG License"
+msgstr "ライセンス"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:33
+msgid "SG Market"
+msgstr "仕向地"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_market_row/sg_market_row.json:25
+msgid "SG Market Row"
+msgstr "仕向地の行"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json:54
+msgid "SG Model Unit"
+msgstr "モデルの搭載ユニット"
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:81
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:90
+msgid "SG Organization"
+msgstr "組織"
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:261
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:138
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:99
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:104
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:103
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:163
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:193
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:117
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:134
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:133
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:155
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:110
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:135
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:160
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:86
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:97
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:139
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:152
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:161
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:122
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:157
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:109
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:159
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:184
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:185
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:164
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:121
+msgid "SG PSIRT Manager"
+msgstr ""
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:44
+msgid "SG Product Category"
+msgstr "製品カテゴリ"
+
+#. Name of a DocType
+#. Option for the 'Target Doctype' (Select) field in DocType 'SG Compensating
+#. Control'
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:86
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:41
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:108
+msgid "SG Product Model"
+msgstr "製品モデル"
+
+#. Name of a DocType
+#. Option for the 'Target Doctype' (Select) field in DocType 'SG Compensating
+#. Control'
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:95
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:41
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:138
+msgid "SG Product Unit"
+msgstr "実機"
+
+#. Name of a DocType
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:32
+msgid "SG Reference"
+msgstr "参照"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:46
+msgid "SG Regulatory Identifier"
+msgstr "規制上の識別子"
+
+#. Name of a DocType
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:105
+msgid "SG Regulatory Report"
+msgstr "当局への報告"
+
+#. Name of a DocType
+#. Option for the 'Target Doctype' (Select) field in DocType 'SG Compensating
+#. Control'
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:108
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:41
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:118
+msgid "SG Release"
+msgstr "リリース"
+
+#. Name of a DocType
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:50
+msgid "SG Release Component"
+msgstr "リリースの部品"
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:291
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:162
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:123
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:128
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:127
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:187
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:217
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:141
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:158
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:134
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:190
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:110
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:121
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:163
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:178
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:185
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:146
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:181
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:133
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:189
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:214
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:209
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:188
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:145
+msgid "SG Release Manager"
+msgstr ""
+
+#. Name of a DocType
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:60
+msgid "SG Remediation Action"
+msgstr "修正対応"
+
+#. Name of a DocType
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:69
+msgid "SG Report Type"
+msgstr "報告の種類"
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:246
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:126
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:87
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:92
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:91
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:151
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:181
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:105
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:122
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:118
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:140
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:98
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:123
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:145
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:74
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:85
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:127
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:139
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:149
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:110
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:145
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:97
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:144
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:169
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:173
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:152
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:109
+msgid "SG Security Analyst"
+msgstr ""
+
+#. Name of a DocType
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:63
+msgid "SG Settings"
+msgstr "SupplyGraphの設定"
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:69
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:128
+msgid "SG Unit Type"
+msgstr "ユニットの種類"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:104
+msgid "SG Update Campaign"
+msgstr "更新キャンペーン"
+
+#. Name of a DocType
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:56
+msgid "SG Update Record"
+msgstr "更新の記録"
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:306
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:174
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:135
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:140
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:139
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:199
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:229
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:153
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:170
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:163
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:185
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:146
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:147
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:205
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:122
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:133
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:175
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:191
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:197
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:158
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:193
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:145
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:204
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:229
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:221
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:200
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:157
+msgid "SG Viewer"
+msgstr ""
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:132
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:156
+msgid "SG Vulnerability"
+msgstr "脆弱性"
+
+#. Name of a DocType
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_alias/sg_vulnerability_alias.json:30
+msgid "SG Vulnerability Alias"
+msgstr "脆弱性の別名"
+
+#. Name of a DocType
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:111
+msgid "SG Vulnerability Case"
+msgstr "脆弱性ケース"
+
+#. Name of a report
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.json:10
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:194
+msgid "SG Vulnerability Impact"
+msgstr "脆弱性の影響"
+
+#. Name of a DocType
+#. Label of a Link in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:68
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:166
+msgid "SG Vulnerability Match"
+msgstr "脆弱性の照合結果"
+
+#: supplygraph/sg_vulnerability/aliases.py:29
+#, python-brace-format
+msgid "SG Vulnerability {0} does not exist"
+msgstr "脆弱性 {0} は存在しません"
+
+#. Option for the 'Algorithm' (Select) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:16
+msgid "SHA-1"
+msgstr ""
+
+#. Option for the 'Algorithm' (Select) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:16
+msgid "SHA-256"
+msgstr ""
+
+#. Description of the 'Hashes' (Table) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "SHA-256等（子テーブル）"
+msgstr ""
+
+#. Option for the 'Algorithm' (Select) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:16
+msgid "SHA-384"
+msgstr ""
+
+#. Option for the 'Algorithm' (Select) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:16
+msgid "SHA-512"
+msgstr ""
+
+#. Option for the 'Algorithm' (Select) field in DocType 'SG Hash'
+#: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:16
+msgid "SHA3-256"
+msgstr ""
+
+#. Option for the 'Format' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:53
+msgid "SPDX"
+msgstr ""
+
+#: supplygraph/sg_bom/importer/__init__.py:104
+msgid "SPDX 3.0 is not supported yet. Use SPDX 2.2 or 2.3."
+msgstr "SPDX 3.0 にはまだ対応していません。SPDX 2.2 または 2.3 を使ってください。"
+
+#. Label of the spdx_id (Data) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:18
+msgid "SPDX ID"
+msgstr ""
+
+#. Description of the 'License Expression' (Data) field in DocType 'SG
+#. Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "SPDXライセンス式（複合の場合）"
+msgstr ""
+
+#. Description of the 'SPDX ID' (Data) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json
+msgid "SPDX識別子（例：Apache-2.0）。独自ライセンスはLicenseRef-で始める"
+msgstr ""
+
+#. Label of the safety_level (Data) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:49
+msgid "Safety Level"
+msgstr "安全度"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:41
+msgid "Save the document before exporting it."
+msgstr "出力する前に文書を保存してください。"
+
+#. Label of the scheme (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:16
+msgid "Scheme"
+msgstr "体系"
+
+#. Label of the scope (Select) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:45
+msgid "Scope"
+msgstr "範囲"
+
+#. Label of the security_level (Data) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:55
+msgid "Security Level"
+msgstr "セキュリティレベル"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:20
+msgid "Select a vulnerability"
+msgstr "脆弱性を選んでください"
+
+#: supplygraph/sg_catalog/component_merge.py:64
+msgid "Select at least one other component to merge"
+msgstr "統合する部品を、残す部品のほかに1つ以上選んでください"
+
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component_list.js:32
+msgid "Select at least two components"
+msgstr "部品を2つ以上選んでください"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.js:26
+msgid "Select one row"
+msgstr "行を1つ選んでください"
+
+#. Label of the serial_no (Data) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:23
+#: supplygraph/sg_product/product_unit.py:46
+msgid "Serial No"
+msgstr "シリアル番号"
+
+#. Label of the serial_number (Data) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:66
+msgid "Serial Number"
+msgstr "シリアル番号"
+
+#. Label of the serial_pattern (Data) field in DocType 'SG Product Category'
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:30
+msgid "Serial Pattern"
+msgstr "シリアル番号の形式"
+
+#. Option for the 'Change Source' (Select) field in DocType 'SG Configuration
+#. Change'
+#. Option for the 'Source' (Select) field in DocType 'SG Installed Release'
+#. Option for the 'Delivery Method' (Select) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:69
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:46
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:41
+msgid "Service"
+msgstr "サービス"
+
+#. Label of the severity (Select) field in DocType 'SG BOM Validation Result'
+#. Label of the severity (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:24
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:93
+msgid "Severity"
+msgstr "深刻度"
+
+#. Option for the 'Unit Status' (Select) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:74
+msgid "Shipped"
+msgstr "出荷済み"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.js:23
+msgid "Show Units"
+msgstr "実機を表示"
+
+#. Label of the slot_name (Data) field in DocType 'SG Installed Release'
+#. Label of the slot_name (Data) field in DocType 'SG Model Unit'
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:26
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json:25
+msgid "Slot Name"
+msgstr "搭載位置"
+
+#. Option for the 'Release Type' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:50
+msgid "Software"
+msgstr "ソフトウェア"
+
+#. Option for the 'Lifecycle Phase' (Select) field in DocType 'SG BOM Document'
+#. Label of the source (Select) field in DocType 'SG Installed Release'
+#. Label of the source (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:80
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:44
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:45
+msgid "Source"
+msgstr "ソース"
+
+#. Label of the source_file (Attach) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:128
+msgid "Source File"
+msgstr "元ファイル"
+
+#. Label of the source_sha256 (Data) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:134
+msgid "Source SHA-256"
+msgstr "元ファイルのSHA-256"
+
+#. Label of the spec_version (Data) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:60
+msgid "Spec Version"
+msgstr "仕様の版"
+
+#. Label of the status_at (Datetime) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:43
+msgid "Status At"
+msgstr "状況の日時"
+
+#. Option for the 'Category' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:36
+msgid "Strong Copyleft"
+msgstr "強いコピーレフト"
+
+#. Label of the subject_release (Link) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:121
+msgid "Subject Release"
+msgstr "対象リリース"
+
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.js:27
+msgid "Subject Release is empty, so this SBOM will not appear in Vulnerability Impact. Accept it anyway?"
+msgstr "対象リリースが空なので、この SBOM は脆弱性の影響に出ません。このまま受け入れますか？"
+
+#. Label of the submission_reference (Data) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:74
+msgid "Submission Reference"
+msgstr "提出の受付番号"
+
+#. Option for the 'Report Status' (Select) field in DocType 'SG Regulatory
+#. Report'
+#. Option for the 'Request Status' (Select) field in DocType 'SG Exchange
+#. Request'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:64
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:62
+msgid "Submitted"
+msgstr "提出済み"
+
+#. Label of the submitted_at (Datetime) field in DocType 'SG Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:69
+msgid "Submitted At"
+msgstr "提出日時"
+
+#. Label of the submitted_bom (Link) field in DocType 'SG Exchange Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:67
+msgid "Submitted BOM"
+msgstr "提出されたBOM"
+
+#. Option for the 'Record Status' (Select) field in DocType 'SG Update Record'
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:37
+msgid "Succeeded"
+msgstr "成功"
+
+#. Label of the summary (Small Text) field in DocType 'SG Advisory Revision'
+#: supplygraph/sg_compliance/doctype/sg_advisory_revision/sg_advisory_revision.json:27
+msgid "Summary"
+msgstr "概要"
+
+#. Label of the supplier (Link) field in DocType 'SG BOM Entry'
+#. Label of the supplier (Link) field in DocType 'SG Component'
+#. Label of the supplier (Link) field in DocType 'SG Component Version'
+#. Option for the 'Organization Type' (Select) field in DocType 'SG
+#. Organization'
+#. Label of the supplier (Link) field in DocType 'SG Exchange Request'
+#. Label of the supplier (Link) field in DocType 'SG Unit Type'
+#. Option for the 'Intake Source' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:57
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:69
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:87
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:31
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:29
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:35
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:48
+msgid "Supplier"
+msgstr "供給元"
+
+#. Label of the supplier_org (Link) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:100
+msgid "Supplier Org"
+msgstr "供給元の組織"
+
+#. Name of a Workspace
+#. Title of a Sidebar
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:28
+#: supplygraph/sidebar/supplygraph/supplygraph.json:160
+msgid "SupplyGraph"
+msgstr ""
+
+#. Label of the support_end_date (Date) field in DocType 'SG Product Model'
+#. Label of the support_end_date (Date) field in DocType 'SG Release'
+#. Label of the support_end_date (Date) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:63
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:95
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:61
+msgid "Support End Date"
+msgstr "サポート終了日"
+
+#. Label of the support_status (Select) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:94
+msgid "Support Status"
+msgstr "サポートの状況"
+
+#. Label of the sync_interval (Select) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:33
+msgid "Sync Interval"
+msgstr "同期の間隔"
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability_list.js:10
+msgid "Sync with OSV"
+msgstr "OSV と同期"
+
+#: supplygraph/devtools/synthetic.py:218
+msgid "Synthetic data can be created or deleted only on a site with developer_mode or allow_tests"
+msgstr "合成データの作成と削除は、developer_mode または allow_tests が有効なサイトでのみできます"
+
+#. Name of a role
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:201
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:90
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:51
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:56
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:55
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:115
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:145
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:69
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:86
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:67
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:88
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:110
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json:74
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json:87
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:100
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json:38
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:49
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:91
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:100
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:113
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:74
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:109
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:61
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:99
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:124
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:137
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:116
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:73
+msgid "System Manager"
+msgstr ""
+
+#. Label of the tlp (Select) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:43
+msgid "TLP"
+msgstr ""
+
+#. Label of the target_count (Int) field in DocType 'SG Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:83
+msgid "Target Count"
+msgstr "対象数"
+
+#. Label of the target_doctype (Select) field in DocType 'SG Compensating
+#. Control'
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:39
+msgid "Target Doctype"
+msgstr "対象のDocType"
+
+#. Label of the target_models (Table MultiSelect) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:47
+msgid "Target Models"
+msgstr "対象モデル"
+
+#. Label of the target_name (Dynamic Link) field in DocType 'SG Compensating
+#. Control'
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:47
+msgid "Target Name"
+msgstr "対象の名前"
+
+#. Label of the target_ref (Data) field in DocType 'SG BOM Validation Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:32
+msgid "Target Ref"
+msgstr "対象の参照"
+
+#: supplygraph/sg_bom/importer/spdx.py:79
+#, python-brace-format
+msgid "The SPDX file could not be read: {0}"
+msgstr "SPDX ファイルを読み取れませんでした：{0}"
+
+#: supplygraph/sg_bom/importer/__init__.py:98
+#, python-brace-format
+msgid "The file is not valid JSON: {0}"
+msgstr "ファイルが正しい JSON ではありません：{0}"
+
+#: supplygraph/sg_product/product_unit.py:38
+#, python-brace-format
+msgid "The serial number rule of product category {0} is not a valid regular expression: {1}"
+msgstr "製品カテゴリ {0} の番号の決まりが、正規表現として正しくありません：{1}"
+
+#: supplygraph/sg_bom/importer/__init__.py:86
+#, python-brace-format
+msgid "This file has already been imported as {0}"
+msgstr "このファイルは {0} として取込済みです"
+
+#. Label of the tier (Select) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:38
+msgid "Tier"
+msgstr "階層"
+
+#. Option for the 'Tier' (Select) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:40
+msgid "Tier 1"
+msgstr ""
+
+#. Option for the 'Tier' (Select) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:40
+msgid "Tier 2"
+msgstr ""
+
+#. Option for the 'Tier' (Select) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:40
+msgid "Tier 3"
+msgstr ""
+
+#. Description of the 'BOM Timestamp' (Datetime) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:110
+msgid "Timestamp"
+msgstr "タイムスタンプ"
+
+#. Label of the title (Data) field in DocType 'SG Advisory'
+#. Label of the title (Data) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:29
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:53
+msgid "Title"
+msgstr "タイトル"
+
+#. Label of the to_entry (Link) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:33
+msgid "To Entry"
+msgstr "依存先のエントリ"
+
+#. Label of the to_release (Link) field in DocType 'SG Campaign Release'
+#. Label of the to_release (Link) field in DocType 'SG Configuration Change'
+#: supplygraph/sg_product/doctype/sg_campaign_release/sg_campaign_release.json:30
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:53
+msgid "To Release"
+msgstr "更新後のリリース"
+
+#. Option for the 'Granularity' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:149
+msgid "Top-level Only"
+msgstr "最上位のみ"
+
+#. Option for the 'Case Status' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:70
+msgid "Triage"
+msgstr "トリアージ"
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "UDI-DI"
+msgstr ""
+
+#. Option for the 'Scheme' (Select) field in DocType 'SG Regulatory Identifier'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:18
+msgid "UNECE Type Approval"
+msgstr ""
+
+#. Label of the url (Data) field in DocType 'SG Reference'
+#: supplygraph/sg_vulnerability/doctype/sg_reference/sg_reference.json:14
+msgid "URL"
+msgstr ""
+
+#. Option for the 'VEX Status' (Select) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:53
+msgid "Under Investigation"
+msgstr "調査中"
+
+#. Label of the unit_label (Data) field in DocType 'SG Product Category'
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json:24
+msgid "Unit Label"
+msgstr "識別子の表示名"
+
+#. Label of the unit_name (Data) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:28
+msgid "Unit Name"
+msgstr "ユニット名"
+
+#. Label of the unit_part_number (Data) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json:19
+msgid "Unit Part Number"
+msgstr "ユニットの部品番号"
+
+#. Label of the unit_slots (Table) field in DocType 'SG Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json:76
+msgid "Unit Slots"
+msgstr "搭載ユニット"
+
+#. Label of the unit_status (Select) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json:72
+msgid "Unit Status"
+msgstr "実機の状況"
+
+#. Label of the unit_type (Link) field in DocType 'SG Campaign Release'
+#. Label of the unit_type (Link) field in DocType 'SG Configuration Change'
+#. Label of the unit_type (Link) field in DocType 'SG Installed Release'
+#. Label of the unit_type (Link) field in DocType 'SG Model Unit'
+#. Label of the unit_type (Link) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_campaign_release/sg_campaign_release.json:15
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:39
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json:18
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json:17
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:56
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:38
+msgid "Unit Type"
+msgstr "ユニットの種類"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:57
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:149
+msgid "Units"
+msgstr "実機"
+
+#. Option for the 'Completeness' (Select) field in DocType 'SG BOM Document'
+#. Option for the 'Support Status' (Select) field in DocType 'SG Component
+#. Version'
+#. Option for the 'Severity' (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:142
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:96
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:95
+msgid "Unknown"
+msgstr "不明"
+
+#: supplygraph/sg_bom/export/__init__.py:54
+msgid "Unsupported Format"
+msgstr "対応していない形式"
+
+#: supplygraph/sg_bom/importer/__init__.py:108
+#, python-brace-format
+msgid "Unsupported SBOM file: {0}. Use CycloneDX JSON, SPDX JSON or SPDX tag-value."
+msgstr "対応していない SBOM ファイルです：{0}。CycloneDX JSON、SPDX JSON、SPDX tag-value のいずれかを使ってください。"
+
+#. Label of the update_campaign (Link) field in DocType 'SG Configuration
+#. Change'
+#. Label of the update_campaign (Link) field in DocType 'SG Update Record'
+#. Option for the 'Action Type' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_product/doctype/sg_configuration_change/sg_configuration_change.json:74
+#: supplygraph/sg_product/doctype/sg_update_record/sg_update_record.json:17
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:20
+msgid "Update Campaign"
+msgstr "更新キャンペーン"
+
+#. Option for the 'Release Type' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:50
+msgid "Update Package"
+msgstr "更新パッケージ"
+
+#. Label of the vex_status (Select) field in DocType 'SG Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:51
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:49
+msgid "VEX Status"
+msgstr "VEXの状況"
+
+#. Label of the valid_until (Date) field in DocType 'SG Regulatory Identifier'
+#. Label of the valid_until (Date) field in DocType 'SG Compensating Control'
+#: supplygraph/sg_product/doctype/sg_regulatory_identifier/sg_regulatory_identifier.json:36
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:67
+msgid "Valid Until"
+msgstr "有効期限"
+
+#. Option for the 'Import Status' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:156
+msgid "Validated"
+msgstr "検証済み"
+
+#. Label of the validation_results (Table) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:168
+msgid "Validation Results"
+msgstr "検証結果"
+
+#. Label of the validation_rule_set (Data) field in DocType 'SG BOM Type'
+#. Label of the validation_rule_set (Data) field in DocType 'SG Settings'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json:37
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json:47
+msgid "Validation Rule Set"
+msgstr "検証ルール群"
+
+#. Label of the validation_score (Percent) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:161
+msgid "Validation Score"
+msgstr "検証スコア"
+
+#: supplygraph/sg_bom/validation/__init__.py:64
+#, python-brace-format
+msgid "Validation rule set {0} of SG BOM Type {1} is not registered in hooks ({2})"
+msgstr "BOMの種類 {1} の検証ルール群 {0} が hooks（{2}）に登録されていません"
+
+#. Label of the variant_condition (Data) field in DocType 'SG Model Unit'
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json:44
+msgid "Variant Condition"
+msgstr "バリエーションの条件"
+
+#. Option for the 'Source' (Select) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:47
+msgid "Vendor CSAF"
+msgstr "ベンダーのCSAF"
+
+#. Option for the 'Granularity' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json:149
+msgid "Vendor Coarse"
+msgstr "ベンダー提供の粗いSBOM"
+
+#. Label of the version (Data) field in DocType 'SG Component Version'
+#. Label of the version (Data) field in DocType 'SG Release'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json:46
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:41
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py:35
+msgid "Version"
+msgstr "バージョン"
+
+#. Label of the version_range (Data) field in DocType 'SG Affected Range'
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json:28
+msgid "Version Range"
+msgstr "版の範囲"
+
+#. Label of the via_bom_document (Link) field in DocType 'SG Release Component'
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json:34
+msgid "Via BOM Document"
+msgstr "経由したBOM文書"
+
+#. Label of the vuln_id (Data) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json:29
+msgid "Vuln ID"
+msgstr "脆弱性ID"
+
+#. Label of the vulnerabilities (Table MultiSelect) field in DocType 'SG
+#. Vulnerability Case'
+#. Label of a Card Break in the SupplyGraph Workspace
+#. Label of a Sidebar Item
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json:40
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:148
+#: supplygraph/sidebar/supplygraph/supplygraph.json:98
+msgid "Vulnerabilities"
+msgstr "脆弱性"
+
+#. Label of a chart in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:10
+msgid "Vulnerabilities by Severity"
+msgstr "深刻度別の脆弱性"
+
+#. Label of the vulnerability (Link) field in DocType 'SG Case Vulnerability'
+#. Label of the vulnerability (Link) field in DocType 'SG Impact Assessment'
+#. Label of the vulnerability (Link) field in DocType 'SG Vulnerability Match'
+#: supplygraph/sg_vulnerability/doctype/sg_case_vulnerability/sg_case_vulnerability.json:13
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:33
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:18
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.js:8
+msgid "Vulnerability"
+msgstr "脆弱性"
+
+#. Label of the vulnerability_case (Link) field in DocType 'SG Advisory'
+#. Label of the vulnerability_case (Link) field in DocType 'SG Regulatory
+#. Report'
+#. Label of the vulnerability_case (Link) field in DocType 'SG Update Campaign'
+#. Label of the vulnerability_case (Link) field in DocType 'SG Compensating
+#. Control'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json:36
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json:40
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json:62
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json:30
+msgid "Vulnerability Case"
+msgstr "脆弱性ケース"
+
+#. Label of a shortcut in the SupplyGraph Workspace
+#. Label of a Sidebar Item
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:266
+#: supplygraph/sidebar/supplygraph/supplygraph.json:146
+msgid "Vulnerability Impact"
+msgstr "脆弱性の影響"
+
+#. Label of a shortcut in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:272
+msgid "Vulnerability Matches"
+msgstr "脆弱性の照合結果"
+
+#. Label of a chart in the SupplyGraph Workspace
+#: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:6
+msgid "Vulnerability Matches by Status"
+msgstr "状況別の照合結果"
+
+#. Option for the 'Severity' (Select) field in DocType 'SG BOM Validation
+#. Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json:26
+msgid "Warning"
+msgstr "警告"
+
+#. Option for the 'Category' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json:36
+msgid "Weak Copyleft"
+msgstr "弱いコピーレフト"
+
+#. Label of the website (Data) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json:52
+msgid "Website"
+msgstr "ウェブサイト"
+
+#. Option for the 'Release Status' (Select) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json:65
+msgid "Withdrawn"
+msgstr "取り下げ"
+
+#. Option for the 'Action Type' (Select) field in DocType 'SG Remediation
+#. Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json:20
+msgid "Workaround"
+msgstr "回避策"
+
+#: supplygraph/sg_bom/export/__init__.py:96
+#, python-brace-format
+msgid "and {0} more"
+msgstr "ほか {0} 件"
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "application"
+msgstr ""
+
+#. Option for the 'Justification' (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:61
+msgid "component_not_present"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "container"
+msgstr ""
+
+#. Option for the 'Relationship' (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:43
+msgid "contains"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "data"
+msgstr ""
+
+#. Option for the 'Relationship' (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:43
+msgid "depends-on"
+msgstr ""
+
+#. Option for the 'Relationship' (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:43
+msgid "dev-dependency"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "device"
+msgstr ""
+
+#. Option for the 'Scope' (Select) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:47
+msgid "excluded"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "file"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "firmware"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "framework"
+msgstr ""
+
+#. Option for the 'Relationship' (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:43
+msgid "generated-from"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "hardware"
+msgstr ""
+
+#. Option for the 'Justification' (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:61
+msgid "inline_mitigations_already_exist"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "library"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "machine-learning-model"
+msgstr ""
+
+#. Option for the 'Component Type' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json:43
+msgid "operating-system"
+msgstr ""
+
+#. Option for the 'Scope' (Select) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:47
+msgid "optional"
+msgstr ""
+
+#. Option for the 'Relationship' (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:43
+msgid "optional-dependency"
+msgstr ""
+
+#. Option for the 'Relationship' (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:43
+msgid "provided-by"
+msgstr ""
+
+#. Option for the 'Scope' (Select) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json:47
+msgid "required"
+msgstr ""
+
+#. Description of the 'Release Changes' (Table) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json
+msgid "unit_type・前提リリース・適用リリースの組"
+msgstr ""
+
+#. Option for the 'Relationship' (Select) field in DocType 'SG Dependency'
+#: supplygraph/sg_bom/doctype/sg_dependency/sg_dependency.json:43
+msgid "variant-of"
+msgstr ""
+
+#. Description of the 'Version Range' (Data) field in DocType 'SG Affected
+#. Range'
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json
+msgid "vers形式の範囲（例：vers:generic/>=3.0.0|<3.0.15）"
+msgstr ""
+
+#. Option for the 'Justification' (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:61
+msgid "vulnerable_code_cannot_be_controlled_by_adversary"
+msgstr ""
+
+#. Option for the 'Justification' (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:61
+msgid "vulnerable_code_not_in_execute_path"
+msgstr ""
+
+#. Option for the 'Justification' (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:61
+msgid "vulnerable_code_not_present"
+msgstr ""
+
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match_list.js:25
+#, python-brace-format
+msgid "{0} matches marked as false positive"
+msgstr "{0} 件を誤検知にしました"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.js:41
+#, python-brace-format
+msgid "{0} units"
+msgstr "{0} 台"
+
+#: supplygraph/sg_product/product_unit.py:45
+#, python-brace-format
+msgid "{0} {1} does not match the rule of product category {2}: {3}"
+msgstr "{0} {1} は、製品カテゴリ {2} の決まりに合いません：{3}"
+
+#. Description of the 'Subject Release' (Link) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "このBOMが記述するリリース"
+msgstr ""
+
+#. Description of the 'Primary BOM' (Link) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json
+msgid "このリリースのSBOM"
+msgstr ""
+
+#. Description of the 'Source' (Select) field in DocType 'SG Installed Release'
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json
+msgid "この値の出どころ"
+msgstr ""
+
+#. Description of the 'Supplier' (Link) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "この版の供給元（部品の既定値を上書き）"
+msgstr ""
+
+#. Description of the 'External BOM' (Link) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json
+msgid "この部品自体のSBOM（入れ子）"
+msgstr ""
+
+#. Description of the 'Via BOM Document' (Link) field in DocType 'SG Release
+#. Component'
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json
+msgid "どのBOMから来たか"
+msgstr ""
+
+#. Description of the 'Is Optional' (Check) field in DocType 'SG Model Unit'
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json
+msgid "オプション装備か"
+msgstr ""
+
+#. Description of the 'Serial No' (Data) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json
+msgid "カテゴリのserial_patternで検証"
+msgstr ""
+
+#. Description of the 'Reference Name' (Dynamic Link) field in DocType 'SG
+#. Remediation Action'
+#: supplygraph/sg_vulnerability/doctype/sg_remediation_action/sg_remediation_action.json
+msgid "キャンペーン等への参照"
+msgstr ""
+
+#. Description of the 'Tier' (Select) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json
+msgid "サプライチェーン上の階層"
+msgstr ""
+
+#. Description of the 'Support Status' (Select) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "サポート状況（FDA・CRA対応）"
+msgstr ""
+
+#. Description of the 'End Of Support Date' (Date) field in DocType 'SG
+#. Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "サポート終了日"
+msgstr ""
+
+#. Description of the 'Advisory URL' (Data) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json
+msgid "セキュリティアドバイザリの公開先（CSAF取込元）"
+msgstr ""
+
+#. Description of the 'Support End Date' (Date) field in DocType 'SG Product
+#. Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json
+msgid "セキュリティ更新の提供終了日（CRAのサポート期間）"
+msgstr ""
+
+#. Description of the 'Release Code' (Data) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json
+msgid "ソフト部品番号（title_field）"
+msgstr ""
+
+#. Description of the 'Download Location' (Small Text) field in DocType 'SG
+#. Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "ダウンロード元のURL（COTS・独自の部品はNone）"
+msgstr ""
+
+#. Description of the 'Unit Part Number' (Data) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json
+msgid "ハードウェア部品番号"
+msgstr ""
+
+#. Description of the 'Copyright Text' (Small Text) field in DocType 'SG
+#. Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "ライセンス表示用"
+msgstr ""
+
+#. Description of the 'Campaign Status' (Select) field in DocType 'SG Update
+#. Campaign'
+#. Description of the 'Case Status' (Select) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json
+msgid "ワークフローで遷移"
+msgstr ""
+
+#. Description of the 'Market' (Link) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json
+msgid "仕向地"
+msgstr ""
+
+#. Description of the 'Markets' (Table MultiSelect) field in DocType 'SG
+#. Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json
+msgid "仕向地・販売地域"
+msgstr ""
+
+#. Description of the 'Report Type Name' (Data) field in DocType 'SG Report
+#. Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json
+msgid "例：CRA Early Warning"
+msgstr ""
+
+#. Description of the 'Spec Version' (Data) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "例：CycloneDX 1.6、SPDX 2.3"
+msgstr ""
+
+#. Description of the 'Recipient' (Data) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json
+msgid "例：ENISA Single Reporting Platform"
+msgstr ""
+
+#. Description of the 'Regulation' (Data) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json
+msgid "例：EU 2024/2847 Art.14"
+msgstr ""
+
+#. Description of the 'Rule Code' (Data) field in DocType 'SG BOM Validation
+#. Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json
+msgid "例：FW-AUTHOR、FW-HASH"
+msgstr ""
+
+#. Description of the 'Market Code' (Data) field in DocType 'SG Market'
+#: supplygraph/sg_product/doctype/sg_market/sg_market.json
+msgid "例：JP、EU、US、CN"
+msgstr ""
+
+#. Description of the 'Advisory ID' (Data) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json
+msgid "例：LG-SA-2026-001"
+msgstr ""
+
+#. Description of the 'BOM Type Name' (Data) field in DocType 'SG BOM Type'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json
+msgid "例：SBOM、AI BOM、SOUP List、Origin BOM"
+msgstr ""
+
+#. Description of the 'Responsible Org' (Link) field in DocType 'SG
+#. Vulnerability Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json
+msgid "修正の責任者（自動車ではCIAで決まる）"
+msgstr ""
+
+#. Description of the 'Format' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "元の形式"
+msgstr ""
+
+#. Description of the 'Source SHA-256' (Data) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "元ファイルのハッシュ（改ざん検知）"
+msgstr ""
+
+#. Description of the 'External BOM Ref' (Small Text) field in DocType 'SG BOM
+#. Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json
+msgid "元文書に書かれた外部SBOMの参照。対象が未取込でも保持し、取込後にexternal_bomへつなぐ"
+msgstr ""
+
+#. Description of the 'BOM Ref' (Data) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json
+msgid "元文書内の識別子（CycloneDX bom-ref / SPDX SPDXID）"
+msgstr ""
+
+#. Description of the 'TLP' (Select) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json
+msgid "共有範囲"
+msgstr ""
+
+#. Description of the 'Default Release' (Link) field in DocType 'SG Model Unit'
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json
+msgid "出荷時の標準リリース"
+msgstr ""
+
+#. Description of the 'Impact Statement' (Small Text) field in DocType 'SG
+#. Impact Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json
+msgid "判断の根拠"
+msgstr ""
+
+#. Description of the 'Adjusted Severity' (Select) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json
+msgid "到達可能性を考慮した深刻度"
+msgstr ""
+
+#. Description of the 'Previous Release' (Link) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json
+msgid "前の版"
+msgstr ""
+
+#. Description of the 'Is Active' (Check) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json
+msgid "取引中か"
+msgstr ""
+
+#. Description of the 'Submission Reference' (Data) field in DocType 'SG
+#. Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json
+msgid "受付番号"
+msgstr ""
+
+#. Description of the 'Source File' (Attach) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "受領した元ファイル"
+msgstr ""
+
+#. Description of the 'Validation Rule Set' (Data) field in DocType 'SG BOM
+#. Type'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json
+msgid "受領時に適用する検証ルール群の名前"
+msgstr ""
+
+#. Description of the 'Aliases' (Table) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json
+msgid "同一脆弱性の別ID"
+msgstr ""
+
+#. Description of the 'Review Status' (Select) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "名寄せの確認状況。重複の候補はNeeds Reviewになる"
+msgstr ""
+
+#. Description of the 'Regulatory IDs' (Table) field in DocType 'SG Product
+#. Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json
+msgid "型式認可番号、UDI-DI、510(k)番号、JC-STAR等"
+msgstr ""
+
+#. Description of the 'Report Body' (Text Editor) field in DocType 'SG
+#. Regulatory Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json
+msgid "報告内容（AI下書き可）"
+msgstr ""
+
+#. Description of the 'Provided By App' (Data) field in DocType 'SG BOM Type'
+#: supplygraph/sg_bom/doctype/sg_bom_type/sg_bom_type.json
+msgid "定義したアプリ名"
+msgstr ""
+
+#. Description of the 'Measured Identifier' (Data) field in DocType 'SG
+#. Installed Release'
+#: supplygraph/sg_product/doctype/sg_installed_release/sg_installed_release.json
+msgid "実機から読んだ識別子（自動車ではUDSのDID値）"
+msgstr ""
+
+#. Description of the 'Unit Label' (Data) field in DocType 'SG Product
+#. Category'
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json
+msgid "実機の呼び名（例：VIN、シリアル、UDI-PI）"
+msgstr ""
+
+#. Description of the 'Serial Pattern' (Data) field in DocType 'SG Product
+#. Category'
+#: supplygraph/sg_product/doctype/sg_product_category/sg_product_category.json
+msgid "実機識別子の検証用正規表現（例：VINは17桁）"
+msgstr ""
+
+#. Description of the 'Target Ref' (Data) field in DocType 'SG BOM Validation
+#. Result'
+#: supplygraph/sg_bom/doctype/sg_bom_validation_result/sg_bom_validation_result.json
+msgid "対象のbom-ref"
+msgstr ""
+
+#. Description of the 'Target Models' (Table MultiSelect) field in DocType 'SG
+#. Update Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json
+msgid "対象の製品モデル"
+msgstr ""
+
+#. Description of the 'Unit Type' (Link) field in DocType 'SG Release'
+#: supplygraph/sg_product/doctype/sg_release/sg_release.json
+msgid "対象ハードウェア"
+msgstr ""
+
+#. Description of the 'Release' (Link) field in DocType 'SG Exchange Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json
+msgid "対象リリース"
+msgstr ""
+
+#. Description of the 'Return Reason' (Small Text) field in DocType 'SG
+#. Exchange Request'
+#: supplygraph/sg_exchange/doctype/sg_exchange_request/sg_exchange_request.json
+msgid "差戻し理由（AI下書き可）"
+msgstr ""
+
+#. Description of the 'Affected Ranges' (Table) field in DocType 'SG
+#. Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json
+msgid "影響する部品と版の範囲"
+msgstr ""
+
+#. Description of the 'Validation Score' (Percent) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "必須項目の充足率"
+msgstr ""
+
+#. Description of the 'Known Exploited' (Check) field in DocType 'SG
+#. Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json
+msgid "悪用が確認済み（CISA KEV等）。CRA報告の起点"
+msgstr ""
+
+#. Description of the 'EPSS Score' (Float) field in DocType 'SG Vulnerability'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability/sg_vulnerability.json
+msgid "悪用確率"
+msgstr ""
+
+#. Description of the 'Country' (Link) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json
+msgid "所在国（ドローンの原産国判定にも使う）"
+msgstr ""
+
+#. Description of the 'Owner User' (Link) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json
+msgid "担当者"
+msgstr ""
+
+#. Description of the 'Unit Slots' (Table) field in DocType 'SG Product Model'
+#: supplygraph/sg_product/doctype/sg_product_model/sg_product_model.json
+msgid "搭載ユニットの構成"
+msgstr ""
+
+#. Description of the 'Slot Name' (Data) field in DocType 'SG Model Unit'
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json
+msgid "搭載位置（例：Front Camera）"
+msgstr ""
+
+#. Description of the 'Variant Condition' (Data) field in DocType 'SG Model
+#. Unit'
+#: supplygraph/sg_product/doctype/sg_model_unit/sg_model_unit.json
+msgid "搭載条件（例：オプションコード）"
+msgstr ""
+
+#. Description of the 'Is Modified' (Check) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "改変版か（パッチ当て等）"
+msgstr ""
+
+#. Description of the 'Revisions' (Table) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json
+msgid "改訂履歴"
+msgstr ""
+
+#. Description of the 'External Connectivity' (Select) field in DocType 'SG
+#. Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json
+msgid "攻撃面（外部接続の有無）"
+msgstr ""
+
+#. Description of the 'BOM Version' (Int) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "文書の版"
+msgstr ""
+
+#. Description of the 'Supplier' (Link) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "既定の供給元"
+msgstr ""
+
+#. Description of the 'Validation Rule Set' (Data) field in DocType 'SG
+#. Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json
+msgid "既定の検証ルール群"
+msgstr ""
+
+#. Description of the 'Deadline Basis' (Select) field in DocType 'SG Report
+#. Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json
+msgid "期限の起点"
+msgstr ""
+
+#. Description of the 'Basis At' (Datetime) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json
+msgid "期限の起点日時"
+msgstr ""
+
+#. Description of the 'Valid Until' (Date) field in DocType 'SG Compensating
+#. Control'
+#: supplygraph/sg_vulnerability/doctype/sg_compensating_control/sg_compensating_control.json
+msgid "期限切れで再承認を促す"
+msgstr ""
+
+#. Description of the 'Validation Results' (Table) field in DocType 'SG BOM
+#. Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "検証結果（子テーブル）"
+msgstr ""
+
+#. Description of the 'Domain Impact' (Small Text) field in DocType 'SG Impact
+#. Assessment'
+#: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json
+msgid "業界固有の影響（安全・臨床など）"
+msgstr ""
+
+#. Description of the 'PURL' (Data) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "版つきPURL"
+msgstr ""
+
+#. Description of the 'PURL Base' (Data) field in DocType 'SG Affected Range'
+#: supplygraph/sg_vulnerability/doctype/sg_affected_range/sg_affected_range.json
+msgid "版なしPURL"
+msgstr ""
+
+#. Description of the 'PURL Base' (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "版なしPURL（例：pkg:generic/openssl）。名寄せの主キー"
+msgstr ""
+
+#. Description of the 'Version' (Data) field in DocType 'SG Component Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "版文字列（原文のまま保持）"
+msgstr ""
+
+#. Description of the 'Installed Releases' (Table) field in DocType 'SG Product
+#. Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json
+msgid "現在の構成（as-maintained）"
+msgstr ""
+
+#. Description of the 'CSAF Document' (JSON) field in DocType 'SG Advisory'
+#: supplygraph/sg_compliance/doctype/sg_advisory/sg_advisory.json
+msgid "生成したCSAF"
+msgstr ""
+
+#. Description of the 'Regulatory IDs' (Table) field in DocType 'SG Product
+#. Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json
+msgid "登録記号、UDI-PI等"
+msgstr ""
+
+#. Description of the 'Is Direct' (Check) field in DocType 'SG BOM Entry'
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry.json
+msgid "直接依存か"
+msgstr ""
+
+#. Description of the 'License Concluded' (Link) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "確定ライセンス（単一の場合）"
+msgstr ""
+
+#. Description of the 'Policy' (Select) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json
+msgid "社内ポリシー"
+msgstr ""
+
+#. Description of the 'Granularity' (Select) field in DocType 'SG BOM Document'
+#: supplygraph/sg_bom/doctype/sg_bom_document/sg_bom_document.json
+msgid "粒度（照合精度の限界を示す）"
+msgstr ""
+
+#. Description of the 'Supplier' (Link) field in DocType 'SG Unit Type'
+#: supplygraph/sg_product/doctype/sg_unit_type/sg_unit_type.json
+msgid "納入元（Tier 1等）"
+msgstr ""
+
+#. Description of the 'Organization Type' (Select) field in DocType 'SG
+#. Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json
+msgid "組織の種別"
+msgstr ""
+
+#. Description of the 'Organization Name' (Data) field in DocType 'SG
+#. Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json
+msgid "組織名"
+msgstr ""
+
+#. Description of the 'Aliases' (Table) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "統合した部品の名前とPURL。再取込で同じ部品につなぐ"
+msgstr ""
+
+#. Description of the 'Alias PURL Base' (Data) field in DocType 'SG Component
+#. Alias'
+#: supplygraph/sg_catalog/doctype/sg_component_alias/sg_component_alias.json
+msgid "統合前の版なしPURL"
+msgstr ""
+
+#. Description of the 'Alias Name' (Data) field in DocType 'SG Component Alias'
+#: supplygraph/sg_catalog/doctype/sg_component_alias/sg_component_alias.json
+msgid "統合前の部品名"
+msgstr ""
+
+#. Description of the 'Sync Interval' (Select) field in DocType 'SG Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json
+msgid "脆弱性情報の同期間隔"
+msgstr ""
+
+#. Description of the 'PSIRT Email' (Data) field in DocType 'SG Organization'
+#: supplygraph/sg_catalog/doctype/sg_organization/sg_organization.json
+msgid "脆弱性連絡窓口"
+msgstr ""
+
+#. Description of the 'CPE Match Min Confidence' (Select) field in DocType 'SG
+#. Settings'
+#: supplygraph/sg_catalog/doctype/sg_settings/sg_settings.json
+msgid "自動確定する照合の下限"
+msgstr ""
+
+#. Description of the 'Due At' (Datetime) field in DocType 'SG Regulatory
+#. Report'
+#: supplygraph/sg_compliance/doctype/sg_regulatory_report/sg_regulatory_report.json
+msgid "自動計算"
+msgstr ""
+
+#. Description of the 'Is Proprietary' (Check) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "自社・商用の非公開部品か"
+msgstr ""
+
+#. Description of the 'Obligations' (Text Editor) field in DocType 'SG License'
+#: supplygraph/sg_catalog/doctype/sg_license/sg_license.json
+msgid "表示・開示などの義務"
+msgstr ""
+
+#. Description of the 'Plant' (Data) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json
+msgid "製造拠点"
+msgstr ""
+
+#. Description of the 'Installed Location' (Data) field in DocType 'SG Product
+#. Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json
+msgid "設置場所"
+msgstr ""
+
+#. Description of the 'Aware At' (Datetime) field in DocType 'SG Vulnerability
+#. Case'
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_case/sg_vulnerability_case.json
+msgid "認知日時（報告期限の起点）"
+msgstr ""
+
+#. Description of the 'Vulnerability Case' (Link) field in DocType 'SG Update
+#. Campaign'
+#: supplygraph/sg_product/doctype/sg_update_campaign/sg_update_campaign.json
+msgid "起因した案件"
+msgstr ""
+
+#. Description of the 'Deadline Days' (Int) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json
+msgid "起点からの日数（14等）"
+msgstr ""
+
+#. Description of the 'Deadline Hours' (Int) field in DocType 'SG Report Type'
+#: supplygraph/sg_compliance/doctype/sg_report_type/sg_report_type.json
+msgid "起点からの時間（24、72等）"
+msgstr ""
+
+#. Description of the 'To Release' (Link) field in DocType 'SG Campaign
+#. Release'
+#: supplygraph/sg_product/doctype/sg_campaign_release/sg_campaign_release.json
+msgid "適用するリリース"
+msgstr ""
+
+#. Description of the 'From Release' (Link) field in DocType 'SG Campaign
+#. Release'
+#: supplygraph/sg_product/doctype/sg_campaign_release/sg_campaign_release.json
+msgid "適用前提のリリース（空なら全て）"
+msgstr ""
+
+#. Description of the 'License Declared' (Data) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "部品の作者が宣言したライセンス（SPDX識別子、なければ名称。NONE、NOASSERTIONも可）"
+msgstr ""
+
+#. Description of the 'Component Name' (Data) field in DocType 'SG Component'
+#: supplygraph/sg_catalog/doctype/sg_component/sg_component.json
+msgid "部品名（title_field）"
+msgstr ""
+
+#. Description of the 'File Name' (Data) field in DocType 'SG Component
+#. Version'
+#: supplygraph/sg_catalog/doctype/sg_component_version/sg_component_version.json
+msgid "配布ファイル名"
+msgstr ""
+
+#. Description of the 'Owner Org' (Link) field in DocType 'SG Product Unit'
+#: supplygraph/sg_product/doctype/sg_product_unit/sg_product_unit.json
+msgid "顧客・納入先（医療機関、工場等）"
+msgstr ""
+

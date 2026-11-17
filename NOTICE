@@ -1,0 +1,13 @@
+SupplyGraph
+Copyright 2026 Lifegence and contributors
+
+This product is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The SBOM files under supplygraph/sg_bom/export/test_data and
+supplygraph/sg_bom/importer/test_data are test data. Files taken from other
+projects keep their own licenses (CC0-1.0 or Apache-2.0); their sources are
+listed in supplygraph/sg_bom/export/test_data/README.md.
+
+docs/spec/FrameworkV1ValidationRules.md and docs/onboarding/DomainPrimer.md
+summarize the OpenChain Project Automotive SBOM Framework Version 1.0,
+licensed under CC BY 4.0.

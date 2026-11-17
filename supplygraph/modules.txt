@@ -1,0 +1,6 @@
+SG Catalog
+SG BOM
+SG Product
+SG Vulnerability
+SG Compliance
+SG Exchange

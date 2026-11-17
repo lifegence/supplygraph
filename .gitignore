@@ -1,0 +1,14 @@
+.DS_Store
+*.pyc
+*.egg-info
+*.swp
+tags
+__pycache__/
+dist/
+build/
+.eggs/
+node_modules/
+supplygraph/docs/current
+supplygraph/public/dist
+*.docx
+*.xlsx

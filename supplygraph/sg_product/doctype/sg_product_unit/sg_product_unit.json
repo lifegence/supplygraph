@@ -1,0 +1,208 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "field:serial_no",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "serial_no",
+  "product_model",
+  "manufactured_on",
+  "plant",
+  "market",
+  "owner_org",
+  "installed_location",
+  "unit_status",
+  "installed_releases",
+  "regulatory_ids"
+ ],
+ "fields": [
+  {
+   "fieldname": "serial_no",
+   "label": "Serial No",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "description": "カテゴリのserial_patternで検証",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "product_model",
+   "label": "Product Model",
+   "fieldtype": "Link",
+   "options": "SG Product Model",
+   "reqd": 1,
+   "search_index": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "manufactured_on",
+   "label": "Manufactured On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "plant",
+   "label": "Plant",
+   "fieldtype": "Data",
+   "description": "製造拠点"
+  },
+  {
+   "fieldname": "market",
+   "label": "Market",
+   "fieldtype": "Link",
+   "options": "SG Market",
+   "description": "仕向地"
+  },
+  {
+   "fieldname": "owner_org",
+   "label": "Owner Org",
+   "fieldtype": "Link",
+   "options": "SG Organization",
+   "description": "顧客・納入先（医療機関、工場等）"
+  },
+  {
+   "fieldname": "installed_location",
+   "label": "Installed Location",
+   "fieldtype": "Data",
+   "description": "設置場所"
+  },
+  {
+   "fieldname": "unit_status",
+   "label": "Unit Status",
+   "fieldtype": "Select",
+   "options": "In Production\nShipped\nIn Service\nDecommissioned"
+  },
+  {
+   "fieldname": "installed_releases",
+   "label": "Installed Releases",
+   "fieldtype": "Table",
+   "options": "SG Installed Release",
+   "description": "現在の構成（as-maintained）"
+  },
+  {
+   "fieldname": "regulatory_ids",
+   "label": "Regulatory IDs",
+   "fieldtype": "Table",
+   "options": "SG Regulatory Identifier",
+   "description": "登録記号、UDI-PI等"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Product",
+ "name": "SG Product Unit",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "import": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "import": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "import": 1
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "import": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "import": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "import": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "import": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "import": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

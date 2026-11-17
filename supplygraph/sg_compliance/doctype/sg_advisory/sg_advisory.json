@@ -1,0 +1,184 @@
+{
+ "actions": [],
+ "autoname": "field:advisory_id",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "advisory_id",
+  "title",
+  "vulnerability_case",
+  "tlp",
+  "csaf_document",
+  "published_at",
+  "revisions",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "advisory_id",
+   "label": "Advisory ID",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "description": "例：LG-SA-2026-001",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "title",
+   "label": "Title",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "vulnerability_case",
+   "label": "Vulnerability Case",
+   "fieldtype": "Link",
+   "options": "SG Vulnerability Case",
+   "search_index": 1
+  },
+  {
+   "fieldname": "tlp",
+   "label": "TLP",
+   "fieldtype": "Select",
+   "options": "CLEAR\nGREEN\nAMBER\nRED",
+   "description": "共有範囲"
+  },
+  {
+   "fieldname": "csaf_document",
+   "label": "CSAF Document",
+   "fieldtype": "JSON",
+   "read_only": 1,
+   "description": "生成したCSAF"
+  },
+  {
+   "fieldname": "published_at",
+   "label": "Published At",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "revisions",
+   "label": "Revisions",
+   "fieldtype": "Table",
+   "options": "SG Advisory Revision",
+   "description": "改訂履歴"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "SG Advisory",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Compliance",
+ "name": "SG Advisory",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0,
+   "submit": 0,
+   "cancel": 0,
+   "amend": 0
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "title",
+ "track_changes": 1
+}

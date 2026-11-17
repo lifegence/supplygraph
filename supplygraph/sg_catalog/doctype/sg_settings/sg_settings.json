@@ -1,0 +1,95 @@
+{
+ "actions": [],
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "nvd_enabled",
+  "nvd_api_key",
+  "osv_enabled",
+  "sync_interval",
+  "cpe_match_min_confidence",
+  "validation_rule_set",
+  "ai_drafting_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "nvd_enabled",
+   "label": "NVD Enabled",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "nvd_api_key",
+   "label": "NVD Api Key",
+   "fieldtype": "Password"
+  },
+  {
+   "fieldname": "osv_enabled",
+   "label": "OSV Enabled",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "sync_interval",
+   "label": "Sync Interval",
+   "fieldtype": "Select",
+   "options": "Hourly\nDaily",
+   "description": "脆弱性情報の同期間隔"
+  },
+  {
+   "fieldname": "cpe_match_min_confidence",
+   "label": "CPE Match Min Confidence",
+   "fieldtype": "Select",
+   "options": "High\nMedium\nLow",
+   "description": "自動確定する照合の下限"
+  },
+  {
+   "fieldname": "validation_rule_set",
+   "label": "Validation Rule Set",
+   "fieldtype": "Data",
+   "description": "既定の検証ルール群"
+  },
+  {
+   "fieldname": "ai_drafting_enabled",
+   "label": "AI Drafting Enabled",
+   "fieldtype": "Check",
+   "description": "AIによる下書きを許可するか"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Catalog",
+ "name": "SG Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,61 @@
+{
+ "actions": [],
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_type",
+  "slot_name",
+  "default_release",
+  "is_optional",
+  "variant_condition"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_type",
+   "label": "Unit Type",
+   "fieldtype": "Link",
+   "options": "SG Unit Type",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "slot_name",
+   "label": "Slot Name",
+   "fieldtype": "Data",
+   "description": "搭載位置（例：Front Camera）"
+  },
+  {
+   "fieldname": "default_release",
+   "label": "Default Release",
+   "fieldtype": "Link",
+   "options": "SG Release",
+   "description": "出荷時の標準リリース"
+  },
+  {
+   "fieldname": "is_optional",
+   "label": "Is Optional",
+   "fieldtype": "Check",
+   "description": "オプション装備か"
+  },
+  {
+   "fieldname": "variant_condition",
+   "label": "Variant Condition",
+   "fieldtype": "Data",
+   "description": "搭載条件（例：オプションコード）"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Product",
+ "name": "SG Model Unit",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

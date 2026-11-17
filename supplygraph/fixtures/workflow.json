@@ -1,0 +1,113 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "SG BOM Document",
+  "workflow_name": "SG BOM Document",
+  "document_type": "SG BOM Document",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "override_status": 0,
+  "workflow_state_field": "import_status",
+  "states": [
+   {
+    "state": "Parsed",
+    "doc_status": "0",
+    "allow_edit": "SG Configuration Manager"
+   },
+   {
+    "state": "Validated",
+    "doc_status": "0",
+    "allow_edit": "SG Configuration Manager"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": "0",
+    "allow_edit": "SG Configuration Manager"
+   },
+   {
+    "state": "Accepted",
+    "doc_status": "1",
+    "allow_edit": "SG Configuration Manager"
+   },
+   {
+    "state": "Cancelled",
+    "doc_status": "2",
+    "allow_edit": "SG Configuration Manager"
+   }
+  ],
+  "transitions": [
+   {
+    "state": "Parsed",
+    "action": "Accept",
+    "next_state": "Accepted",
+    "allowed": "SG Configuration Manager",
+    "allow_self_approval": 1,
+    "condition": "not frappe.db.get_value(\"SG BOM Type\", doc.bom_type, \"validation_rule_set\")"
+   },
+   {
+    "state": "Parsed",
+    "action": "Accept",
+    "next_state": "Accepted",
+    "allowed": "SG Administrator",
+    "allow_self_approval": 1,
+    "condition": "not frappe.db.get_value(\"SG BOM Type\", doc.bom_type, \"validation_rule_set\")"
+   },
+   {
+    "state": "Parsed",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "SG Configuration Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Parsed",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "SG Administrator",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Validated",
+    "action": "Accept",
+    "next_state": "Accepted",
+    "allowed": "SG Configuration Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Validated",
+    "action": "Accept",
+    "next_state": "Accepted",
+    "allowed": "SG Administrator",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Validated",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "SG Configuration Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Validated",
+    "action": "Reject",
+    "next_state": "Rejected",
+    "allowed": "SG Administrator",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Accepted",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "SG Configuration Manager",
+    "allow_self_approval": 1
+   },
+   {
+    "state": "Accepted",
+    "action": "Cancel",
+    "next_state": "Cancelled",
+    "allowed": "SG Administrator",
+    "allow_self_approval": 1
+   }
+  ]
+ }
+]

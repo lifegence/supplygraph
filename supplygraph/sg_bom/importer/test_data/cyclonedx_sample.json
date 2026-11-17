@@ -1,0 +1,54 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:3e671687-395b-41f5-a30f-a58921a69b79",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-11-01T05:55:55Z",
+    "lifecycles": [{"phase": "build"}],
+    "authors": [{"name": "T Company, Ltd."}],
+    "component": {
+      "type": "application",
+      "bom-ref": "app",
+      "name": "T-Sample",
+      "version": "1.0.0",
+      "supplier": {"name": "T Company"},
+      "copyright": "(C) 2026 T Company"
+    }
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "lib-a",
+      "name": "a-lib",
+      "version": "1.2.3",
+      "purl": "pkg:PyPI/A_Lib@1.2.3?arch=x86",
+      "supplier": {"name": "A Project"},
+      "copyright": "(C) A Project",
+      "hashes": [
+        {"alg": "SHA-256", "content": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"},
+        {"alg": "MD5", "content": "d41d8cd98f00b204e9800998ecf8427e"}
+      ],
+      "licenses": [
+        {"license": {"id": "MIT", "acknowledgement": "declared"}},
+        {"license": {"id": "Apache-2.0", "acknowledgement": "concluded"}}
+      ],
+      "evidence": {"identity": [{"field": "name", "methods": [{"technique": "filename", "confidence": 0.1, "value": "a_lib.whl"}]}]},
+      "externalReferences": [{"type": "distribution", "url": "https://example.com/a.whl"}],
+      "components": [
+        {"type": "library", "bom-ref": "lib-a-child", "name": "a-child", "version": "0.1"}
+      ]
+    },
+    {
+      "type": "firmware",
+      "bom-ref": "fw-b",
+      "name": "b-firmware",
+      "licenses": [{"expression": "MIT OR GPL-2.0-only"}],
+      "externalReferences": [{"type": "bom", "url": "urn:cdx:11111111-2222-3333-4444-555555555555/1"}]
+    }
+  ],
+  "dependencies": [
+    {"ref": "app", "dependsOn": ["lib-a", "fw-b"]},
+    {"ref": "lib-a", "dependsOn": ["missing-ref"]}
+  ]
+}

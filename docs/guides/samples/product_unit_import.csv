@@ -1,0 +1,5 @@
+Serial No,Product Model,Manufactured On,Plant,Unit Status,Unit Type (Installed Releases),Slot Name (Installed Releases),Release (Installed Releases),Installed On (Installed Releases),Source (Installed Releases)
+SAMPLE00000000001,DEMO-SEDAN,2026-04-01,Demo Plant 1,In Service,DEMO-IVI-100,IVI,SGR-0000002,2026-04-01 09:00:00,As-Built
+,,,,,DEMO-TCU-200,TCU,SGR-0000004,2026-04-01 09:00:00,As-Built
+SAMPLE00000000002,DEMO-SUV,2026-05-15,Demo Plant 1,Shipped,DEMO-IVI-100,IVI,SGR-0000001,2026-05-15 10:30:00,As-Built
+,,,,,DEMO-TCU-200,TCU,SGR-0000004,2026-05-15 10:30:00,As-Built

@@ -1,0 +1,50 @@
+{
+ "actions": [],
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_type",
+  "from_release",
+  "to_release"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_type",
+   "label": "Unit Type",
+   "fieldtype": "Link",
+   "options": "SG Unit Type",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "from_release",
+   "label": "From Release",
+   "fieldtype": "Link",
+   "options": "SG Release",
+   "description": "適用前提のリリース（空なら全て）"
+  },
+  {
+   "fieldname": "to_release",
+   "label": "To Release",
+   "fieldtype": "Link",
+   "options": "SG Release",
+   "reqd": 1,
+   "description": "適用するリリース",
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Product",
+ "name": "SG Campaign Release",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

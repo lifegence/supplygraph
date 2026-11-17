@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_type",
+  "slot_name",
+  "release",
+  "installed_on",
+  "source",
+  "measured_identifier"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_type",
+   "label": "Unit Type",
+   "fieldtype": "Link",
+   "options": "SG Unit Type",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "slot_name",
+   "label": "Slot Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "release",
+   "label": "Release",
+   "fieldtype": "Link",
+   "options": "SG Release",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "installed_on",
+   "label": "Installed On",
+   "fieldtype": "Datetime"
+  },
+  {
+   "fieldname": "source",
+   "label": "Source",
+   "fieldtype": "Select",
+   "options": "As-Built\nOTA\nService\nCustomer Install\nMeasured",
+   "description": "この値の出どころ"
+  },
+  {
+   "fieldname": "measured_identifier",
+   "label": "Measured Identifier",
+   "fieldtype": "Data",
+   "description": "実機から読んだ識別子（自動車ではUDSのDID値）"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Product",
+ "name": "SG Installed Release",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

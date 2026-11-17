@@ -1,0 +1,63 @@
+{
+  "spdxVersion": "SPDX-2.3",
+  "dataLicense": "CC0-1.0",
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "name": "T-Sample",
+  "documentNamespace": "https://example.com/spdx/T-Sample",
+  "creationInfo": {
+    "created": "2026-01-01T05:55:55Z",
+    "creators": ["Tool: SCA tool - v0.11.1", "Organization: T Company, Ltd."],
+    "comment": "SBOM Type : Build"
+  },
+  "externalDocumentRefs": [
+    {
+      "externalDocumentId": "DocumentRef-B-Component",
+      "spdxDocument": "https://example.com/spdx/B-Component",
+      "checksum": {"algorithm": "SHA256", "checksumValue": "a799be4c01d8b123fd7634e6f25c8bce763213f265514c1c37781c856c352e85"}
+    }
+  ],
+  "packages": [
+    {
+      "name": "T-Sample",
+      "SPDXID": "SPDXRef-T",
+      "versionInfo": "1.0",
+      "supplier": "Organization: T Company",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "T-Sample.exe",
+      "filesAnalyzed": false,
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "(C) 2026 T Company."
+    },
+    {
+      "name": "A-Component",
+      "SPDXID": "SPDXRef-A",
+      "versionInfo": "2.0",
+      "supplier": "Organization: A Company",
+      "downloadLocation": "https://example.com/a.lib",
+      "packageFileName": "A-Component.lib",
+      "filesAnalyzed": false,
+      "licenseConcluded": "MIT",
+      "licenseDeclared": "NONE",
+      "copyrightText": "NOASSERTION",
+      "checksums": [{"algorithm": "SHA256", "checksumValue": "9c50067a4da56808c6cfe11d6b71e1507c6115d2c22004ad7d3f6d4409367358"}],
+      "externalRefs": [{"referenceCategory": "PACKAGE-MANAGER", "referenceType": "purl", "referenceLocator": "pkg:generic/a-component@2.0"}]
+    },
+    {
+      "name": "B-Component",
+      "SPDXID": "SPDXRef-B",
+      "versionInfo": "3.0",
+      "supplier": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "packageFileName": "B-Component.iso",
+      "filesAnalyzed": false
+    }
+  ],
+  "relationships": [
+    {"spdxElementId": "SPDXRef-DOCUMENT", "relationshipType": "DESCRIBES", "relatedSpdxElement": "SPDXRef-T"},
+    {"spdxElementId": "SPDXRef-T", "relationshipType": "CONTAINS", "relatedSpdxElement": "SPDXRef-A"},
+    {"spdxElementId": "SPDXRef-T", "relationshipType": "CONTAINS", "relatedSpdxElement": "SPDXRef-B"},
+    {"spdxElementId": "SPDXRef-A", "relationshipType": "DEV_DEPENDENCY_OF", "relatedSpdxElement": "SPDXRef-T"},
+    {"spdxElementId": "SPDXRef-A", "relationshipType": "CONTAINS", "relatedSpdxElement": "NOASSERTION"},
+    {"spdxElementId": "SPDXRef-B", "relationshipType": "DESCRIBED_BY", "relatedSpdxElement": "DocumentRef-B-Component:SPDXRef-DOCUMENT"}
+  ]
+}

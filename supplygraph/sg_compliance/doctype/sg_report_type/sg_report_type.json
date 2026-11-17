@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "autoname": "field:report_type_name",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "report_type_name",
+  "regulation",
+  "recipient",
+  "deadline_basis",
+  "deadline_hours",
+  "deadline_days",
+  "provided_by_app"
+ ],
+ "fields": [
+  {
+   "fieldname": "report_type_name",
+   "label": "Report Type Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "description": "例：CRA Early Warning",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "regulation",
+   "label": "Regulation",
+   "fieldtype": "Data",
+   "description": "例：EU 2024/2847 Art.14"
+  },
+  {
+   "fieldname": "recipient",
+   "label": "Recipient",
+   "fieldtype": "Data",
+   "description": "例：ENISA Single Reporting Platform"
+  },
+  {
+   "fieldname": "deadline_basis",
+   "label": "Deadline Basis",
+   "fieldtype": "Select",
+   "options": "Aware At\nFix Available\nFixed Date\nPeriodic",
+   "reqd": 1,
+   "description": "期限の起点",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "deadline_hours",
+   "label": "Deadline Hours",
+   "fieldtype": "Int",
+   "description": "起点からの時間（24、72等）"
+  },
+  {
+   "fieldname": "deadline_days",
+   "label": "Deadline Days",
+   "fieldtype": "Int",
+   "description": "起点からの日数（14等）"
+  },
+  {
+   "fieldname": "provided_by_app",
+   "label": "Provided By App",
+   "fieldtype": "Data"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Compliance",
+ "name": "SG Report Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

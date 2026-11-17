@@ -1,0 +1,32 @@
+[
+ {
+  "doctype": "Workflow State",
+  "name": "Parsed",
+  "workflow_state_name": "Parsed",
+  "style": "Info"
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Validated",
+  "workflow_state_name": "Validated",
+  "style": "Primary"
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Accepted",
+  "workflow_state_name": "Accepted",
+  "style": "Success"
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Rejected",
+  "workflow_state_name": "Rejected",
+  "style": "Danger"
+ },
+ {
+  "doctype": "Workflow State",
+  "name": "Cancelled",
+  "workflow_state_name": "Cancelled",
+  "style": "Inverse"
+ }
+]

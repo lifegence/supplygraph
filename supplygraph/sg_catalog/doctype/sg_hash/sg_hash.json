@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "algorithm",
+  "hash_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "algorithm",
+   "label": "Algorithm",
+   "fieldtype": "Select",
+   "options": "SHA-1\nSHA-256\nSHA-384\nSHA-512\nSHA3-256\nBLAKE3",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "hash_value",
+   "label": "Hash Value",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "description": "16進文字列",
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Catalog",
+ "name": "SG Hash",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

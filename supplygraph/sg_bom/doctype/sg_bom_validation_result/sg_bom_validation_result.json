@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_code",
+  "severity",
+  "target_ref",
+  "message"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_code",
+   "label": "Rule Code",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "description": "例：FW-AUTHOR、FW-HASH",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "severity",
+   "label": "Severity",
+   "fieldtype": "Select",
+   "options": "Error\nWarning\nInfo",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "target_ref",
+   "label": "Target Ref",
+   "fieldtype": "Data",
+   "description": "対象のbom-ref"
+  },
+  {
+   "fieldname": "message",
+   "label": "Message",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG BOM",
+ "name": "SG BOM Validation Result",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 0
+}

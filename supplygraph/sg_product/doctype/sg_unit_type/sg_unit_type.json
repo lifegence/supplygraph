@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "autoname": "field:unit_part_number",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_part_number",
+  "unit_name",
+  "supplier",
+  "external_connectivity",
+  "safety_level",
+  "security_level",
+  "support_end_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_part_number",
+   "label": "Unit Part Number",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "description": "ハードウェア部品番号",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "unit_name",
+   "label": "Unit Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "supplier",
+   "label": "Supplier",
+   "fieldtype": "Link",
+   "options": "SG Organization",
+   "description": "納入元（Tier 1等）"
+  },
+  {
+   "fieldname": "external_connectivity",
+   "label": "External Connectivity",
+   "fieldtype": "Select",
+   "options": "None\nInternal Bus\nLocal Wireless\nCellular or Internet",
+   "description": "攻撃面（外部接続の有無）"
+  },
+  {
+   "fieldname": "safety_level",
+   "label": "Safety Level",
+   "fieldtype": "Data",
+   "description": "ASIL / SIL / PL / IEC 62304クラス（業界ごとの表記）"
+  },
+  {
+   "fieldname": "security_level",
+   "label": "Security Level",
+   "fieldtype": "Data",
+   "description": "CAL / IEC 62443 SL"
+  },
+  {
+   "fieldname": "support_end_date",
+   "label": "Support End Date",
+   "fieldtype": "Date"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Product",
+ "name": "SG Unit Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "unit_name",
+ "track_changes": 1
+}

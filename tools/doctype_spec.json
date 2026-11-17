@@ -1,0 +1,2171 @@
+{
+ "5.1 カタログ（Catalog）": [
+  {
+   "name": "SG Organization",
+   "phase": "MVP",
+   "naming": "field:organization_name",
+   "purpose": "部品の供給元、製品の製造元、顧客、OSSプロジェクトを一元管理する。ERPNextのSupplier / Customerとはブリッジアプリで対応づける（D2）。",
+   "fields": [
+    [
+     "organization_name",
+     "Data",
+     "",
+     "必須・一意",
+     "組織名"
+    ],
+    [
+     "organization_type",
+     "Select",
+     "Supplier / Manufacturer / Customer / Internal / Open Source Project",
+     "必須",
+     "組織の種別"
+    ],
+    [
+     "tier",
+     "Select",
+     "Tier 1 / Tier 2 / Tier 3 / N/A",
+     "",
+     "サプライチェーン上の階層"
+    ],
+    [
+     "country",
+     "Link",
+     "Country",
+     "",
+     "所在国（ドローンの原産国判定にも使う）"
+    ],
+    [
+     "website",
+     "Data (URL)",
+     "",
+     "",
+     ""
+    ],
+    [
+     "psirt_email",
+     "Data (Email)",
+     "",
+     "",
+     "脆弱性連絡窓口"
+    ],
+    [
+     "advisory_url",
+     "Data (URL)",
+     "",
+     "",
+     "セキュリティアドバイザリの公開先（CSAF取込元）"
+    ],
+    [
+     "is_active",
+     "Check",
+     "",
+     "",
+     "取引中か"
+    ]
+   ]
+  },
+  {
+   "name": "SG Component",
+   "phase": "MVP",
+   "naming": "naming_series: SGC-.#######",
+   "purpose": "版を持たない部品の同一性（例：OpenSSL）。CVEの影響範囲は部品単位で公開されるため、版（SG Component Version）とは分けて持つ。",
+   "fields": [
+    [
+     "naming_series",
+     "Select",
+     "SGC-.#######",
+     "必須",
+     ""
+    ],
+    [
+     "component_name",
+     "Data",
+     "",
+     "必須",
+     "部品名（title_field）"
+    ],
+    [
+     "component_type",
+     "Select",
+     "library / framework / operating-system / firmware / application / container / file / machine-learning-model / data / device / hardware",
+     "必須",
+     "CycloneDXのcomponent typeに合わせる"
+    ],
+    [
+     "purl_base",
+     "Data",
+     "",
+     "一意",
+     "版なしPURL（例：pkg:generic/openssl）。名寄せの主キー"
+    ],
+    [
+     "cpe_vendor",
+     "Data",
+     "",
+     "",
+     "CPEのvendor（NVD照合用）"
+    ],
+    [
+     "cpe_product",
+     "Data",
+     "",
+     "",
+     "CPEのproduct"
+    ],
+    [
+     "supplier",
+     "Link",
+     "SG Organization",
+     "",
+     "既定の供給元"
+    ],
+    [
+     "is_proprietary",
+     "Check",
+     "",
+     "",
+     "自社・商用の非公開部品か"
+    ],
+    [
+     "repository_url",
+     "Data (URL)",
+     "",
+     "",
+     ""
+    ],
+    [
+     "description",
+     "Small Text",
+     "",
+     "",
+     ""
+    ],
+    [
+     "review_status",
+     "Select",
+     "Confirmed / Needs Review",
+     "",
+     "名寄せの確認状況。重複の候補はNeeds Reviewになる"
+    ],
+    [
+     "aliases",
+     "Table",
+     "SG Component Alias",
+     "",
+     "統合した部品の名前とPURL。再取込で同じ部品につなぐ"
+    ]
+   ],
+   "note": "インデックス：purl_base（一意）、(cpe_vendor, cpe_product)。"
+  },
+  {
+   "name": "SG Component Version",
+   "phase": "MVP",
+   "naming": "naming_series: SGCV-.#########",
+   "purpose": "部品の特定の版。脆弱性照合・ライセンス・サポート期限はこの単位で判定する。逆引き経路の起点。",
+   "fields": [
+    [
+     "component",
+     "Link",
+     "SG Component",
+     "必須",
+     ""
+    ],
+    [
+     "version",
+     "Data",
+     "",
+     "必須",
+     "版文字列（原文のまま保持）"
+    ],
+    [
+     "purl",
+     "Data",
+     "",
+     "一意",
+     "版つきPURL"
+    ],
+    [
+     "cpe",
+     "Data",
+     "",
+     "",
+     "CPE 2.3文字列"
+    ],
+    [
+     "hashes",
+     "Table",
+     "SG Hash",
+     "",
+     "SHA-256等（子テーブル）"
+    ],
+    [
+     "license_concluded",
+     "Link",
+     "SG License",
+     "",
+     "確定ライセンス（単一の場合）"
+    ],
+    [
+     "license_expression",
+     "Data",
+     "",
+     "",
+     "SPDXライセンス式（複合の場合）"
+    ],
+    [
+     "supplier",
+     "Link",
+     "SG Organization",
+     "",
+     "この版の供給元（部品の既定値を上書き）"
+    ],
+    [
+     "support_status",
+     "Select",
+     "Active / Limited / End of Support / Unknown",
+     "",
+     "サポート状況（FDA・CRA対応）"
+    ],
+    [
+     "end_of_support_date",
+     "Date",
+     "",
+     "",
+     "サポート終了日"
+    ],
+    [
+     "is_modified",
+     "Check",
+     "",
+     "",
+     "改変版か（パッチ当て等）"
+    ],
+    [
+     "file_name",
+     "Data",
+     "",
+     "",
+     "配布ファイル名"
+    ],
+    [
+     "download_location",
+     "Small Text",
+     "",
+     "",
+     "ダウンロード元のURL（COTS・独自の部品はNone）"
+    ],
+    [
+     "license_declared",
+     "Data",
+     "",
+     "",
+     "部品の作者が宣言したライセンス（SPDX識別子、なければ名称。NONE、NOASSERTIONも可）"
+    ],
+    [
+     "copyright_text",
+     "Small Text",
+     "",
+     "",
+     "ライセンス表示用"
+    ]
+   ],
+   "note": "一意制約：(component, version)。インデックス：purl、component、end_of_support_date。"
+  },
+  {
+   "name": "SG License",
+   "phase": "Phase 2",
+   "naming": "field:spdx_id",
+   "purpose": "SPDXライセンスの台帳と社内ポリシー。AIモデル特有の利用制限つきライセンスも同じ台帳で扱う。",
+   "fields": [
+    [
+     "spdx_id",
+     "Data",
+     "",
+     "必須・一意",
+     "SPDX識別子（例：Apache-2.0）。独自ライセンスはLicenseRef-で始める"
+    ],
+    [
+     "license_name",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "category",
+     "Select",
+     "Permissive / Weak Copyleft / Strong Copyleft / Network Copyleft / Proprietary / AI Use Restricted / Public Domain",
+     "必須",
+     ""
+    ],
+    [
+     "osi_approved",
+     "Check",
+     "",
+     "",
+     ""
+    ],
+    [
+     "policy",
+     "Select",
+     "Allowed / Review Required / Prohibited",
+     "必須",
+     "社内ポリシー"
+    ],
+    [
+     "obligations",
+     "Text Editor",
+     "",
+     "",
+     "表示・開示などの義務"
+    ]
+   ]
+  },
+  {
+   "name": "SG Hash",
+   "phase": "MVP",
+   "naming": "（子テーブル）",
+   "kind": "子テーブル",
+   "track": false,
+   "purpose": "SG Component Version と SG Release のハッシュ値。",
+   "fields": [
+    [
+     "algorithm",
+     "Select",
+     "SHA-1 / SHA-256 / SHA-384 / SHA-512 / SHA3-256 / BLAKE3",
+     "必須",
+     ""
+    ],
+    [
+     "hash_value",
+     "Data",
+     "",
+     "必須",
+     "16進文字列"
+    ]
+   ]
+  }
+ ],
+ "5.2 BOM": [
+  {
+   "name": "SG BOM Type",
+   "phase": "MVP",
+   "naming": "field:bom_type_name",
+   "purpose": "BOMの種類。コアはSBOMを持ち、業界アプリがAI BOM・SOUP List・Origin BOMなどをフィクスチャで追加する（D6）。",
+   "fields": [
+    [
+     "bom_type_name",
+     "Data",
+     "",
+     "必須・一意",
+     "例：SBOM、AI BOM、SOUP List、Origin BOM"
+    ],
+    [
+     "provided_by_app",
+     "Data",
+     "",
+     "",
+     "定義したアプリ名"
+    ],
+    [
+     "required_entry_fields",
+     "JSON",
+     "",
+     "",
+     "BOM Entryで必須にする追加フィールドの一覧"
+    ],
+    [
+     "validation_rule_set",
+     "Data",
+     "",
+     "",
+     "受領時に適用する検証ルール群の名前"
+    ]
+   ]
+  },
+  {
+   "name": "SG BOM Document",
+   "phase": "MVP",
+   "naming": "naming_series: SGB-.YYYY.-.#####",
+   "kind": "提出可能",
+   "purpose": "SBOM等の文書1件のヘッダ。受領・検証して承認したら提出（Submit）し、証跡として変更不可にする（D5）。修正はAmendで新版を作る。",
+   "fields": [
+    [
+     "bom_type",
+     "Link",
+     "SG BOM Type",
+     "必須",
+     ""
+    ],
+    [
+     "format",
+     "Select",
+     "CycloneDX / SPDX / Internal",
+     "必須",
+     "元の形式"
+    ],
+    [
+     "spec_version",
+     "Data",
+     "",
+     "",
+     "例：CycloneDX 1.6、SPDX 2.3"
+    ],
+    [
+     "serial_number",
+     "Data",
+     "",
+     "",
+     "CycloneDXのserialNumber / SPDXのdocumentNamespace"
+    ],
+    [
+     "bom_version",
+     "Int",
+     "",
+     "",
+     "文書の版"
+    ],
+    [
+     "lifecycle_phase",
+     "Select",
+     "Design / Source / Build / Analyzed / Deployed / Runtime",
+     "必須",
+     "CISAのSBOM種別（FrameworkのSBOM Type）"
+    ],
+    [
+     "author_name",
+     "Data",
+     "",
+     "必須",
+     "SBOM Author"
+    ],
+    [
+     "author_org",
+     "Link",
+     "SG Organization",
+     "",
+     ""
+    ],
+    [
+     "supplier_org",
+     "Link",
+     "SG Organization",
+     "",
+     "SBOMを提供した組織"
+    ],
+    [
+     "bom_timestamp",
+     "Datetime",
+     "",
+     "必須",
+     "Timestamp"
+    ],
+    [
+     "primary_component",
+     "Link",
+     "SG Component Version",
+     "",
+     "Primary Component"
+    ],
+    [
+     "subject_release",
+     "Link",
+     "SG Release",
+     "",
+     "このBOMが記述するリリース"
+    ],
+    [
+     "source_file",
+     "Attach",
+     "",
+     "",
+     "受領した元ファイル"
+    ],
+    [
+     "source_sha256",
+     "Data",
+     "",
+     "",
+     "元ファイルのハッシュ（改ざん検知）"
+    ],
+    [
+     "completeness",
+     "Select",
+     "Complete / Incomplete / Unknown",
+     "",
+     "CycloneDX compositionsに対応"
+    ],
+    [
+     "granularity",
+     "Select",
+     "Full / Top-level Only / Vendor Coarse",
+     "",
+     "粒度（照合精度の限界を示す）"
+    ],
+    [
+     "import_status",
+     "Select",
+     "Parsed / Validated / Rejected / Accepted / Cancelled",
+     "読取専用",
+     ""
+    ],
+    [
+     "validation_score",
+     "Percent",
+     "",
+     "読取専用",
+     "必須項目の充足率"
+    ],
+    [
+     "validation_results",
+     "Table",
+     "SG BOM Validation Result",
+     "",
+     "検証結果（子テーブル）"
+    ],
+    [
+     "entry_count",
+     "Int",
+     "",
+     "読取専用",
+     "BOM Entryの件数"
+    ]
+   ],
+   "note": "BOM Entry・Dependencyは子テーブルにせず独立DocTypeにする（D4）。数千行のSBOMでもフォームの読み込みが重くならない。"
+  },
+  {
+   "name": "SG BOM Validation Result",
+   "phase": "MVP",
+   "naming": "（子テーブル）",
+   "kind": "子テーブル",
+   "track": false,
+   "purpose": "受領SBOMの検証結果。Automotive SBOM Frameworkの必須項目等のルールごとに1行。",
+   "fields": [
+    [
+     "rule_code",
+     "Data",
+     "",
+     "必須",
+     "例：FW-AUTHOR、FW-HASH"
+    ],
+    [
+     "severity",
+     "Select",
+     "Error / Warning / Info",
+     "必須",
+     ""
+    ],
+    [
+     "target_ref",
+     "Data",
+     "",
+     "",
+     "対象のbom-ref"
+    ],
+    [
+     "message",
+     "Small Text",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG BOM Entry",
+   "phase": "MVP",
+   "naming": "hash",
+   "track": false,
+   "purpose": "BOM文書の1行（部品の版1つ）。入れ子のSBOMは external_bom で別文書を参照する（FrameworkのExternal Document Reference）。",
+   "fields": [
+    [
+     "bom_document",
+     "Link",
+     "SG BOM Document",
+     "必須",
+     ""
+    ],
+    [
+     "component_version",
+     "Link",
+     "SG Component Version",
+     "必須",
+     ""
+    ],
+    [
+     "bom_ref",
+     "Data",
+     "",
+     "",
+     "元文書内の識別子（CycloneDX bom-ref / SPDX SPDXID）"
+    ],
+    [
+     "scope",
+     "Select",
+     "required / optional / excluded",
+     "",
+     ""
+    ],
+    [
+     "is_direct",
+     "Check",
+     "",
+     "",
+     "直接依存か"
+    ],
+    [
+     "supplier",
+     "Link",
+     "SG Organization",
+     "",
+     ""
+    ],
+    [
+     "license_concluded",
+     "Link",
+     "SG License",
+     "",
+     ""
+    ],
+    [
+     "external_bom",
+     "Link",
+     "SG BOM Document",
+     "",
+     "この部品自体のSBOM（入れ子）"
+    ],
+    [
+     "external_bom_ref",
+     "Small Text",
+     "",
+     "",
+     "元文書に書かれた外部SBOMの参照。対象が未取込でも保持し、取込後にexternal_bomへつなぐ"
+    ]
+   ],
+   "note": "インデックス：(bom_document, component_version)、component_version。"
+  },
+  {
+   "name": "SG Dependency",
+   "phase": "MVP",
+   "naming": "hash",
+   "track": false,
+   "purpose": "BOM Entry間の関係。SPDXのRelationshipとCycloneDXのdependenciesを同じ形で持つ。",
+   "fields": [
+    [
+     "bom_document",
+     "Link",
+     "SG BOM Document",
+     "必須",
+     ""
+    ],
+    [
+     "from_entry",
+     "Link",
+     "SG BOM Entry",
+     "必須",
+     ""
+    ],
+    [
+     "to_entry",
+     "Link",
+     "SG BOM Entry",
+     "必須",
+     ""
+    ],
+    [
+     "relationship",
+     "Select",
+     "depends-on / contains / dev-dependency / optional-dependency / provided-by / generated-from / variant-of",
+     "必須",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Release Component",
+   "phase": "MVP",
+   "naming": "hash",
+   "track": false,
+   "purpose": "リリースに含まれる部品の版を、入れ子SBOMまで展開して平坦化した索引。BOM文書の提出時に再計算する。影響逆引きを結合1回で済ませるための非正規化テーブル（D7）。",
+   "fields": [
+    [
+     "release",
+     "Link",
+     "SG Release",
+     "必須",
+     ""
+    ],
+    [
+     "component_version",
+     "Link",
+     "SG Component Version",
+     "必須",
+     ""
+    ],
+    [
+     "via_bom_document",
+     "Link",
+     "SG BOM Document",
+     "",
+     "どのBOMから来たか"
+    ],
+    [
+     "depth",
+     "Int",
+     "",
+     "",
+     "0＝直接、1以上＝推移的"
+    ]
+   ],
+   "note": "一意制約：(release, component_version, via_bom_document)。インデックス：component_version。"
+  }
+ ],
+ "5.3 製品構成・更新（Product）": [
+  {
+   "name": "SG Product Category",
+   "phase": "MVP",
+   "naming": "field:category_name",
+   "purpose": "製品の種類（Vehicle、Robot、Industrial Device、Medical Device、Airframe）。業界アプリがフィクスチャで登録し、カテゴリに応じてフォームの項目を切り替える。",
+   "fields": [
+    [
+     "category_name",
+     "Data",
+     "",
+     "必須・一意",
+     ""
+    ],
+    [
+     "unit_label",
+     "Data",
+     "",
+     "",
+     "実機の呼び名（例：VIN、シリアル、UDI-PI）"
+    ],
+    [
+     "serial_pattern",
+     "Data",
+     "",
+     "",
+     "実機識別子の検証用正規表現（例：VINは17桁）"
+    ],
+    [
+     "provided_by_app",
+     "Data",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Product Model",
+   "phase": "MVP",
+   "naming": "field:model_code",
+   "purpose": "製品モデル（自動車の型式、医療機器のUDI-DI単位など）。搭載ユニットの構成を子テーブルで持つ。",
+   "fields": [
+    [
+     "model_code",
+     "Data",
+     "",
+     "必須・一意",
+     ""
+    ],
+    [
+     "model_name",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "product_category",
+     "Link",
+     "SG Product Category",
+     "必須",
+     ""
+    ],
+    [
+     "manufacturer",
+     "Link",
+     "SG Organization",
+     "",
+     ""
+    ],
+    [
+     "markets",
+     "Table MultiSelect",
+     "SG Market Row",
+     "",
+     "仕向地・販売地域"
+    ],
+    [
+     "lifecycle_status",
+     "Select",
+     "Development / In Production / End of Production / End of Support",
+     "",
+     ""
+    ],
+    [
+     "support_end_date",
+     "Date",
+     "",
+     "",
+     "セキュリティ更新の提供終了日（CRAのサポート期間）"
+    ],
+    [
+     "regulatory_ids",
+     "Table",
+     "SG Regulatory Identifier",
+     "",
+     "型式認可番号、UDI-DI、510(k)番号、JC-STAR等"
+    ],
+    [
+     "unit_slots",
+     "Table",
+     "SG Model Unit",
+     "",
+     "搭載ユニットの構成"
+    ]
+   ]
+  },
+  {
+   "name": "SG Model Unit",
+   "phase": "MVP",
+   "naming": "（子テーブル）",
+   "kind": "子テーブル",
+   "track": false,
+   "purpose": "製品モデルに搭載されるユニットの枠と、標準のリリース。",
+   "fields": [
+    [
+     "unit_type",
+     "Link",
+     "SG Unit Type",
+     "必須",
+     ""
+    ],
+    [
+     "slot_name",
+     "Data",
+     "",
+     "",
+     "搭載位置（例：Front Camera）"
+    ],
+    [
+     "default_release",
+     "Link",
+     "SG Release",
+     "",
+     "出荷時の標準リリース"
+    ],
+    [
+     "is_optional",
+     "Check",
+     "",
+     "",
+     "オプション装備か"
+    ],
+    [
+     "variant_condition",
+     "Data",
+     "",
+     "",
+     "搭載条件（例：オプションコード）"
+    ]
+   ]
+  },
+  {
+   "name": "SG Regulatory Identifier",
+   "phase": "MVP",
+   "naming": "（子テーブル）",
+   "kind": "子テーブル",
+   "track": false,
+   "purpose": "製品モデル・実機に付く規制上の識別子。業界ごとの番号体系をスキーム名で区別する。",
+   "fields": [
+    [
+     "scheme",
+     "Select",
+     "UNECE Type Approval / UDI-DI / FDA 510(k) / FDA PMA / PMDA Approval / CE DoC / JC-STAR / Drone Registration / Other",
+     "必須",
+     ""
+    ],
+    [
+     "identifier",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "issued_on",
+     "Date",
+     "",
+     "",
+     ""
+    ],
+    [
+     "valid_until",
+     "Date",
+     "",
+     "",
+     "JC-STARラベル等の有効期限"
+    ]
+   ]
+  },
+  {
+   "name": "SG Unit Type",
+   "phase": "MVP",
+   "naming": "field:unit_part_number",
+   "purpose": "搭載ユニット（ECU、コントローラ、モジュール等）のハードウェア型。攻撃面と安全度の属性を持ち、影響の優先度づけに使う。",
+   "fields": [
+    [
+     "unit_part_number",
+     "Data",
+     "",
+     "必須・一意",
+     "ハードウェア部品番号"
+    ],
+    [
+     "unit_name",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "supplier",
+     "Link",
+     "SG Organization",
+     "",
+     "納入元（Tier 1等）"
+    ],
+    [
+     "external_connectivity",
+     "Select",
+     "None / Internal Bus / Local Wireless / Cellular or Internet",
+     "",
+     "攻撃面（外部接続の有無）"
+    ],
+    [
+     "safety_level",
+     "Data",
+     "",
+     "",
+     "ASIL / SIL / PL / IEC 62304クラス（業界ごとの表記）"
+    ],
+    [
+     "security_level",
+     "Data",
+     "",
+     "",
+     "CAL / IEC 62443 SL"
+    ],
+    [
+     "support_end_date",
+     "Date",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Release",
+   "phase": "MVP",
+   "naming": "naming_series: SGR-.#######",
+   "purpose": "ソフトウェア・ファームウェア・キャリブレーション・AIモデル等の版。BOM文書が記述し、実機に搭載される単位。",
+   "fields": [
+    [
+     "release_code",
+     "Data",
+     "",
+     "必須",
+     "ソフト部品番号（title_field）"
+    ],
+    [
+     "version",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "release_type",
+     "Select",
+     "Software / Firmware / Calibration / AI Model / Configuration / Update Package",
+     "必須",
+     ""
+    ],
+    [
+     "unit_type",
+     "Link",
+     "SG Unit Type",
+     "",
+     "対象ハードウェア"
+    ],
+    [
+     "release_status",
+     "Select",
+     "Planned / Released / Withdrawn / End of Support",
+     "必須",
+     ""
+    ],
+    [
+     "released_on",
+     "Date",
+     "",
+     "",
+     ""
+    ],
+    [
+     "hashes",
+     "Table",
+     "SG Hash",
+     "",
+     ""
+    ],
+    [
+     "primary_bom",
+     "Link",
+     "SG BOM Document",
+     "",
+     "このリリースのSBOM"
+    ],
+    [
+     "previous_release",
+     "Link",
+     "SG Release",
+     "",
+     "前の版"
+    ],
+    [
+     "support_end_date",
+     "Date",
+     "",
+     "",
+     ""
+    ],
+    [
+     "release_notes",
+     "Text Editor",
+     "",
+     "",
+     ""
+    ]
+   ],
+   "note": "一意制約：(release_code, version)。"
+  },
+  {
+   "name": "SG Product Unit",
+   "phase": "MVP",
+   "naming": "field:serial_no",
+   "purpose": "実機1台（VIN、ロボットのシリアル、UDI-PI、機器シリアル、機体シリアル）。現在の構成を子テーブルで持つ。",
+   "fields": [
+    [
+     "serial_no",
+     "Data",
+     "",
+     "必須・一意",
+     "カテゴリのserial_patternで検証"
+    ],
+    [
+     "product_model",
+     "Link",
+     "SG Product Model",
+     "必須",
+     ""
+    ],
+    [
+     "manufactured_on",
+     "Date",
+     "",
+     "",
+     ""
+    ],
+    [
+     "plant",
+     "Data",
+     "",
+     "",
+     "製造拠点"
+    ],
+    [
+     "market",
+     "Link",
+     "SG Market",
+     "",
+     "仕向地"
+    ],
+    [
+     "owner_org",
+     "Link",
+     "SG Organization",
+     "",
+     "顧客・納入先（医療機関、工場等）"
+    ],
+    [
+     "installed_location",
+     "Data",
+     "",
+     "",
+     "設置場所"
+    ],
+    [
+     "unit_status",
+     "Select",
+     "In Production / Shipped / In Service / Decommissioned",
+     "",
+     ""
+    ],
+    [
+     "installed_releases",
+     "Table",
+     "SG Installed Release",
+     "",
+     "現在の構成（as-maintained）"
+    ],
+    [
+     "regulatory_ids",
+     "Table",
+     "SG Regulatory Identifier",
+     "",
+     "登録記号、UDI-PI等"
+    ]
+   ],
+   "note": "数百万台の規模では、影響台数の推計に SG Product Model × リリースの集計テーブル（Phase 2で追加）を併用する。"
+  },
+  {
+   "name": "SG Installed Release",
+   "phase": "MVP",
+   "naming": "（子テーブル）",
+   "kind": "子テーブル",
+   "track": false,
+   "purpose": "実機の各ユニットに今入っているリリース。構成変更の確定時にコントローラが更新する。",
+   "fields": [
+    [
+     "unit_type",
+     "Link",
+     "SG Unit Type",
+     "必須",
+     ""
+    ],
+    [
+     "slot_name",
+     "Data",
+     "",
+     "",
+     ""
+    ],
+    [
+     "release",
+     "Link",
+     "SG Release",
+     "必須",
+     ""
+    ],
+    [
+     "installed_on",
+     "Datetime",
+     "",
+     "",
+     ""
+    ],
+    [
+     "source",
+     "Select",
+     "As-Built / OTA / Service / Customer Install / Measured",
+     "",
+     "この値の出どころ"
+    ],
+    [
+     "measured_identifier",
+     "Data",
+     "",
+     "",
+     "実機から読んだ識別子（自動車ではUDSのDID値）"
+    ]
+   ],
+   "note": "インデックス：release（逆引きで実機を探す主経路）。"
+  },
+  {
+   "name": "SG Configuration Change",
+   "phase": "Phase 2",
+   "naming": "naming_series: SGCC-.YYYY.-.########",
+   "kind": "提出可能",
+   "track": false,
+   "purpose": "実機の構成変更の履歴（as-builtからの全変更）。提出時に SG Product Unit の installed_releases を更新する。",
+   "fields": [
+    [
+     "product_unit",
+     "Link",
+     "SG Product Unit",
+     "必須",
+     ""
+    ],
+    [
+     "unit_type",
+     "Link",
+     "SG Unit Type",
+     "必須",
+     ""
+    ],
+    [
+     "from_release",
+     "Link",
+     "SG Release",
+     "",
+     ""
+    ],
+    [
+     "to_release",
+     "Link",
+     "SG Release",
+     "必須",
+     ""
+    ],
+    [
+     "changed_on",
+     "Datetime",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "change_source",
+     "Select",
+     "As-Built / OTA / Service / Customer Install / Measured",
+     "必須",
+     ""
+    ],
+    [
+     "update_campaign",
+     "Link",
+     "SG Update Campaign",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Update Campaign",
+   "phase": "Phase 2",
+   "naming": "naming_series: SGUC-.YYYY.-.####",
+   "purpose": "更新の配布計画（OTA、販売店作業、計画停止での適用など）。対象条件と承認、進捗を管理する。",
+   "fields": [
+    [
+     "campaign_title",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "delivery_method",
+     "Select",
+     "OTA / Service / Customer Install / Maintenance Window",
+     "必須",
+     ""
+    ],
+    [
+     "target_models",
+     "Table MultiSelect",
+     "SG Campaign Model",
+     "",
+     "対象の製品モデル"
+    ],
+    [
+     "release_changes",
+     "Table",
+     "SG Campaign Release",
+     "必須",
+     "unit_type・前提リリース・適用リリースの組"
+    ],
+    [
+     "vulnerability_case",
+     "Link",
+     "SG Vulnerability Case",
+     "",
+     "起因した案件"
+    ],
+    [
+     "planned_start",
+     "Date",
+     "",
+     "",
+     ""
+    ],
+    [
+     "campaign_status",
+     "Select",
+     "Draft / In Review / Approved / In Progress / Completed / Cancelled",
+     "読取専用",
+     "ワークフローで遷移"
+    ],
+    [
+     "target_count",
+     "Int",
+     "",
+     "読取専用",
+     ""
+    ],
+    [
+     "completed_count",
+     "Int",
+     "",
+     "読取専用",
+     ""
+    ],
+    [
+     "failed_count",
+     "Int",
+     "",
+     "読取専用",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Update Record",
+   "phase": "Phase 2",
+   "naming": "hash",
+   "track": false,
+   "purpose": "キャンペーン×実機の適用結果。成功時に SG Configuration Change を自動作成する。",
+   "fields": [
+    [
+     "update_campaign",
+     "Link",
+     "SG Update Campaign",
+     "必須",
+     ""
+    ],
+    [
+     "product_unit",
+     "Link",
+     "SG Product Unit",
+     "必須",
+     ""
+    ],
+    [
+     "record_status",
+     "Select",
+     "Pending / Succeeded / Failed / Rolled Back",
+     "必須",
+     ""
+    ],
+    [
+     "status_at",
+     "Datetime",
+     "",
+     "",
+     ""
+    ],
+    [
+     "error_detail",
+     "Small Text",
+     "",
+     "",
+     ""
+    ]
+   ],
+   "note": "一意制約：(update_campaign, product_unit)。"
+  }
+ ],
+ "5.4 脆弱性（Vulnerability）": [
+  {
+   "name": "SG Vulnerability",
+   "phase": "MVP",
+   "naming": "field:vuln_id",
+   "purpose": "外部の脆弱性情報（NVD、OSV、GitHub Advisory、ベンダーCSAF）を取り込んだもの。定期同期ジョブで更新する。",
+   "fields": [
+    [
+     "vuln_id",
+     "Data",
+     "",
+     "必須・一意",
+     "CVE-2026-XXXX、GHSA-…、OSV ID"
+    ],
+    [
+     "aliases",
+     "Table",
+     "SG Vulnerability Alias",
+     "",
+     "同一脆弱性の別ID"
+    ],
+    [
+     "source",
+     "Select",
+     "NVD / OSV / GitHub / Vendor CSAF / Manual",
+     "必須",
+     ""
+    ],
+    [
+     "title",
+     "Data",
+     "",
+     "",
+     ""
+    ],
+    [
+     "description",
+     "Text",
+     "",
+     "",
+     ""
+    ],
+    [
+     "published_on",
+     "Datetime",
+     "",
+     "",
+     ""
+    ],
+    [
+     "modified_on",
+     "Datetime",
+     "",
+     "",
+     ""
+    ],
+    [
+     "cvss_v3_vector",
+     "Data",
+     "",
+     "",
+     ""
+    ],
+    [
+     "cvss_v3_score",
+     "Float",
+     "",
+     "",
+     ""
+    ],
+    [
+     "cvss_v4_vector",
+     "Data",
+     "",
+     "",
+     ""
+    ],
+    [
+     "cvss_v4_score",
+     "Float",
+     "",
+     "",
+     ""
+    ],
+    [
+     "severity",
+     "Select",
+     "Critical / High / Medium / Low / None / Unknown",
+     "",
+     ""
+    ],
+    [
+     "epss_score",
+     "Float",
+     "",
+     "",
+     "悪用確率"
+    ],
+    [
+     "known_exploited",
+     "Check",
+     "",
+     "",
+     "悪用が確認済み（CISA KEV等）。CRA報告の起点"
+    ],
+    [
+     "cwe_ids",
+     "Data",
+     "",
+     "",
+     ""
+    ],
+    [
+     "affected_ranges",
+     "Table",
+     "SG Affected Range",
+     "",
+     "影響する部品と版の範囲"
+    ],
+    [
+     "references",
+     "Table",
+     "SG Reference",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Affected Range",
+   "phase": "MVP",
+   "naming": "（子テーブル）",
+   "kind": "子テーブル",
+   "track": false,
+   "purpose": "脆弱性が影響する部品と版の範囲。",
+   "fields": [
+    [
+     "purl_base",
+     "Data",
+     "",
+     "",
+     "版なしPURL"
+    ],
+    [
+     "cpe_match",
+     "Data",
+     "",
+     "",
+     "CPE照合文字列"
+    ],
+    [
+     "version_range",
+     "Data",
+     "",
+     "",
+     "vers形式の範囲（例：vers:generic/>=3.0.0|<3.0.15）"
+    ],
+    [
+     "fixed_version",
+     "Data",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Vulnerability Match",
+   "phase": "MVP",
+   "naming": "hash",
+   "track": false,
+   "purpose": "脆弱性と部品の版の照合結果。照合ジョブが作り、誤検知は人が却下する。",
+   "fields": [
+    [
+     "vulnerability",
+     "Link",
+     "SG Vulnerability",
+     "必須",
+     ""
+    ],
+    [
+     "component_version",
+     "Link",
+     "SG Component Version",
+     "必須",
+     ""
+    ],
+    [
+     "match_method",
+     "Select",
+     "PURL Exact / PURL Range / CPE / Manual",
+     "必須",
+     ""
+    ],
+    [
+     "confidence",
+     "Select",
+     "High / Medium / Low",
+     "必須",
+     "CPE照合はMedium以下"
+    ],
+    [
+     "match_status",
+     "Select",
+     "Open / Confirmed / False Positive",
+     "必須",
+     ""
+    ],
+    [
+     "reviewed_by",
+     "Link",
+     "User",
+     "",
+     ""
+    ]
+   ],
+   "note": "一意制約：(vulnerability, component_version)。インデックス：component_version、match_status。"
+  },
+  {
+   "name": "SG Impact Assessment",
+   "phase": "Phase 2",
+   "naming": "naming_series: SGIA-.YYYY.-.######",
+   "kind": "提出可能",
+   "purpose": "脆弱性がリリース（製品）に影響するかの判定＝VEXステートメント。承認後に提出し、CSAF / OpenVEXとして出力する。",
+   "fields": [
+    [
+     "vulnerability",
+     "Link",
+     "SG Vulnerability",
+     "必須",
+     ""
+    ],
+    [
+     "release",
+     "Link",
+     "SG Release",
+     "必須",
+     ""
+    ],
+    [
+     "vex_status",
+     "Select",
+     "Not Affected / Affected / Fixed / Under Investigation",
+     "必須",
+     ""
+    ],
+    [
+     "justification",
+     "Select",
+     "component_not_present / vulnerable_code_not_present / vulnerable_code_not_in_execute_path / vulnerable_code_cannot_be_controlled_by_adversary / inline_mitigations_already_exist",
+     "条件付き必須",
+     "Not Affectedの場合に必須"
+    ],
+    [
+     "impact_statement",
+     "Small Text",
+     "",
+     "",
+     "判断の根拠"
+    ],
+    [
+     "action_statement",
+     "Small Text",
+     "",
+     "",
+     "Affectedの場合の対処"
+    ],
+    [
+     "adjusted_severity",
+     "Select",
+     "Critical / High / Medium / Low / None",
+     "",
+     "到達可能性を考慮した深刻度"
+    ],
+    [
+     "domain_impact",
+     "Small Text",
+     "",
+     "",
+     "業界固有の影響（安全・臨床など）"
+    ],
+    [
+     "fixed_in_release",
+     "Link",
+     "SG Release",
+     "",
+     ""
+    ],
+    [
+     "ai_drafted",
+     "Check",
+     "",
+     "読取専用",
+     "AIが下書きしたか（D8）"
+    ]
+   ],
+   "note": "一意制約：(vulnerability, release, docstatus≠2)。"
+  },
+  {
+   "name": "SG Vulnerability Case",
+   "phase": "Phase 2",
+   "naming": "naming_series: SGVC-.YYYY.-.####",
+   "purpose": "PSIRTの対応案件。複数の脆弱性・リリース・キャンペーン・当局報告を束ねる。",
+   "fields": [
+    [
+     "case_title",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "vulnerabilities",
+     "Table MultiSelect",
+     "SG Case Vulnerability",
+     "",
+     ""
+    ],
+    [
+     "intake_source",
+     "Select",
+     "Public Disclosure / Researcher / Customer / Supplier / Internal",
+     "必須",
+     ""
+    ],
+    [
+     "aware_at",
+     "Datetime",
+     "",
+     "必須",
+     "認知日時（報告期限の起点）"
+    ],
+    [
+     "case_severity",
+     "Select",
+     "Critical / High / Medium / Low",
+     "",
+     ""
+    ],
+    [
+     "case_status",
+     "Select",
+     "Received / Triage / Investigating / Remediating / Monitoring / Closed",
+     "読取専用",
+     "ワークフローで遷移"
+    ],
+    [
+     "owner_user",
+     "Link",
+     "User",
+     "",
+     "担当者"
+    ],
+    [
+     "responsible_org",
+     "Link",
+     "SG Organization",
+     "",
+     "修正の責任者（自動車ではCIAで決まる）"
+    ],
+    [
+     "affected_release_count",
+     "Int",
+     "",
+     "読取専用",
+     ""
+    ],
+    [
+     "affected_unit_count",
+     "Int",
+     "",
+     "読取専用",
+     ""
+    ],
+    [
+     "actions",
+     "Table",
+     "SG Remediation Action",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Remediation Action",
+   "phase": "Phase 2",
+   "naming": "（子テーブル）",
+   "kind": "子テーブル",
+   "track": false,
+   "purpose": "案件の対処項目。",
+   "fields": [
+    [
+     "action_type",
+     "Select",
+     "Patch / Update Campaign / Workaround / Compensating Control / Customer Notification / Risk Acceptance",
+     "必須",
+     ""
+    ],
+    [
+     "responsible_org",
+     "Link",
+     "SG Organization",
+     "",
+     ""
+    ],
+    [
+     "due_date",
+     "Date",
+     "",
+     "",
+     ""
+    ],
+    [
+     "action_status",
+     "Select",
+     "Open / Done / Cancelled",
+     "",
+     ""
+    ],
+    [
+     "reference_doctype",
+     "Link",
+     "DocType",
+     "",
+     ""
+    ],
+    [
+     "reference_name",
+     "Dynamic Link",
+     "reference_doctype",
+     "",
+     "キャンペーン等への参照"
+    ]
+   ]
+  },
+  {
+   "name": "SG Compensating Control",
+   "phase": "Phase 2",
+   "naming": "naming_series: SGCMP-.#####",
+   "kind": "提出可能",
+   "purpose": "パッチを当てられない期間の補償策とリスク受容。産業IoTで必須だが、業界共通の概念としてコアに置く。",
+   "fields": [
+    [
+     "vulnerability_case",
+     "Link",
+     "SG Vulnerability Case",
+     "必須",
+     ""
+    ],
+    [
+     "target_doctype",
+     "Select",
+     "SG Release / SG Product Unit / SG Product Model",
+     "必須",
+     ""
+    ],
+    [
+     "target_name",
+     "Dynamic Link",
+     "target_doctype",
+     "必須",
+     ""
+    ],
+    [
+     "reason_unpatchable",
+     "Small Text",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "control_description",
+     "Text Editor",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "valid_until",
+     "Date",
+     "",
+     "必須",
+     "期限切れで再承認を促す"
+    ],
+    [
+     "approved_by",
+     "Link",
+     "User",
+     "",
+     ""
+    ]
+   ]
+  }
+ ],
+ "5.5 コンプライアンス・交換（Compliance / Exchange）": [
+  {
+   "name": "SG Report Type",
+   "phase": "Phase 2",
+   "naming": "field:report_type_name",
+   "purpose": "当局報告の種類と期限ルール。業界アプリがフィクスチャで登録する（CRA 24時間など）。",
+   "fields": [
+    [
+     "report_type_name",
+     "Data",
+     "",
+     "必須・一意",
+     "例：CRA Early Warning"
+    ],
+    [
+     "regulation",
+     "Data",
+     "",
+     "",
+     "例：EU 2024/2847 Art.14"
+    ],
+    [
+     "recipient",
+     "Data",
+     "",
+     "",
+     "例：ENISA Single Reporting Platform"
+    ],
+    [
+     "deadline_basis",
+     "Select",
+     "Aware At / Fix Available / Fixed Date / Periodic",
+     "必須",
+     "期限の起点"
+    ],
+    [
+     "deadline_hours",
+     "Int",
+     "",
+     "",
+     "起点からの時間（24、72等）"
+    ],
+    [
+     "deadline_days",
+     "Int",
+     "",
+     "",
+     "起点からの日数（14等）"
+    ],
+    [
+     "provided_by_app",
+     "Data",
+     "",
+     "",
+     ""
+    ]
+   ]
+  },
+  {
+   "name": "SG Regulatory Report",
+   "phase": "Phase 2",
+   "naming": "naming_series: SGRR-.YYYY.-.####",
+   "kind": "提出可能",
+   "purpose": "期限つきの報告タスク。案件の認知日時と報告種類のルールから期限を自動計算し、期限前に通知する。",
+   "fields": [
+    [
+     "report_type",
+     "Link",
+     "SG Report Type",
+     "必須",
+     ""
+    ],
+    [
+     "vulnerability_case",
+     "Link",
+     "SG Vulnerability Case",
+     "",
+     ""
+    ],
+    [
+     "basis_at",
+     "Datetime",
+     "",
+     "必須",
+     "期限の起点日時"
+    ],
+    [
+     "due_at",
+     "Datetime",
+     "",
+     "読取専用",
+     "自動計算"
+    ],
+    [
+     "report_status",
+     "Select",
+     "Not Started / Drafting / Approved / Submitted / Overdue / Not Required",
+     "読取専用",
+     ""
+    ],
+    [
+     "submitted_at",
+     "Datetime",
+     "",
+     "",
+     ""
+    ],
+    [
+     "submission_reference",
+     "Data",
+     "",
+     "",
+     "受付番号"
+    ],
+    [
+     "report_body",
+     "Text Editor",
+     "",
+     "",
+     "報告内容（AI下書き可）"
+    ],
+    [
+     "attachments",
+     "Attach",
+     "",
+     "",
+     ""
+    ]
+   ],
+   "note": "スケジューラ（毎時）で due_at を監視し、残り時間に応じて担当者・コンプライアンス責任者へ通知する。"
+  },
+  {
+   "name": "SG Advisory",
+   "phase": "Phase 2",
+   "naming": "field:advisory_id",
+   "kind": "提出可能",
+   "purpose": "顧客向けに公開するセキュリティアドバイザリ。提出済みのImpact AssessmentからCSAF 2.0文書を生成する。",
+   "fields": [
+    [
+     "advisory_id",
+     "Data",
+     "",
+     "必須・一意",
+     "例：LG-SA-2026-001"
+    ],
+    [
+     "title",
+     "Data",
+     "",
+     "必須",
+     ""
+    ],
+    [
+     "vulnerability_case",
+     "Link",
+     "SG Vulnerability Case",
+     "",
+     ""
+    ],
+    [
+     "tlp",
+     "Select",
+     "CLEAR / GREEN / AMBER / RED",
+     "",
+     "共有範囲"
+    ],
+    [
+     "csaf_document",
+     "JSON",
+     "",
+     "読取専用",
+     "生成したCSAF"
+    ],
+    [
+     "published_at",
+     "Datetime",
+     "",
+     "",
+     ""
+    ],
+    [
+     "revisions",
+     "Table",
+     "SG Advisory Revision",
+     "",
+     "改訂履歴"
+    ]
+   ]
+  },
+  {
+   "name": "SG Exchange Request",
+   "phase": "Phase 2",
+   "naming": "naming_series: SGX-.YYYY.-.#####",
+   "purpose": "サプライヤーへのSBOM提出依頼。サプライヤーはポータル（Webフォーム）から提出し、検証で不足があれば差し戻す。",
+   "fields": [
+    [
+     "supplier",
+     "Link",
+     "SG Organization",
+     "必須",
+     ""
+    ],
+    [
+     "release",
+     "Link",
+     "SG Release",
+     "必須",
+     "対象リリース"
+    ],
+    [
+     "requested_bom_type",
+     "Link",
+     "SG BOM Type",
+     "必須",
+     ""
+    ],
+    [
+     "due_date",
+     "Date",
+     "",
+     "",
+     ""
+    ],
+    [
+     "request_status",
+     "Select",
+     "Requested / Submitted / Returned / Accepted / Cancelled",
+     "読取専用",
+     ""
+    ],
+    [
+     "submitted_bom",
+     "Link",
+     "SG BOM Document",
+     "",
+     ""
+    ],
+    [
+     "return_reason",
+     "Small Text",
+     "",
+     "",
+     "差戻し理由（AI下書き可）"
+    ]
+   ]
+  },
+  {
+   "name": "SG Settings",
+   "phase": "MVP",
+   "naming": "（Single）",
+   "kind": "Single",
+   "purpose": "アプリ全体の設定。",
+   "fields": [
+    [
+     "nvd_enabled",
+     "Check",
+     "",
+     "",
+     ""
+    ],
+    [
+     "nvd_api_key",
+     "Password",
+     "",
+     "",
+     ""
+    ],
+    [
+     "osv_enabled",
+     "Check",
+     "",
+     "",
+     ""
+    ],
+    [
+     "sync_interval",
+     "Select",
+     "Hourly / Daily",
+     "",
+     "脆弱性情報の同期間隔"
+    ],
+    [
+     "cpe_match_min_confidence",
+     "Select",
+     "High / Medium / Low",
+     "",
+     "自動確定する照合の下限"
+    ],
+    [
+     "validation_rule_set",
+     "Data",
+     "",
+     "",
+     "既定の検証ルール群"
+    ],
+    [
+     "ai_drafting_enabled",
+     "Check",
+     "",
+     "",
+     "AIによる下書きを許可するか"
+    ]
+   ]
+  }
+ ]
+}

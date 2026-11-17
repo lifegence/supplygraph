@@ -1,0 +1,245 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "component",
+  "version",
+  "purl",
+  "cpe",
+  "hashes",
+  "license_concluded",
+  "license_expression",
+  "supplier",
+  "support_status",
+  "end_of_support_date",
+  "is_modified",
+  "file_name",
+  "download_location",
+  "license_declared",
+  "copyright_text"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SGCV-.#########",
+   "default": "SGCV-.#########",
+   "reqd": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "component",
+   "label": "Component",
+   "fieldtype": "Link",
+   "options": "SG Component",
+   "reqd": 1,
+   "search_index": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "version",
+   "label": "Version",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "description": "版文字列（原文のまま保持）",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "purl",
+   "label": "PURL",
+   "fieldtype": "Data",
+   "unique": 1,
+   "description": "版つきPURL"
+  },
+  {
+   "fieldname": "cpe",
+   "label": "CPE",
+   "fieldtype": "Data",
+   "description": "CPE 2.3文字列"
+  },
+  {
+   "fieldname": "hashes",
+   "label": "Hashes",
+   "fieldtype": "Table",
+   "options": "SG Hash",
+   "description": "SHA-256等（子テーブル）"
+  },
+  {
+   "fieldname": "license_concluded",
+   "label": "License Concluded",
+   "fieldtype": "Link",
+   "options": "SG License",
+   "description": "確定ライセンス（単一の場合）"
+  },
+  {
+   "fieldname": "license_expression",
+   "label": "License Expression",
+   "fieldtype": "Data",
+   "description": "SPDXライセンス式（複合の場合）"
+  },
+  {
+   "fieldname": "supplier",
+   "label": "Supplier",
+   "fieldtype": "Link",
+   "options": "SG Organization",
+   "description": "この版の供給元（部品の既定値を上書き）"
+  },
+  {
+   "fieldname": "support_status",
+   "label": "Support Status",
+   "fieldtype": "Select",
+   "options": "Active\nLimited\nEnd of Support\nUnknown",
+   "description": "サポート状況（FDA・CRA対応）"
+  },
+  {
+   "fieldname": "end_of_support_date",
+   "label": "End Of Support Date",
+   "fieldtype": "Date",
+   "description": "サポート終了日"
+  },
+  {
+   "fieldname": "is_modified",
+   "label": "Is Modified",
+   "fieldtype": "Check",
+   "description": "改変版か（パッチ当て等）"
+  },
+  {
+   "fieldname": "file_name",
+   "label": "File Name",
+   "fieldtype": "Data",
+   "description": "配布ファイル名"
+  },
+  {
+   "fieldname": "download_location",
+   "label": "Download Location",
+   "fieldtype": "Small Text",
+   "description": "ダウンロード元のURL（COTS・独自の部品はNone）"
+  },
+  {
+   "fieldname": "license_declared",
+   "label": "License Declared",
+   "fieldtype": "Data",
+   "description": "部品の作者が宣言したライセンス（SPDX識別子、なければ名称。NONE、NOASSERTIONも可）"
+  },
+  {
+   "fieldname": "copyright_text",
+   "label": "Copyright Text",
+   "fieldtype": "Small Text",
+   "description": "ライセンス表示用"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Catalog",
+ "name": "SG Component Version",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

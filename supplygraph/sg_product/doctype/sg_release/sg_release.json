@@ -1,0 +1,215 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-10-15 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "release_code",
+  "version",
+  "release_type",
+  "unit_type",
+  "release_status",
+  "released_on",
+  "hashes",
+  "primary_bom",
+  "previous_release",
+  "support_end_date",
+  "release_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "SGR-.#######",
+   "default": "SGR-.#######",
+   "reqd": 1,
+   "hidden": 1
+  },
+  {
+   "fieldname": "release_code",
+   "label": "Release Code",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "description": "ソフト部品番号（title_field）",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "version",
+   "label": "Version",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "release_type",
+   "label": "Release Type",
+   "fieldtype": "Select",
+   "options": "Software\nFirmware\nCalibration\nAI Model\nConfiguration\nUpdate Package",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "unit_type",
+   "label": "Unit Type",
+   "fieldtype": "Link",
+   "options": "SG Unit Type",
+   "description": "対象ハードウェア"
+  },
+  {
+   "fieldname": "release_status",
+   "label": "Release Status",
+   "fieldtype": "Select",
+   "options": "Planned\nReleased\nWithdrawn\nEnd of Support",
+   "reqd": 1
+  },
+  {
+   "fieldname": "released_on",
+   "label": "Released On",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "hashes",
+   "label": "Hashes",
+   "fieldtype": "Table",
+   "options": "SG Hash"
+  },
+  {
+   "fieldname": "primary_bom",
+   "label": "Primary BOM",
+   "fieldtype": "Link",
+   "options": "SG BOM Document",
+   "description": "このリリースのSBOM"
+  },
+  {
+   "fieldname": "previous_release",
+   "label": "Previous Release",
+   "fieldtype": "Link",
+   "options": "SG Release",
+   "description": "前の版"
+  },
+  {
+   "fieldname": "support_end_date",
+   "label": "Support End Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "release_notes",
+   "label": "Release Notes",
+   "fieldtype": "Text Editor"
+  }
+ ],
+ "links": [],
+ "modified": "2026-10-15 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "SG Product",
+ "name": "SG Release",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Administrator",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "SG Configuration Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "SG Security Analyst",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG PSIRT Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Compliance Officer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Release Manager",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "SG Viewer",
+   "read": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "release_code",
+ "track_changes": 1
+}
