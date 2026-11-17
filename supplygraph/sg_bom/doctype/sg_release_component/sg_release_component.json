@@ -8,7 +8,8 @@
   "release",
   "component_version",
   "via_bom_document",
-  "depth"
+  "depth",
+  "development_only"
  ],
  "fields": [
   {
@@ -41,10 +42,19 @@
    "label": "Depth",
    "fieldtype": "Int",
    "description": "0＝直接、1以上＝推移的"
+  },
+  {
+   "default": "0",
+   "description": "このリリースの SBOM で、この部品の版の行がすべて Scope＝excluded（開発用）",
+   "fieldname": "development_only",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Development Only"
   }
  ],
  "links": [],
- "modified": "2026-10-15 00:00:00.000000",
+ "modified": "2026-11-18 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "SG BOM",
  "name": "SG Release Component",

@@ -11,6 +11,8 @@ import re
 import frappe
 from frappe import _
 
+from supplygraph.sg_bom.flatten import refresh_match_development_only
+
 NEEDS_REVIEW = "Needs Review"
 CONFIRMED = "Confirmed"
 
@@ -125,6 +127,8 @@ def _merge_version(target: str, source: str) -> None:
 			document.append("hashes", {"algorithm": algorithm, "hash_value": value})
 	document.flags.ignore_permissions = True
 	document.save()
+	# The kept version now has the index rows of both
+	refresh_match_development_only([target])
 
 
 def _finish_target(target: str) -> None:

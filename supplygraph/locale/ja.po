@@ -766,6 +766,14 @@ msgstr "設計"
 msgid "Development"
 msgstr "開発中"
 
+#: supplygraph/sg_bom/doctype/sg_release_component/sg_release_component.json
+msgid "Development Only"
+msgstr "開発用だけ"
+
+#: supplygraph/sg_vulnerability/report/sg_vulnerability_impact/sg_vulnerability_impact.py
+msgid "Development-Only Components"
+msgstr "開発用の部品"
+
 #. Label of the domain_impact (Small Text) field in DocType 'SG Impact
 #. Assessment'
 #: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:86
@@ -1303,6 +1311,10 @@ msgstr "製造日"
 msgid "Manufacturer"
 msgstr "製造者"
 
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+msgid "Mark as Development Only"
+msgstr "開発用にする"
+
 #: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match_list.js:19
 msgid "Mark as False Positive"
 msgstr "誤検知にする"
@@ -1593,6 +1605,10 @@ msgstr "義務"
 #: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json:54
 msgid "Open"
 msgstr "オープン"
+
+#: supplygraph/sg_vulnerability/number_card/open_development_only_matches/open_development_only_matches.json
+msgid "Open Development-Only Matches"
+msgstr "未対応の照合結果（開発用）"
 
 #. Label of a number card in the SupplyGraph Workspace
 #: supplygraph/sg_vulnerability/workspace/supplygraph/supplygraph.json:208
@@ -3151,6 +3167,10 @@ msgstr "実機"
 msgid "Unknown"
 msgstr "不明"
 
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+msgid "Unmark Development Only"
+msgstr "開発用を外す"
+
 #: supplygraph/sg_bom/export/__init__.py:54
 msgid "Unsupported Format"
 msgstr "対応していない形式"
@@ -3487,6 +3507,16 @@ msgstr ""
 #: supplygraph/sg_vulnerability/doctype/sg_impact_assessment/sg_impact_assessment.json:61
 msgid "vulnerable_code_not_present"
 msgstr ""
+
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+#, python-brace-format
+msgid "{0} entries marked as development only"
+msgstr "{0} 件を開発用にしました"
+
+#: supplygraph/sg_bom/doctype/sg_bom_entry/sg_bom_entry_list.js
+#, python-brace-format
+msgid "{0} entries no longer marked as development only"
+msgstr "{0} 件の開発用を外しました"
 
 #: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match_list.js:25
 #, python-brace-format

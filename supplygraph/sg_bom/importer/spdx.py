@@ -51,12 +51,19 @@ RELATIONS = {
 	RelationshipType.STATIC_LINK: ("depends-on", False),
 	RelationshipType.DYNAMIC_LINK: ("depends-on", False),
 	RelationshipType.DEV_DEPENDENCY_OF: ("dev-dependency", True),
+	RelationshipType.BUILD_DEPENDENCY_OF: ("dev-dependency", True),
+	RelationshipType.TEST_DEPENDENCY_OF: ("dev-dependency", True),
 	RelationshipType.OPTIONAL_DEPENDENCY_OF: ("optional-dependency", True),
 	RelationshipType.PROVIDED_DEPENDENCY_OF: ("provided-by", True),
 	RelationshipType.GENERATED_FROM: ("generated-from", False),
 	RelationshipType.DESCENDANT_OF: ("generated-from", False),
 	RelationshipType.VARIANT_OF: ("variant-of", False),
 }
+# A package is used only for development when it is the target of these and of no runtime dependency.
+# CycloneDX states the same with scope "excluded", so SPDX packages get that scope.
+DEVELOPMENT_RELATIONS = {"dev-dependency"}
+RUNTIME_RELATIONS = {"depends-on", "optional-dependency", "provided-by"}
+EXCLUDED_SCOPE = "excluded"
 
 
 @contextmanager
@@ -98,7 +105,20 @@ def parse_spdx_file(path: str) -> ParsedBom:
 	documents = {item.document_ref_id: item.document_uri for item in info.external_document_refs}
 	for relationship in document.relationships:
 		_add_relationship(bom, relationship, refs, components, documents)
+	_mark_development_only(bom, components)
 	return bom
+
+
+def _mark_development_only(bom, components) -> None:
+	development, runtime = set(), set()
+	for _source, target, relation in bom.relations:
+		if relation in DEVELOPMENT_RELATIONS:
+			development.add(target)
+		elif relation in RUNTIME_RELATIONS:
+			runtime.add(target)
+	for ref in development - runtime:
+		if ref in components:
+			components[ref].scope = EXCLUDED_SCOPE
 
 
 def _component(package, issues: list[Issue]) -> ParsedComponent:

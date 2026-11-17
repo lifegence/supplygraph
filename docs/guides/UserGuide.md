@@ -99,7 +99,7 @@ SupplyGraph の設定（SG Settings）で「OSVを有効にする」（OSV Enabl
 - 同期が動いている間にもう一度押しても、2つ目の同期は始まりません。定期の同期とも重なりません。
 - 同期には worker が必要です。
 
-同期すると、脆弱性（Vulnerabilities）と照合結果（Matches）が増えます。PURL を持たない部品と、版が `^1.0.0` のような範囲になっている部品は照合されません。範囲の部品は、取込の検証結果に `IMP-VERSION-RANGE` の警告が出ます。
+同期すると、脆弱性（Vulnerabilities）と照合結果（Matches）が増えます。PURL を持たない部品、PURL に版が無い部品、版が `^1.0.0` のような範囲になっている部品は照合されません。範囲の部品は、取込の検証結果に `IMP-VERSION-RANGE` の警告が出ます。
 
 ## 5. 影響を調べる
 
@@ -108,6 +108,16 @@ SupplyGraph の設定（SG Settings）で「OSVを有効にする」（OSV Enabl
 3. 行の左端にチェックを入れて「実機を表示」（Show Units）を押すと、シリアル番号（自動車なら VIN）の一覧が出ます。選べる行は1つだけです。
 
 「影響なしと修正済みも含める」（Include Not Affected and Fixed）にチェックを入れると、判定で除いたリリースも出ます。
+
+### 開発用の部品
+
+画面を作る道具やテストの部品など、開発だけで使う部品の照合は、外さずに分けて表示します。
+
+- SBOM で開発用とされた部品は、取り込むと開発用になります。CycloneDX では scope が `excluded` の部品、SPDX では `DEV_DEPENDENCY_OF`、`BUILD_DEPENDENCY_OF`、`TEST_DEPENDENCY_OF` だけでつながる部品です。
+- SBOM に印が無いとき（Frappe の SBOM など）は、BOMの行（SG BOM Entry）の一覧で行を選び、「アクション」の「開発用にする」（Mark as Development Only）を押します。外すときは「開発用を外す」（Unmark Development Only）です。
+- 照合結果の「開発用だけ」（Development Only）は、その部品の版を含むすべてのリリースで開発用のときに付きます。一覧の絞り込みにも使えます。
+- ホームの「未対応の照合結果」は、開発用だけの照合を数えません。「未対応の照合結果（開発用）」に分けて数えます。
+- 脆弱性の影響では、開発用の部品を「開発用の部品」（Development-Only Components）の列に分けます。開発用の部品しか無いリリースには「開発用だけ」が付き、ほかのリリースの後に並びます。
 
 ## 6. 判定を記録する
 
