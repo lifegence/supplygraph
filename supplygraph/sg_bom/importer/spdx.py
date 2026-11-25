@@ -25,8 +25,8 @@ from supplygraph.sg_bom.importer.model import (
 	Issue,
 	ParsedBom,
 	ParsedComponent,
+	add_hash,
 	clean,
-	normalize_hash,
 	parse_timestamp,
 	split_purl,
 )
@@ -148,11 +148,7 @@ def _component(package, issues: list[Issue]) -> ParsedComponent:
 		copyright_text=_text(package.copyright_text),
 	)
 	for checksum in package.checksums:
-		algorithm = normalize_hash(checksum.algorithm.name)
-		if algorithm:
-			component.hashes.append((algorithm, checksum.value))
-		else:
-			issues.append(Issue("IMP-HASH", f"Skipped unsupported hash {checksum.algorithm.name}"))
+		add_hash(component, checksum.algorithm.name, checksum.value, issues)
 	return component
 
 

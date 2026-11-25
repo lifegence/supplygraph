@@ -11,8 +11,8 @@ from supplygraph.sg_bom.importer.model import (
 	Issue,
 	ParsedBom,
 	ParsedComponent,
+	add_hash,
 	clean,
-	normalize_hash,
 	parse_timestamp,
 	split_purl,
 )
@@ -97,11 +97,7 @@ def _add_component(bom: ParsedBom, data: dict, known_refs: set[str], parent_ref:
 		external_bom_ref=_external_url(data, "bom"),
 	)
 	for item in data.get("hashes") or []:
-		algorithm = normalize_hash(str(item.get("alg", "")))
-		if algorithm and item.get("content"):
-			component.hashes.append((algorithm, item["content"]))
-		else:
-			bom.issues.append(Issue("IMP-HASH", f"Skipped unsupported hash {item.get('alg')}"))
+		add_hash(component, str(item.get("alg", "")), item.get("content"), bom.issues)
 	bom.components.append(component)
 
 	if parent_ref:

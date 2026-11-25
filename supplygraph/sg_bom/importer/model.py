@@ -81,6 +81,25 @@ def normalize_hash(algorithm: str) -> str | None:
 	return HASH_ALGORITHMS.get(algorithm.upper().replace("-", "").replace("_", ""))
 
 
+def add_hash(component: "ParsedComponent", algorithm: str, value, issues: list[Issue]) -> None:
+	"""Keep a hash with a supported algorithm and a value; give a warning for one that is not kept."""
+	option = normalize_hash(algorithm)
+	if not option:
+		issues.append(Issue("IMP-HASH", f"Skipped unsupported hash {algorithm}"))
+		return
+	text = clean(value)
+	if not text:
+		issues.append(
+			Issue(
+				"IMP-HASH-VALUE",
+				f"Skipped hash {option} without a value on {component.name} {component.version}",
+				target_ref=component.ref,
+			)
+		)
+		return
+	component.hashes.append((option, text))
+
+
 def is_version_constraint(version: str | None) -> bool:
 	"""True for a declared range such as "^1.0.0", which does not say which version is installed."""
 	return bool(version and VERSION_CONSTRAINT.search(version))
