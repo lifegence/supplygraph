@@ -38,6 +38,10 @@ doc_events = {
 		"before_cancel": "supplygraph.sg_bom.workflow.before_cancel",
 		"on_cancel": "supplygraph.sg_bom.flatten.on_bom_change",
 	},
+	"SG Impact Assessment": {
+		"on_submit": "supplygraph.sg_vulnerability.vex.on_assessment_change",
+		"on_cancel": "supplygraph.sg_vulnerability.vex.on_assessment_change",
+	},
 	"SG Release": {
 		"on_update": "supplygraph.sg_bom.flatten.on_release_update",
 	},
