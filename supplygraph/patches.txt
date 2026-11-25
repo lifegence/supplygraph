@@ -7,3 +7,4 @@
 supplygraph.patches.v0_1.add_installed_release_index
 supplygraph.patches.v0_1.set_bom_workflow_states
 supplygraph.patches.v0_1.set_sbom_syntax_rule_set
+supplygraph.patches.v0_1.set_match_vex_handled

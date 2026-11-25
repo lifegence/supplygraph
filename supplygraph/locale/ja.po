@@ -1013,6 +1013,11 @@ msgstr ""
 msgid "Granularity"
 msgstr "粒度"
 
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match.json
+#: supplygraph/sg_vulnerability/doctype/sg_vulnerability_match/sg_vulnerability_match_list.js
+msgid "Handled by Assessment"
+msgstr "判定で対応済み"
+
 #. Label of the hash_value (Data) field in DocType 'SG Hash'
 #: supplygraph/sg_catalog/doctype/sg_hash/sg_hash.json:22
 msgid "Hash Value"

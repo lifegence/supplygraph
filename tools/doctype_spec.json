@@ -1597,6 +1597,13 @@
      "",
      "読み取り専用",
      "この部品の版を含むすべてのリリースで、開発用だけに使われている"
+    ],
+    [
+     "vex_handled",
+     "Check",
+     "",
+     "読み取り専用",
+     "この部品の版を含むすべてのリリースに、影響なしか修正済みの影響評価が提出されている"
     ]
    ],
    "note": "一意制約：(vulnerability, component_version)。インデックス：component_version、match_status。"

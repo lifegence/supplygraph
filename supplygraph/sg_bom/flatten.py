@@ -12,6 +12,8 @@ and its vulnerability matches carry development_only, so that the screens can sh
 import frappe
 from frappe.utils import now
 
+from supplygraph.sg_vulnerability.vex import refresh_vex_handled
+
 FIND_CHUNK = 1000
 EXCLUDED_SCOPE = "excluded"
 
@@ -50,7 +52,9 @@ def rebuild_release(release: str) -> int:
 		],
 		values,
 	)
-	refresh_match_development_only(before | {version for version, _bom in rows})
+	changed = before | {version for version, _bom in rows}
+	refresh_match_development_only(changed)
+	refresh_vex_handled(changed)
 	return len(values)
 
 
