@@ -29,6 +29,22 @@ def read_bytes(name: str) -> bytes:
 		return file.read()
 
 
+SPDX_TAG_VALUE = """SPDXVersion: SPDX-2.3
+DataLicense: CC0-1.0
+SPDXID: SPDXRef-DOCUMENT
+DocumentName: hash-value
+DocumentNamespace: https://example.com/spdx/hash-value
+Creator: Organization: Example
+Created: 2026-11-26T00:00:00Z
+
+PackageName: A
+SPDXID: SPDXRef-A
+PackageVersion: 1.0
+PackageDownloadLocation: NOASSERTION
+PackageChecksum: {checksum}
+"""
+
+
 def cyclonedx_sample() -> dict:
 	return json.loads(read_bytes("cyclonedx_sample.json"))
 
@@ -134,6 +150,27 @@ class UnitTestParsing(UnitTestCase):
 		self.assertIn("IMP-HASH", codes)
 		self.assertIn("IMP-UNKNOWN-REF", codes)
 
+	def test_cyclonedx_hashes_without_a_value_are_not_kept(self):
+		data = cyclonedx_sample()
+		data["components"][0]["hashes"] = [
+			{"alg": "SHA-256"},
+			{"alg": "SHA-384", "content": ""},
+			{"alg": "SHA-512", "content": "   "},
+			{"alg": "SHA-1", "content": " da39a3ee5e6b4b0d3255bfef95601890afd80709 "},
+			{"alg": "MD5", "content": "d41d8cd98f00b204e9800998ecf8427e"},
+		]
+		bom = parse_cyclonedx(data)
+		component = next(c for c in bom.components if c.ref == "lib-a")
+		self.assertEqual(component.hashes, [("SHA-1", "da39a3ee5e6b4b0d3255bfef95601890afd80709")])
+		issues = [(issue.rule_code, issue.message, issue.target_ref) for issue in bom.issues]
+		for algorithm in ("SHA-256", "SHA-384", "SHA-512"):
+			self.assertIn(
+				("IMP-HASH-VALUE", f"Skipped hash {algorithm} without a value on a-lib 1.2.3", "lib-a"),
+				issues,
+			)
+		self.assertIn(("IMP-HASH", "Skipped unsupported hash MD5", None), issues)
+		self.assertNotIn("Skipped unsupported hash SHA-256", [issue[1] for issue in issues])
+
 	def test_cyclonedx_1_5_identity_object(self):
 		data = cyclonedx_sample()
 		data["components"][0]["evidence"]["identity"] = {
@@ -169,6 +206,40 @@ class UnitTestParsing(UnitTestCase):
 		)
 		bom = importer.parse_content(json.dumps(data).encode(), "t.spdx.json")
 		self.assertEqual(bom.primary_ref, "SPDXRef-T")
+
+	def test_spdx_hashes_without_a_value_are_not_kept(self):
+		data = json.loads(read_bytes("spdx_sample.spdx.json"))
+		package = next(p for p in data["packages"] if p["SPDXID"] == "SPDXRef-A")
+		package["checksums"] = [
+			{"algorithm": "SHA256", "checksumValue": ""},
+			{"algorithm": "SHA512", "checksumValue": "  "},
+		]
+		bom = importer.parse_content(json.dumps(data).encode(), "t.spdx.json")
+		component = next(c for c in bom.components if c.ref == "SPDXRef-A")
+		self.assertEqual(component.hashes, [])
+		self.assertEqual(
+			[
+				(issue.rule_code, issue.target_ref)
+				for issue in bom.issues
+				if issue.rule_code.startswith("IMP-HASH")
+			],
+			[("IMP-HASH-VALUE", "SPDXRef-A"), ("IMP-HASH-VALUE", "SPDXRef-A")],
+		)
+
+	def test_spdx_tag_value_hash_without_a_value_is_not_kept(self):
+		content = SPDX_TAG_VALUE.format(checksum="SHA256:   ").encode()
+		bom = importer.parse_content(content, "t.spdx")
+		self.assertEqual(bom.components[0].hashes, [])
+		self.assertEqual(
+			[
+				(issue.rule_code, issue.message)
+				for issue in bom.issues
+				if issue.rule_code.startswith("IMP-HASH")
+			],
+			[("IMP-HASH-VALUE", "Skipped hash SHA-256 without a value on A 1.0")],
+		)
+		kept = importer.parse_content(SPDX_TAG_VALUE.format(checksum="SHA256: abc123").encode(), "t.spdx")
+		self.assertEqual(kept.components[0].hashes, [("SHA-256", "abc123")])
 
 	def test_spdx_package_and_relations(self):
 		bom = parse_spdx_file(os.path.join(DATA, "spdx_sample.spdx.json"))
@@ -280,6 +351,17 @@ class IntegrationTestImport(IntegrationTestCase):
 		rows = [row for row in document.validation_results if row.rule_code == "IMP-HASH"]
 		self.assertEqual(len(rows), 1)
 		self.assertIn("(3 times)", rows[0].message)
+
+	def test_hash_without_a_value_is_not_stored(self):
+		data = cyclonedx_sample()
+		data["components"][0]["hashes"] = [{"alg": "SHA-256", "content": " "}]
+		document = frappe.get_doc("SG BOM Document", self.import_sample(data))
+		version = frappe.db.get_value(
+			"SG BOM Entry", {"bom_document": document.name, "bom_ref": "lib-a"}, "component_version"
+		)
+		self.assertEqual(frappe.get_doc("SG Component Version", version).hashes, [])
+		rows = [row for row in document.validation_results if row.rule_code == "IMP-HASH-VALUE"]
+		self.assertEqual([(row.target_ref, row.severity) for row in rows], [("lib-a", "Warning")])
 
 	def test_too_long_purl_is_dropped_with_a_warning(self):
 		data = cyclonedx_sample()
